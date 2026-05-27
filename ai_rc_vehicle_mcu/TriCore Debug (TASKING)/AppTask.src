@@ -1,0 +1,1639 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc14280a --dep-file=AppTask.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc23x -D__CPU_TC23X__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc23x -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Configurations -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\Infra -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\Infra\\\\Platform -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\Infra\\\\Sfr -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\Infra\\\\Sfr\\\\TC23A -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\Infra\\\\Sfr\\\\TC23A\\\\_Reg -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\Service -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\Service\\\\CpuGeneric -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\CStart -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Trap -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma\\\\Std -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Flash -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Flash\\\\Std -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom\\\\Timer -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Port -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Port\\\\Std -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Scu -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Scu\\\\Std -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Src -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Src\\\\Std -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Stm -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Stm\\\\Std -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc\\\\Adc -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc\\\\Std -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Impl -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Lib -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o AppTask.src ../AppTask.c"
+	.compiler_name		"ctc"
+	;source	'../AppTask.c'
+
+	
+$TC16X
+	
+	.sdecl	'.text.AppTask.AppTask_1ms',code,cluster('AppTask_1ms')
+	.sect	'.text.AppTask.AppTask_1ms'
+	.align	2
+	
+	.global	AppTask_1ms
+; Function AppTask_1ms
+.L36:
+AppTask_1ms:	.type	func
+	sub.a	a10,#8
+.L102:
+	j	.L2
+.L3:
+	ld.bu	d4,[a10]
+.L143:
+	mov	d5,#0
+	call	AppProtocol_Feed
+.L2:
+	lea	a4,[a10]0
+	call	DrvUart_ReceiveByte
+.L144:
+	jne	d2,#0,.L3
+.L145:
+	j	.L4
+.L5:
+	ld.bu	d4,[a10]
+.L146:
+	mov	d5,#1
+	call	AppProtocol_Feed
+.L4:
+	lea	a4,[a10]0
+	call	DrvUart1_ReceiveByte
+.L147:
+	jne	d2,#0,.L5
+.L148:
+	ret
+.L71:
+	
+__AppTask_1ms_function_end:
+	.size	AppTask_1ms,__AppTask_1ms_function_end-AppTask_1ms
+.L51:
+	; End of function
+	
+	.sdecl	'.text.AppTask.AppTask_10ms',code,cluster('AppTask_10ms')
+	.sect	'.text.AppTask.AppTask_10ms'
+	.align	2
+	
+	.global	AppTask_10ms
+; Function AppTask_10ms
+.L38:
+AppTask_10ms:	.type	func
+	call	DrvUltrasonic_Trigger
+.L153:
+	call	DrvSensorFusion_Update
+.L154:
+	movh.a	a15,#@his(g_vehicleMode)
+	lea	a15,[a15]@los(g_vehicleMode)
+	ld.bu	d15,[a15]
+	jne	d15,#2,.L6
+.L155:
+	movh.a	a15,#@his(_999001_s_prevMode)
+	lea	a15,[a15]@los(_999001_s_prevMode)
+	ld.bu	d15,[a15]
+.L156:
+	jeq	d15,#2,.L7
+.L157:
+	call	AppAutonomous_Start
+.L158:
+	j	.L8
+.L7:
+.L6:
+	movh.a	a15,#@his(g_vehicleMode)
+	lea	a15,[a15]@los(g_vehicleMode)
+	ld.bu	d15,[a15]
+	jeq	d15,#2,.L9
+.L159:
+	movh.a	a15,#@his(_999001_s_prevMode)
+	lea	a15,[a15]@los(_999001_s_prevMode)
+	ld.bu	d15,[a15]
+.L160:
+	jne	d15,#2,.L10
+.L161:
+	call	AppAutonomous_Stop
+.L10:
+.L9:
+.L8:
+	movh.a	a15,#@his(g_vehicleMode)
+	lea	a15,[a15]@los(g_vehicleMode)
+	ld.bu	d15,[a15]
+.L162:
+	jne	d15,#3,.L11
+.L163:
+	call	AppVehicle_IsTurning
+.L164:
+	jne	d2,#0,.L12
+.L75:
+	call	DrvMpu9250_GetYaw
+.L103:
+	mov	d15,#0
+.L165:
+	cmp.f	d15,d2,d15
+	jnz.t	d15:0,.L13
+.L166:
+	j	.L14
+.L13:
+	insn.t	d2,d2:31,d2:31
+.L14:
+	movh	d15,#16752
+.L167:
+	cmp.f	d15,d2,d15
+	jnz.t	d15:2,.L15
+.L168:
+	movh.a	a15,#@his(g_vehicleCmd)
+	lea	a15,[a15]@los(g_vehicleCmd)
+.L169:
+	mov	d15,#1
+.L170:
+	st.b	[a15],d15
+.L171:
+	j	.L16
+.L15:
+	movh.a	a15,#@his(g_vehicleCmd)
+	lea	a15,[a15]@los(g_vehicleCmd)
+.L172:
+	mov	d15,#7
+.L173:
+	st.b	[a15],d15
+.L16:
+.L12:
+	j	.L17
+.L11:
+	movh.a	a15,#@his(g_vehicleMode)
+	lea	a15,[a15]@los(g_vehicleMode)
+	ld.bu	d15,[a15]
+.L174:
+	jne	d15,#2,.L18
+.L175:
+	call	AppAutonomous_Update
+.L176:
+	j	.L19
+.L18:
+	movh.a	a15,#@his(g_vehicleMode)
+	lea	a15,[a15]@los(g_vehicleMode)
+	ld.bu	d15,[a15]
+	jeq	d15,#0,.L20
+.L177:
+	movh.a	a15,#@his(g_vehicleMode)
+	lea	a15,[a15]@los(g_vehicleMode)
+	ld.bu	d15,[a15]
+.L178:
+	jne	d15,#1,.L21
+.L20:
+	movh.a	a15,#@his(g_1ms_counter)
+	lea	a15,[a15]@los(g_1ms_counter)
+	ld.w	d0,[a15]
+.L179:
+	movh.a	a15,#@his(g_lastMoveTime)
+	lea	a15,[a15]@los(g_lastMoveTime)
+	ld.w	d15,[a15]
+.L180:
+	sub	d0,d15
+.L181:
+	mov	d15,#200
+.L182:
+	jge.u	d15,d0,.L22
+.L183:
+	movh.a	a15,#@his(g_vehicleCmd)
+	lea	a15,[a15]@los(g_vehicleCmd)
+.L184:
+	mov	d15,#0
+.L185:
+	st.b	[a15],d15
+.L22:
+.L21:
+.L19:
+.L17:
+	movh.a	a15,#@his(_999001_s_prevMode)
+	lea	a15,[a15]@los(_999001_s_prevMode)
+.L186:
+	movh.a	a2,#@his(g_vehicleMode)
+	lea	a2,[a2]@los(g_vehicleMode)
+	ld.bu	d15,[a2]
+.L187:
+	st.b	[a15],d15
+.L188:
+	call	AppVehicle_Update
+.L189:
+	call	DrvMpu9250_ReadSensors
+.L190:
+	ret
+.L74:
+	
+__AppTask_10ms_function_end:
+	.size	AppTask_10ms,__AppTask_10ms_function_end-AppTask_10ms
+.L56:
+	; End of function
+	
+	.sdecl	'.text.AppTask.Uint16ToStr',code,cluster('Uint16ToStr')
+	.sect	'.text.AppTask.Uint16ToStr'
+	.align	2
+	
+; Function Uint16ToStr
+.L40:
+Uint16ToStr:	.type	func
+	sub.a	a10,#8
+.L104:
+	mov	d0,#0
+.L105:
+	jne	d4,#0,.L23
+.L236:
+	mov	d15,#48
+.L237:
+	st.b	[a4],d15
+.L238:
+	mov	d15,#0
+.L239:
+	st.b	[a4]1,d15
+.L240:
+	j	.L24
+.L23:
+	j	.L25
+.L26:
+	addsc.a	a15,a10,d0,#0
+.L241:
+	mov	d15,#10
+.L106:
+	div.u	e2,d4,d15
+.L107:
+	add	d15,d3,#48
+.L242:
+	st.b	[a15],d15
+.L243:
+	add	d0,#1
+.L244:
+	mov	d15,#10
+.L108:
+	div.u	e4,d4,d15
+.L25:
+	jge.u	d4,#1,.L26
+.L99:
+	mov	d1,#0
+.L109:
+	j	.L27
+.L28:
+	addsc.a	a15,a4,d1,#0
+.L245:
+	add	d15,d0,#-1
+.L246:
+	sub	d15,d1
+.L247:
+	addsc.a	a2,a10,d15,#0
+	ld.b	d15,[a2]0
+.L248:
+	st.b	[a15],d15
+.L249:
+	add	d1,#1
+.L27:
+	jlt	d1,d0,.L28
+.L250:
+	addsc.a	a15,a4,d1,#0
+.L251:
+	mov	d15,#0
+.L252:
+	st.b	[a15],d15
+.L24:
+	ret
+.L91:
+	
+__Uint16ToStr_function_end:
+	.size	Uint16ToStr,__Uint16ToStr_function_end-Uint16ToStr
+.L66:
+	; End of function
+	
+	.sdecl	'.text.AppTask.AppTask_100ms',code,cluster('AppTask_100ms')
+	.sect	'.text.AppTask.AppTask_100ms'
+	.align	2
+	
+	.global	AppTask_100ms
+; Function AppTask_100ms
+.L42:
+AppTask_100ms:	.type	func
+	sub.a	a10,#8
+.L110:
+	call	DrvDio_ToggleLed0
+.L80:
+	call	DrvSensorFusion_GetIrLeft
+.L111:
+	mov	d15,d2
+.L112:
+	call	DrvSensorFusion_GetIrRight
+.L114:
+	mov	d8,d2
+.L116:
+	call	DrvSensorFusion_GetUltrasonic
+.L115:
+	mov	d9,d2
+.L118:
+	call	DrvAdc_GetBatteryMv
+.L117:
+	mov	d10,d2
+.L120:
+	call	AppObstacle_Detect
+.L119:
+	mov	d11,d2
+.L122:
+	movh.a	a4,#@his(.1.str)
+	lea	a4,[a4]@los(.1.str)
+	call	DrvUart_SendString
+.L121:
+	movh.a	a4,#@his(.1.str)
+	lea	a4,[a4]@los(.1.str)
+	call	DrvUart1_SendString
+.L195:
+	lea	a4,[a10]0
+	mov	d4,d15
+.L123:
+	call	Uint16ToStr
+.L124:
+	lea	a4,[a10]0
+	call	DrvUart_SendString
+.L196:
+	lea	a4,[a10]0
+	call	DrvUart1_SendString
+.L197:
+	movh.a	a4,#@his(.2.str)
+	lea	a4,[a4]@los(.2.str)
+	call	DrvUart_SendString
+.L198:
+	movh.a	a4,#@his(.2.str)
+	lea	a4,[a4]@los(.2.str)
+	call	DrvUart1_SendString
+.L199:
+	lea	a4,[a10]0
+	mov	d4,d8
+.L125:
+	call	Uint16ToStr
+.L126:
+	lea	a4,[a10]0
+	call	DrvUart_SendString
+.L200:
+	lea	a4,[a10]0
+	call	DrvUart1_SendString
+.L201:
+	movh.a	a4,#@his(.3.str)
+	lea	a4,[a4]@los(.3.str)
+	call	DrvUart_SendString
+.L202:
+	movh.a	a4,#@his(.3.str)
+	lea	a4,[a4]@los(.3.str)
+	call	DrvUart1_SendString
+.L203:
+	lea	a4,[a10]0
+	mov	d4,d9
+.L127:
+	call	Uint16ToStr
+.L128:
+	lea	a4,[a10]0
+	call	DrvUart_SendString
+.L204:
+	lea	a4,[a10]0
+	call	DrvUart1_SendString
+.L205:
+	movh.a	a4,#@his(.4.str)
+	lea	a4,[a4]@los(.4.str)
+	call	DrvUart_SendString
+.L206:
+	movh.a	a4,#@his(.4.str)
+	lea	a4,[a4]@los(.4.str)
+	call	DrvUart1_SendString
+.L207:
+	lea	a4,[a10]0
+	mov	d4,d10
+.L129:
+	call	Uint16ToStr
+.L130:
+	lea	a4,[a10]0
+	call	DrvUart_SendString
+.L208:
+	lea	a4,[a10]0
+	call	DrvUart1_SendString
+.L209:
+	movh.a	a4,#@his(.5.str)
+	lea	a4,[a4]@los(.5.str)
+	call	DrvUart_SendString
+.L210:
+	movh.a	a4,#@his(.5.str)
+	lea	a4,[a4]@los(.5.str)
+	call	DrvUart1_SendString
+.L211:
+	lea	a4,[a10]0
+	mov	d4,d11
+.L131:
+	call	Uint16ToStr
+.L132:
+	lea	a4,[a10]0
+	call	DrvUart_SendString
+.L212:
+	lea	a4,[a10]0
+	call	DrvUart1_SendString
+.L213:
+	movh.a	a4,#@his(.6.str)
+	lea	a4,[a4]@los(.6.str)
+	call	DrvUart_SendString
+.L214:
+	movh.a	a4,#@his(.6.str)
+	lea	a4,[a4]@los(.6.str)
+	call	DrvUart1_SendString
+.L215:
+	jlt.u	d10,#1,.L29
+.L216:
+	mov	d15,#6800
+.L113:
+	jge.u	d10,d15,.L30
+.L89:
+	movh.a	a15,#@his(s_melodyIdx)
+	lea	a15,[a15]@los(s_melodyIdx)
+	ld.bu	d15,[a15]
+.L217:
+	mul	d15,d15,#2
+.L218:
+	movh.a	a15,#@his(s_lowBatMelody)
+	lea	a15,[a15]@los(s_lowBatMelody)
+.L219:
+	addsc.a	a15,a15,d15,#0
+	ld.hu	d4,[a15]0
+.L133:
+	jlt.u	d4,#1,.L31
+.L220:
+	call	DrvBuzzer_PlayNote
+.L134:
+	j	.L32
+.L31:
+	call	DrvBuzzer_Off
+.L32:
+	movh.a	a15,#@his(s_melodyIdx)
+	lea	a15,[a15]@los(s_melodyIdx)
+	movh.a	a2,#@his(s_melodyIdx)
+	lea	a2,[a2]@los(s_melodyIdx)
+	ld.bu	d15,[a2]
+.L221:
+	add	d15,#1
+	st.b	[a15],d15
+.L222:
+	movh.a	a15,#@his(s_melodyIdx)
+	lea	a15,[a15]@los(s_melodyIdx)
+	ld.bu	d0,[a15]
+.L223:
+	mov	d15,#68
+.L224:
+	jlt.u	d0,d15,.L33
+.L225:
+	movh.a	a15,#@his(s_melodyIdx)
+	lea	a15,[a15]@los(s_melodyIdx)
+.L226:
+	mov	d15,#0
+.L227:
+	st.b	[a15],d15
+.L33:
+	j	.L34
+.L30:
+.L29:
+	call	DrvBuzzer_Off
+.L228:
+	movh.a	a15,#@his(s_melodyIdx)
+	lea	a15,[a15]@los(s_melodyIdx)
+.L229:
+	mov	d15,#0
+.L230:
+	st.b	[a15],d15
+.L34:
+	call	DrvMpu9250_SendUart
+.L231:
+	ret
+.L79:
+	
+__AppTask_100ms_function_end:
+	.size	AppTask_100ms,__AppTask_100ms_function_end-AppTask_100ms
+.L61:
+	; End of function
+	
+	.sdecl	'.rodata.AppTask.s_lowBatMelody',data,rom,cluster('s_lowBatMelody')
+	.sect	'.rodata.AppTask.s_lowBatMelody'
+	.align	2
+s_lowBatMelody:	.type	object
+	.size	s_lowBatMelody,136
+	.half	659,659
+	.space	2
+	.half	659
+	.space	2
+	.half	523,659
+	.space	2
+	.half	784
+	.space	6
+	.half	392
+	.space	6
+	.half	523
+	.space	4
+	.half	392
+	.space	4
+	.half	330
+	.space	4
+	.half	440
+	.space	2
+	.half	494
+	.space	2
+	.half	466,440
+	.space	2
+	.half	392,659
+	.space	2
+	.half	784,880
+	.space	2
+	.half	698,784
+	.space	2
+	.half	659
+	.space	2
+	.half	523,587,494
+	.space	44
+	.sdecl	'.data.AppTask.s_melodyIdx',data,cluster('s_melodyIdx')
+	.sect	'.data.AppTask.s_melodyIdx'
+s_melodyIdx:	.type	object
+	.size	s_melodyIdx,1
+	.space	1
+	.sdecl	'.data.AppTask._999001_s_prevMode',data,cluster('_999001_s_prevMode')
+	.sect	'.data.AppTask._999001_s_prevMode'
+_999001_s_prevMode:	.type	object
+	.size	_999001_s_prevMode,1
+	.space	1
+	.sdecl	'.rodata.AppTask..1.str',data,rom
+	.sect	'.rodata.AppTask..1.str'
+.1.str:	.type	object
+	.size	.1.str,3
+	.byte	76,58
+	.space	1
+	.sdecl	'.rodata.AppTask..2.str',data,rom
+	.sect	'.rodata.AppTask..2.str'
+.2.str:	.type	object
+	.size	.2.str,4
+	.byte	44,82,58
+	.space	1
+	.sdecl	'.rodata.AppTask..3.str',data,rom
+	.sect	'.rodata.AppTask..3.str'
+.3.str:	.type	object
+	.size	.3.str,4
+	.byte	44,85,58
+	.space	1
+	.sdecl	'.rodata.AppTask..4.str',data,rom
+	.sect	'.rodata.AppTask..4.str'
+.4.str:	.type	object
+	.size	.4.str,4
+	.byte	44,66,58
+	.space	1
+	.sdecl	'.rodata.AppTask..5.str',data,rom
+	.sect	'.rodata.AppTask..5.str'
+.5.str:	.type	object
+	.size	.5.str,4
+	.byte	44,79,58
+	.space	1
+	.sdecl	'.rodata.AppTask..6.str',data,rom
+	.sect	'.rodata.AppTask..6.str'
+.6.str:	.type	object
+	.size	.6.str,3
+	.byte	13,10
+	.space	1
+	.calls	'AppTask_1ms','AppProtocol_Feed'
+	.calls	'AppTask_1ms','DrvUart_ReceiveByte'
+	.calls	'AppTask_1ms','DrvUart1_ReceiveByte'
+	.calls	'AppTask_10ms','DrvUltrasonic_Trigger'
+	.calls	'AppTask_10ms','DrvSensorFusion_Update'
+	.calls	'AppTask_10ms','AppAutonomous_Start'
+	.calls	'AppTask_10ms','AppAutonomous_Stop'
+	.calls	'AppTask_10ms','AppVehicle_IsTurning'
+	.calls	'AppTask_10ms','DrvMpu9250_GetYaw'
+	.calls	'AppTask_10ms','AppAutonomous_Update'
+	.calls	'AppTask_10ms','AppVehicle_Update'
+	.calls	'AppTask_10ms','DrvMpu9250_ReadSensors'
+	.calls	'AppTask_100ms','DrvDio_ToggleLed0'
+	.calls	'AppTask_100ms','DrvSensorFusion_GetIrLeft'
+	.calls	'AppTask_100ms','DrvSensorFusion_GetIrRight'
+	.calls	'AppTask_100ms','DrvSensorFusion_GetUltrasonic'
+	.calls	'AppTask_100ms','DrvAdc_GetBatteryMv'
+	.calls	'AppTask_100ms','AppObstacle_Detect'
+	.calls	'AppTask_100ms','DrvUart_SendString'
+	.calls	'AppTask_100ms','DrvUart1_SendString'
+	.calls	'AppTask_100ms','Uint16ToStr'
+	.calls	'AppTask_100ms','DrvBuzzer_PlayNote'
+	.calls	'AppTask_100ms','DrvBuzzer_Off'
+	.calls	'AppTask_100ms','DrvMpu9250_SendUart'
+	.calls	'AppTask_1ms','',8
+	.calls	'AppTask_10ms','',0
+	.calls	'Uint16ToStr','',8
+	.extern	DrvDio_ToggleLed0
+	.extern	DrvUart_SendString
+	.extern	DrvUart_ReceiveByte
+	.extern	DrvUart1_SendString
+	.extern	DrvUart1_ReceiveByte
+	.extern	DrvAdc_GetBatteryMv
+	.extern	DrvUltrasonic_Trigger
+	.extern	DrvMpu9250_ReadSensors
+	.extern	DrvMpu9250_GetYaw
+	.extern	DrvMpu9250_SendUart
+	.extern	g_1ms_counter
+	.extern	DrvBuzzer_PlayNote
+	.extern	DrvBuzzer_Off
+	.extern	DrvSensorFusion_Update
+	.extern	DrvSensorFusion_GetIrLeft
+	.extern	DrvSensorFusion_GetIrRight
+	.extern	DrvSensorFusion_GetUltrasonic
+	.extern	g_vehicleCmd
+	.extern	AppVehicle_Update
+	.extern	AppVehicle_IsTurning
+	.extern	g_lastMoveTime
+	.extern	g_vehicleMode
+	.extern	AppProtocol_Feed
+	.extern	AppObstacle_Detect
+	.extern	AppAutonomous_Start
+	.extern	AppAutonomous_Stop
+	.extern	AppAutonomous_Update
+	.calls	'AppTask_100ms','',8
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L44:
+	.word	1618
+	.half	3
+	.word	.L45
+	.byte	4
+.L43:
+	.byte	1
+	.byte	'../AppTask.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L46
+.L72:
+	.byte	2
+	.byte	'unsigned char',0,1,8
+.L76:
+	.byte	2
+	.byte	'float',0,4,4
+.L81:
+	.byte	2
+	.byte	'unsigned short int',0,2,7,2
+	.byte	'char',0,1,6
+.L87:
+	.byte	3,8
+	.word	226
+	.byte	4,7,0,5
+	.byte	'DrvDio_ToggleLed0',0,1,27,6,1,1,1,1,6
+	.word	226
+	.byte	7
+	.word	269
+	.byte	8
+	.byte	'DrvUart_SendString',0,2,20,9,1,1,1,1,9
+	.byte	'str',0,2,20,40
+	.word	274
+	.byte	0,7
+	.word	178
+	.byte	10
+	.byte	'DrvUart_ReceiveByte',0,2,21,9
+	.word	178
+	.byte	1,1,1,1,9
+	.byte	'data',0,2,21,36
+	.word	319
+	.byte	0,8
+	.byte	'DrvUart1_SendString',0,3,20,9,1,1,1,1,9
+	.byte	'str',0,3,20,41
+	.word	274
+	.byte	0,10
+	.byte	'DrvUart1_ReceiveByte',0,3,21,9
+	.word	178
+	.byte	1,1,1,1,9
+	.byte	'data',0,3,21,37
+	.word	319
+	.byte	0,11
+	.byte	'DrvAdc_GetBatteryMv',0,4,18,8
+	.word	204
+	.byte	1,1,1,1,5
+	.byte	'DrvUltrasonic_Trigger',0,5,14,6,1,1,1,1,5
+	.byte	'DrvMpu9250_ReadSensors',0,6,15,9,1,1,1,1,11
+	.byte	'DrvMpu9250_GetYaw',0,6,18,9
+	.word	195
+	.byte	1,1,1,1,5
+	.byte	'DrvMpu9250_SendUart',0,6,19,9,1,1,1,1,8
+	.byte	'DrvBuzzer_PlayNote',0,7,14,6,1,1,1,1,9
+	.byte	'freqHz',0,7,14,32
+	.word	204
+	.byte	0,5
+	.byte	'DrvBuzzer_Off',0,7,15,6,1,1,1,1,5
+	.byte	'DrvSensorFusion_Update',0,8,27,8,1,1,1,1,11
+	.byte	'DrvSensorFusion_GetIrLeft',0,8,28,8
+	.word	204
+	.byte	1,1,1,1,11
+	.byte	'DrvSensorFusion_GetIrRight',0,8,29,8
+	.word	204
+	.byte	1,1,1,1,11
+	.byte	'DrvSensorFusion_GetUltrasonic',0,8,30,8
+	.word	204
+	.byte	1,1,1,1,5
+	.byte	'AppVehicle_Update',0,9,29,6,1,1,1,1,11
+	.byte	'AppVehicle_IsTurning',0,9,30,9
+	.word	178
+	.byte	1,1,1,1,8
+	.byte	'AppProtocol_Feed',0,10,77,6,1,1,1,1,9
+	.byte	'byte',0,10,77,29
+	.word	178
+	.byte	9
+	.byte	'ch',0,10,77,41
+	.word	178
+	.byte	0,12,11,20,9,1,13
+	.byte	'OBSTACLE_NONE',0,0,13
+	.byte	'OBSTACLE_FRONT',0,1,13
+	.byte	'OBSTACLE_LEFT',0,2,13
+	.byte	'OBSTACLE_RIGHT',0,3,13
+	.byte	'OBSTACLE_BOTH_SIDES',0,4,0,11
+	.byte	'AppObstacle_Detect',0,11,29,16
+	.word	933
+	.byte	1,1,1,1,5
+	.byte	'AppAutonomous_Start',0,12,16,6,1,1,1,1,5
+	.byte	'AppAutonomous_Stop',0,12,17,6,1,1,1,1,5
+	.byte	'AppAutonomous_Update',0,12,18,6,1,1,1,1
+.L93:
+	.byte	7
+	.word	226
+.L95:
+	.byte	3,6
+	.word	226
+	.byte	4,5,0
+.L97:
+	.byte	2
+	.byte	'int',0,4,5,2
+	.byte	'short int',0,2,5,14
+	.byte	'__wchar_t',0,13,1,1
+	.word	1163
+	.byte	2
+	.byte	'unsigned int',0,4,7,14
+	.byte	'__size_t',0,13,1,1
+	.word	1194
+	.byte	14
+	.byte	'__ptrdiff_t',0,13,1,1
+	.word	1156
+	.byte	15,1,7
+	.word	1247
+	.byte	14
+	.byte	'__codeptr',0,13,1,1
+	.word	1249
+	.byte	14
+	.byte	'boolean',0,14,104,29
+	.word	178
+	.byte	14
+	.byte	'uint8',0,14,108,29
+	.word	178
+	.byte	14
+	.byte	'uint16',0,14,112,29
+	.word	204
+	.byte	2
+	.byte	'unsigned long int',0,4,7,14
+	.byte	'uint32',0,14,116,29
+	.word	1317
+	.byte	14
+	.byte	'sint16',0,14,129,1,29
+	.word	1163
+	.byte	2
+	.byte	'long int',0,4,5,14
+	.byte	'sint32',0,14,134,1,29
+	.word	1369
+	.byte	2
+	.byte	'long long int',0,8,5,14
+	.byte	'sint64',0,14,141,1,29
+	.word	1397
+	.byte	14
+	.byte	'float32',0,14,170,1,29
+	.word	195
+	.byte	16
+	.byte	'void',0,7
+	.word	1447
+	.byte	14
+	.byte	'pvoid',0,15,54,28
+	.word	1453
+	.byte	17
+	.word	1317
+	.byte	18
+	.byte	'g_1ms_counter',0,16,21,24
+	.word	1472
+	.byte	1,1,17
+	.word	178
+	.byte	18
+	.byte	'g_vehicleCmd',0,9,25,25
+	.word	1501
+	.byte	1,1,18
+	.byte	'g_lastMoveTime',0,10,71,15
+	.word	1317
+	.byte	1,1,17
+	.word	178
+	.byte	18
+	.byte	'g_vehicleMode',0,10,74,23
+	.word	1554
+	.byte	1,1,14
+	.byte	'ObstacleType_t',0,11,27,3
+	.word	933
+	.byte	3,136,1
+	.word	204
+	.byte	4,67,0
+.L101:
+	.byte	6
+	.word	1606
+	.byte	0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L45:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,1,1,11,15,73,19,0,0,4,33,0
+	.byte	47,15,0,0,5,46,0,3,8,58,15,59,15,57,15,54,15,39,12,63,12,60,12,0,0,6,38,0,73,19,0,0,7,15,0,73,19,0,0,8
+	.byte	46,1,3,8,58,15,59,15,57,15,54,15,39,12,63,12,60,12,0,0,9,5,0,3,8,58,15,59,15,57,15,73,19,0,0,10,46,1,3
+	.byte	8,58,15,59,15,57,15,73,19,54,15,39,12,63,12,60,12,0,0,11,46,0,3,8,58,15,59,15,57,15,73,19,54,15,39,12
+	.byte	63,12,60,12,0,0,12,4,1,58,15,59,15,57,15,11,15,0,0,13,40,0,3,8,28,13,0,0,14,22,0,3,8,58,15,59,15,57,15
+	.byte	73,19,0,0,15,21,0,54,15,0,0,16,59,0,3,8,0,0,17,53,0,73,19,0,0,18,52,0,3,8,58,15,59,15,57,15,73,19,63,12
+	.byte	60,12,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L46:
+	.word	.L136-.L135
+.L135:
+	.half	3
+	.word	.L138-.L137
+.L137:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'D:\\\\01_WorkPlace\\\\201_RC_Vehicle\\\\ai_rc_vehicle\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Std',0
+	.byte	0
+	.byte	'..\\DrvDio.h',0,0,0,0
+	.byte	'..\\DrvUart.h',0,0,0,0
+	.byte	'..\\DrvUart1.h',0,0,0,0
+	.byte	'..\\DrvAdc.h',0,0,0,0
+	.byte	'..\\DrvUltrasonic.h',0,0,0,0
+	.byte	'..\\DrvMpu9250.h',0,0,0,0
+	.byte	'..\\DrvBuzzer.h',0,0,0,0
+	.byte	'..\\DrvSensorFusion.h',0,0,0,0
+	.byte	'..\\AppVehicle.h',0,0,0,0
+	.byte	'..\\AppProtocol.h',0,0,0,0
+	.byte	'..\\AppObstacle.h',0,0,0,0
+	.byte	'..\\AppAutonomous.h',0,0,0,0
+	.byte	'../AppTask.c',0,0,0,0
+	.byte	'Platform_Types.h',0,1,0,0
+	.byte	'Ifx_Types.h',0,1,0,0
+	.byte	'..\\DrvGtmTimer.h',0,0,0,0,0
+.L138:
+.L136:
+	.sdecl	'.debug_info',debug,cluster('AppTask_1ms')
+	.sect	'.debug_info'
+.L47:
+	.word	245
+	.half	3
+	.word	.L48
+	.byte	4,1
+	.byte	'../AppTask.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L50,.L49
+	.byte	2
+	.word	.L43
+	.byte	3
+	.byte	'AppTask_1ms',0,1,62,6,1,1,1
+	.word	.L36,.L71,.L35
+	.byte	4
+	.word	.L36,.L71
+	.byte	5
+	.byte	'rxByte',0,1,64,11
+	.word	.L72,.L73
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('AppTask_1ms')
+	.sect	'.debug_abbrev'
+.L48:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('AppTask_1ms')
+	.sect	'.debug_line'
+.L49:
+	.word	.L140-.L139
+.L139:
+	.half	3
+	.word	.L142-.L141
+.L141:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../AppTask.c',0,0,0,0,0
+.L142:
+	.byte	5,6,7,0,5,2
+	.word	.L36
+	.byte	3,61,1,5,40,9
+	.half	.L102-.L36
+	.byte	3,5,1,5,26,9
+	.half	.L3-.L102
+	.byte	3,2,1,5,34,9
+	.half	.L143-.L3
+	.byte	1,5,33,9
+	.half	.L2-.L143
+	.byte	3,126,1,5,40,9
+	.half	.L144-.L2
+	.byte	1,5,41,7,9
+	.half	.L145-.L144
+	.byte	3,6,1,5,26,9
+	.half	.L5-.L145
+	.byte	3,2,1,5,34,9
+	.half	.L146-.L5
+	.byte	1,9
+	.half	.L4-.L146
+	.byte	3,126,1,5,41,9
+	.half	.L147-.L4
+	.byte	1,5,1,7,9
+	.half	.L148-.L147
+	.byte	3,4,1,7,9
+	.half	.L51-.L148
+	.byte	0,1,1
+.L140:
+	.sdecl	'.debug_ranges',debug,cluster('AppTask_1ms')
+	.sect	'.debug_ranges'
+.L50:
+	.word	-1,.L36,0,.L51-.L36,0,0
+	.sdecl	'.debug_info',debug,cluster('AppTask_10ms')
+	.sect	'.debug_info'
+.L52:
+	.word	297
+	.half	3
+	.word	.L53
+	.byte	4,1
+	.byte	'../AppTask.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L55,.L54
+	.byte	2
+	.word	.L43
+	.byte	3
+	.byte	'AppTask_10ms',0,1,82,6,1,1,1
+	.word	.L38,.L74,.L37
+	.byte	4
+	.word	.L38,.L74
+	.byte	5
+	.byte	's_prevMode',0,1,84,18
+	.word	.L72
+	.byte	5,3
+	.word	_999001_s_prevMode
+	.byte	4
+	.word	.L75,.L12
+	.byte	6
+	.byte	'yaw',0,1,101,21
+	.word	.L76,.L77
+	.byte	6
+	.byte	'absYaw',0,1,102,21
+	.word	.L76,.L78
+	.byte	0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('AppTask_10ms')
+	.sect	'.debug_abbrev'
+.L53:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,6,52,0
+	.byte	3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('AppTask_10ms')
+	.sect	'.debug_line'
+.L54:
+	.word	.L150-.L149
+.L149:
+	.half	3
+	.word	.L152-.L151
+.L151:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../AppTask.c',0,0,0,0,0
+.L152:
+	.byte	5,26,7,0,5,2
+	.word	.L38
+	.byte	3,214,0,1,5,27,9
+	.half	.L153-.L38
+	.byte	3,1,1,5,9,9
+	.half	.L154-.L153
+	.byte	3,3,1,5,47,9
+	.half	.L155-.L154
+	.byte	1,5,58,9
+	.half	.L156-.L155
+	.byte	1,5,28,7,9
+	.half	.L157-.L156
+	.byte	3,1,1,5,30,9
+	.half	.L158-.L157
+	.byte	1,5,14,9
+	.half	.L6-.L158
+	.byte	3,1,1,5,52,9
+	.half	.L159-.L6
+	.byte	1,5,63,9
+	.half	.L160-.L159
+	.byte	1,5,27,7,9
+	.half	.L161-.L160
+	.byte	3,1,1,5,9,9
+	.half	.L8-.L161
+	.byte	3,3,1,5,5,9
+	.half	.L162-.L8
+	.byte	1,5,34,7,9
+	.half	.L163-.L162
+	.byte	3,2,1,5,14,9
+	.half	.L164-.L163
+	.byte	1,5,47,7,9
+	.half	.L75-.L164
+	.byte	3,2,1,5,37,9
+	.half	.L103-.L75
+	.byte	3,1,1,5,30,9
+	.half	.L165-.L103
+	.byte	1,5,50,9
+	.half	.L166-.L165
+	.byte	1,5,45,9
+	.half	.L13-.L166
+	.byte	1,5,26,9
+	.half	.L14-.L13
+	.byte	3,2,1,5,13,9
+	.half	.L167-.L14
+	.byte	1,5,17,9
+	.half	.L168-.L167
+	.byte	3,3,1,5,32,9
+	.half	.L169-.L168
+	.byte	1,5,30,9
+	.half	.L170-.L169
+	.byte	1,5,48,9
+	.half	.L171-.L170
+	.byte	3,126,1,5,17,9
+	.half	.L15-.L171
+	.byte	1,5,32,9
+	.half	.L172-.L15
+	.byte	1,5,30,9
+	.half	.L173-.L172
+	.byte	1,5,9,9
+	.half	.L12-.L173
+	.byte	3,122,1,5,14,9
+	.half	.L11-.L12
+	.byte	3,12,1,5,10,9
+	.half	.L174-.L11
+	.byte	1,5,29,7,9
+	.half	.L175-.L174
+	.byte	3,2,1,5,31,9
+	.half	.L176-.L175
+	.byte	1,5,14,9
+	.half	.L18-.L176
+	.byte	3,2,1,9
+	.half	.L177-.L18
+	.byte	3,1,1,5,28,9
+	.half	.L178-.L177
+	.byte	1,5,14,7,9
+	.half	.L20-.L178
+	.byte	3,3,1,5,30,9
+	.half	.L179-.L20
+	.byte	1,5,28,9
+	.half	.L180-.L179
+	.byte	1,5,48,9
+	.half	.L181-.L180
+	.byte	1,5,9,9
+	.half	.L182-.L181
+	.byte	1,5,13,7,9
+	.half	.L183-.L182
+	.byte	3,2,1,5,28,9
+	.half	.L184-.L183
+	.byte	1,5,26,9
+	.half	.L185-.L184
+	.byte	1,5,5,9
+	.half	.L17-.L185
+	.byte	3,4,1,5,18,9
+	.half	.L186-.L17
+	.byte	1,5,16,9
+	.half	.L187-.L186
+	.byte	1,5,22,9
+	.half	.L188-.L187
+	.byte	3,2,1,5,27,9
+	.half	.L189-.L188
+	.byte	3,3,1,5,1,9
+	.half	.L190-.L189
+	.byte	3,1,1,7,9
+	.half	.L56-.L190
+	.byte	0,1,1
+.L150:
+	.sdecl	'.debug_ranges',debug,cluster('AppTask_10ms')
+	.sect	'.debug_ranges'
+.L55:
+	.word	-1,.L38,0,.L56-.L38,0,0
+	.sdecl	'.debug_info',debug,cluster('AppTask_100ms')
+	.sect	'.debug_info'
+.L57:
+	.word	386
+	.half	3
+	.word	.L58
+	.byte	4,1
+	.byte	'../AppTask.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L60,.L59
+	.byte	2
+	.word	.L43
+	.byte	3
+	.byte	'AppTask_100ms',0,1,160,1,6,1,1,1
+	.word	.L42,.L79,.L41
+	.byte	4
+	.word	.L42,.L79
+	.byte	4
+	.word	.L80,.L79
+	.byte	5
+	.byte	'irLeft',0,1,164,1,12
+	.word	.L81,.L82
+	.byte	5
+	.byte	'irRight',0,1,165,1,12
+	.word	.L81,.L83
+	.byte	5
+	.byte	'usDist',0,1,166,1,12
+	.word	.L81,.L84
+	.byte	5
+	.byte	'batMv',0,1,167,1,12
+	.word	.L81,.L85
+	.byte	5
+	.byte	'obstacle',0,1,168,1,12
+	.word	.L72,.L86
+	.byte	5
+	.byte	'str',0,1,169,1,10
+	.word	.L87,.L88
+	.byte	4
+	.word	.L89,.L33
+	.byte	5
+	.byte	'note',0,1,202,1,16
+	.word	.L81,.L90
+	.byte	0,0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('AppTask_100ms')
+	.sect	'.debug_abbrev'
+.L58:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('AppTask_100ms')
+	.sect	'.debug_line'
+.L59:
+	.word	.L192-.L191
+.L191:
+	.half	3
+	.word	.L194-.L193
+.L193:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../AppTask.c',0,0,0,0,0
+.L194:
+	.byte	5,6,7,0,5,2
+	.word	.L42
+	.byte	3,159,1,1,5,22,9
+	.half	.L110-.L42
+	.byte	3,2,1,5,47,9
+	.half	.L80-.L110
+	.byte	3,2,1,5,20,9
+	.half	.L111-.L80
+	.byte	1,5,48,9
+	.half	.L112-.L111
+	.byte	3,1,1,5,20,9
+	.half	.L114-.L112
+	.byte	1,5,51,9
+	.half	.L116-.L114
+	.byte	3,1,1,5,20,9
+	.half	.L115-.L116
+	.byte	1,5,41,9
+	.half	.L118-.L115
+	.byte	3,1,1,5,20,9
+	.half	.L117-.L118
+	.byte	1,5,48,9
+	.half	.L120-.L117
+	.byte	3,1,1,5,21,9
+	.half	.L119-.L120
+	.byte	1,5,24,9
+	.half	.L122-.L119
+	.byte	3,3,1,5,25,9
+	.half	.L121-.L122
+	.byte	3,1,1,9
+	.half	.L195-.L121
+	.byte	3,1,1,5,24,9
+	.half	.L124-.L195
+	.byte	3,1,1,5,25,9
+	.half	.L196-.L124
+	.byte	3,1,1,5,24,9
+	.half	.L197-.L196
+	.byte	3,1,1,5,25,9
+	.half	.L198-.L197
+	.byte	3,1,1,5,26,9
+	.half	.L199-.L198
+	.byte	3,1,1,5,24,9
+	.half	.L126-.L199
+	.byte	3,1,1,5,25,9
+	.half	.L200-.L126
+	.byte	3,1,1,5,24,9
+	.half	.L201-.L200
+	.byte	3,1,1,5,25,9
+	.half	.L202-.L201
+	.byte	3,1,1,9
+	.half	.L203-.L202
+	.byte	3,1,1,5,24,9
+	.half	.L128-.L203
+	.byte	3,1,1,5,25,9
+	.half	.L204-.L128
+	.byte	3,1,1,5,24,9
+	.half	.L205-.L204
+	.byte	3,1,1,5,25,9
+	.half	.L206-.L205
+	.byte	3,1,1,5,24,9
+	.half	.L207-.L206
+	.byte	3,1,1,9
+	.half	.L130-.L207
+	.byte	3,1,1,5,25,9
+	.half	.L208-.L130
+	.byte	3,1,1,5,24,9
+	.half	.L209-.L208
+	.byte	3,1,1,5,25,9
+	.half	.L210-.L209
+	.byte	3,1,1,5,35,9
+	.half	.L211-.L210
+	.byte	3,1,1,5,24,9
+	.half	.L132-.L211
+	.byte	3,1,1,5,25,9
+	.half	.L212-.L132
+	.byte	3,1,1,5,24,9
+	.half	.L213-.L212
+	.byte	3,1,1,5,25,9
+	.half	.L214-.L213
+	.byte	3,1,1,5,9,9
+	.half	.L215-.L214
+	.byte	3,3,1,5,34,7,9
+	.half	.L216-.L215
+	.byte	1,5,32,9
+	.half	.L113-.L216
+	.byte	1,5,38,7,9
+	.half	.L89-.L113
+	.byte	3,2,1,5,37,9
+	.half	.L217-.L89
+	.byte	1,5,23,9
+	.half	.L218-.L217
+	.byte	1,5,37,9
+	.half	.L219-.L218
+	.byte	1,5,9,9
+	.half	.L133-.L219
+	.byte	3,1,1,5,32,7,9
+	.half	.L220-.L133
+	.byte	3,1,1,5,37,9
+	.half	.L134-.L220
+	.byte	1,5,26,9
+	.half	.L31-.L134
+	.byte	3,2,1,5,9,9
+	.half	.L32-.L31
+	.byte	3,2,1,5,20,9
+	.half	.L221-.L32
+	.byte	1,5,13,9
+	.half	.L222-.L221
+	.byte	3,1,1,5,28,9
+	.half	.L223-.L222
+	.byte	1,5,9,9
+	.half	.L224-.L223
+	.byte	1,5,13,7,9
+	.half	.L225-.L224
+	.byte	3,1,1,5,27,9
+	.half	.L226-.L225
+	.byte	1,5,25,9
+	.half	.L227-.L226
+	.byte	1,5,9,9
+	.half	.L33-.L227
+	.byte	3,127,1,5,22,9
+	.half	.L29-.L33
+	.byte	3,5,1,5,9,9
+	.half	.L228-.L29
+	.byte	3,1,1,5,23,9
+	.half	.L229-.L228
+	.byte	1,5,21,9
+	.half	.L230-.L229
+	.byte	1,5,24,9
+	.half	.L34-.L230
+	.byte	3,3,1,5,1,9
+	.half	.L231-.L34
+	.byte	3,1,1,7,9
+	.half	.L61-.L231
+	.byte	0,1,1
+.L192:
+	.sdecl	'.debug_ranges',debug,cluster('AppTask_100ms')
+	.sect	'.debug_ranges'
+.L60:
+	.word	-1,.L42,0,.L61-.L42,0,0
+	.sdecl	'.debug_info',debug,cluster('Uint16ToStr')
+	.sect	'.debug_info'
+.L62:
+	.word	317
+	.half	3
+	.word	.L63
+	.byte	4,1
+	.byte	'../AppTask.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L65,.L64
+	.byte	2
+	.word	.L43
+	.byte	3
+	.byte	'Uint16ToStr',0,1,136,1,13,1,1
+	.word	.L40,.L91,.L39
+	.byte	4
+	.byte	'val',0,1,136,1,32
+	.word	.L81,.L92
+	.byte	4
+	.byte	'buf',0,1,136,1,43
+	.word	.L93,.L94
+	.byte	5
+	.word	.L40,.L91
+	.byte	6
+	.byte	'tmp',0,1,138,1,10
+	.word	.L95,.L96
+	.byte	6
+	.byte	'i',0,1,139,1,10
+	.word	.L97,.L98
+	.byte	5
+	.word	.L99,.L91
+	.byte	6
+	.byte	'j',0,1,154,1,9
+	.word	.L97,.L100
+	.byte	0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Uint16ToStr')
+	.sect	'.debug_abbrev'
+.L63:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3,8,58
+	.byte	15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Uint16ToStr')
+	.sect	'.debug_line'
+.L64:
+	.word	.L233-.L232
+.L232:
+	.half	3
+	.word	.L235-.L234
+.L234:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../AppTask.c',0,0,0,0,0
+.L235:
+	.byte	5,13,7,0,5,2
+	.word	.L40
+	.byte	3,135,1,1,5,12,9
+	.half	.L104-.L40
+	.byte	3,3,1,5,5,9
+	.half	.L105-.L104
+	.byte	3,2,1,5,18,7,9
+	.half	.L236-.L105
+	.byte	3,2,1,5,16,9
+	.half	.L237-.L236
+	.byte	1,5,18,9
+	.half	.L238-.L237
+	.byte	3,1,1,5,16,9
+	.half	.L239-.L238
+	.byte	1,5,9,9
+	.half	.L240-.L239
+	.byte	3,1,1,5,20,9
+	.half	.L23-.L240
+	.byte	3,3,1,5,12,9
+	.half	.L26-.L23
+	.byte	3,2,1,5,39,9
+	.half	.L241-.L26
+	.byte	1,5,37,9
+	.half	.L106-.L241
+	.byte	1,5,24,9
+	.half	.L107-.L106
+	.byte	1,5,18,9
+	.half	.L242-.L107
+	.byte	1,5,14,9
+	.half	.L243-.L242
+	.byte	1,5,16,9
+	.half	.L244-.L243
+	.byte	3,1,1,5,13,9
+	.half	.L108-.L244
+	.byte	1,5,20,9
+	.half	.L25-.L108
+	.byte	3,125,1,5,12,7,9
+	.half	.L99-.L25
+	.byte	3,7,1,5,22,9
+	.half	.L109-.L99
+	.byte	1,5,12,9
+	.half	.L28-.L109
+	.byte	3,1,1,5,24,9
+	.half	.L245-.L28
+	.byte	1,5,28,9
+	.half	.L246-.L245
+	.byte	1,5,21,9
+	.half	.L247-.L246
+	.byte	1,5,16,9
+	.half	.L248-.L247
+	.byte	1,5,25,9
+	.half	.L249-.L248
+	.byte	3,127,1,5,22,9
+	.half	.L27-.L249
+	.byte	1,5,8,7,9
+	.half	.L250-.L27
+	.byte	3,2,1,5,14,9
+	.half	.L251-.L250
+	.byte	1,5,12,9
+	.half	.L252-.L251
+	.byte	1,5,1,9
+	.half	.L24-.L252
+	.byte	3,1,1,7,9
+	.half	.L66-.L24
+	.byte	0,1,1
+.L233:
+	.sdecl	'.debug_ranges',debug,cluster('Uint16ToStr')
+	.sect	'.debug_ranges'
+.L65:
+	.word	-1,.L40,0,.L66-.L40,0,0
+	.sdecl	'.debug_info',debug,cluster('s_lowBatMelody')
+	.sect	'.debug_info'
+.L67:
+	.word	205
+	.half	3
+	.word	.L68
+	.byte	4,1
+	.byte	'../AppTask.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L43
+	.byte	3
+	.byte	's_lowBatMelody',0,13,41,21
+	.word	.L101
+	.byte	5,3
+	.word	s_lowBatMelody
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_lowBatMelody')
+	.sect	'.debug_abbrev'
+.L68:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('s_melodyIdx')
+	.sect	'.debug_info'
+.L69:
+	.word	202
+	.half	3
+	.word	.L70
+	.byte	4,1
+	.byte	'../AppTask.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L43
+	.byte	3
+	.byte	's_melodyIdx',0,13,57,14
+	.word	.L72
+	.byte	5,3
+	.word	s_melodyIdx
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_melodyIdx')
+	.sect	'.debug_abbrev'
+.L70:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_loc',debug,cluster('AppTask_100ms')
+	.sect	'.debug_loc'
+.L41:
+	.word	-1,.L42,0,.L110-.L42
+	.half	2
+	.byte	138,0
+	.word	.L110-.L42,.L79-.L42
+	.half	2
+	.byte	138,8
+	.word	.L79-.L42,.L79-.L42
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L85:
+	.word	-1,.L42,.L117-.L42,.L119-.L42
+	.half	1
+	.byte	82
+	.word	.L120-.L42,.L79-.L42
+	.half	1
+	.byte	90
+	.word	.L129-.L42,.L130-.L42
+	.half	1
+	.byte	84
+	.word	0,0
+.L82:
+	.word	-1,.L42,.L111-.L42,.L112-.L42
+	.half	1
+	.byte	82
+	.word	.L112-.L42,.L113-.L42
+	.half	1
+	.byte	95
+	.word	.L123-.L42,.L124-.L42
+	.half	1
+	.byte	84
+	.word	0,0
+.L83:
+	.word	-1,.L42,.L114-.L42,.L115-.L42
+	.half	1
+	.byte	82
+	.word	.L116-.L42,.L79-.L42
+	.half	1
+	.byte	88
+	.word	.L125-.L42,.L126-.L42
+	.half	1
+	.byte	84
+	.word	0,0
+.L90:
+	.word	-1,.L42,.L133-.L42,.L134-.L42
+	.half	1
+	.byte	84
+	.word	.L31-.L42,.L32-.L42
+	.half	1
+	.byte	84
+	.word	0,0
+.L86:
+	.word	-1,.L42,.L119-.L42,.L121-.L42
+	.half	1
+	.byte	82
+	.word	.L122-.L42,.L79-.L42
+	.half	1
+	.byte	91
+	.word	.L131-.L42,.L132-.L42
+	.half	1
+	.byte	84
+	.word	0,0
+.L88:
+	.word	-1,.L42,0,.L79-.L42
+	.half	2
+	.byte	145,120
+	.word	0,0
+.L84:
+	.word	-1,.L42,.L115-.L42,.L117-.L42
+	.half	1
+	.byte	82
+	.word	.L118-.L42,.L79-.L42
+	.half	1
+	.byte	89
+	.word	.L127-.L42,.L128-.L42
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('AppTask_10ms')
+	.sect	'.debug_loc'
+.L37:
+	.word	-1,.L38,0,.L74-.L38
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L78:
+	.word	0,0
+.L77:
+	.word	-1,.L38,.L103-.L38,.L12-.L38
+	.half	1
+	.byte	82
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('AppTask_1ms')
+	.sect	'.debug_loc'
+.L35:
+	.word	-1,.L36,0,.L102-.L36
+	.half	2
+	.byte	138,0
+	.word	.L102-.L36,.L71-.L36
+	.half	2
+	.byte	138,8
+	.word	.L71-.L36,.L71-.L36
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L73:
+	.word	-1,.L36,0,.L71-.L36
+	.half	2
+	.byte	145,120
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('Uint16ToStr')
+	.sect	'.debug_loc'
+.L39:
+	.word	-1,.L40,0,.L104-.L40
+	.half	2
+	.byte	138,0
+	.word	.L104-.L40,.L91-.L40
+	.half	2
+	.byte	138,8
+	.word	.L91-.L40,.L91-.L40
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L94:
+	.word	-1,.L40,0,.L91-.L40
+	.half	1
+	.byte	100
+	.word	0,0
+.L98:
+	.word	-1,.L40,.L105-.L40,.L91-.L40
+	.half	5
+	.byte	144,32,157,32,0
+	.word	0,0
+.L100:
+	.word	-1,.L40,.L109-.L40,.L24-.L40
+	.half	1
+	.byte	81
+	.word	0,0
+.L96:
+	.word	-1,.L40,0,.L91-.L40
+	.half	2
+	.byte	145,120
+	.word	0,0
+.L92:
+	.word	-1,.L40,0,.L26-.L40
+	.half	1
+	.byte	84
+	.word	.L106-.L40,.L107-.L40
+	.half	1
+	.byte	84
+	.word	.L108-.L40,.L99-.L40
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L253:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('AppTask_1ms')
+	.sect	'.debug_frame'
+	.word	36
+	.word	.L253,.L36,.L71-.L36
+	.byte	4
+	.word	(.L102-.L36)/2
+	.byte	19,8,22,26,3,19,138,8,4
+	.word	(.L71-.L102)/2
+	.byte	19,0,8,26,0,0
+	.sdecl	'.debug_frame',debug,cluster('AppTask_10ms')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L253,.L38,.L74-.L38
+	.sdecl	'.debug_frame',debug,cluster('Uint16ToStr')
+	.sect	'.debug_frame'
+	.word	44
+	.word	.L253,.L40,.L91-.L40
+	.byte	8,19,8,21,8,22,8,23,4
+	.word	(.L104-.L40)/2
+	.byte	19,8,22,26,3,19,138,8,4
+	.word	(.L91-.L104)/2
+	.byte	19,0,8,26,0,0
+	.sdecl	'.debug_frame',debug,cluster('AppTask_100ms')
+	.sect	'.debug_frame'
+	.word	36
+	.word	.L253,.L42,.L79-.L42
+	.byte	4
+	.word	(.L110-.L42)/2
+	.byte	19,8,22,26,3,19,138,8,4
+	.word	(.L79-.L110)/2
+	.byte	19,0,8,26,0,0
+	; Module end

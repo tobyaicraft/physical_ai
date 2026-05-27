@@ -1,0 +1,199 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+"../AppAutonomous.c" \
+"../AppMotorTest.c" \
+"../AppObstacle.c" \
+"../AppProtocol.c" \
+"../AppTask.c" \
+"../AppVehicle.c" \
+"../Cpu0_Main.c" \
+"../DrvAdc.c" \
+"../DrvBuzzer.c" \
+"../DrvDio.c" \
+"../DrvFlash.c" \
+"../DrvGtmTimer.c" \
+"../DrvIntc.c" \
+"../DrvMotor.c" \
+"../DrvMpu9250.c" \
+"../DrvPwm.c" \
+"../DrvSensorFusion.c" \
+"../DrvSpi.c" \
+"../DrvUart.c" \
+"../DrvUart1.c" \
+"../DrvUltrasonic.c" \
+"../Scheduler.c" 
+
+COMPILED_SRCS += \
+"AppAutonomous.src" \
+"AppMotorTest.src" \
+"AppObstacle.src" \
+"AppProtocol.src" \
+"AppTask.src" \
+"AppVehicle.src" \
+"Cpu0_Main.src" \
+"DrvAdc.src" \
+"DrvBuzzer.src" \
+"DrvDio.src" \
+"DrvFlash.src" \
+"DrvGtmTimer.src" \
+"DrvIntc.src" \
+"DrvMotor.src" \
+"DrvMpu9250.src" \
+"DrvPwm.src" \
+"DrvSensorFusion.src" \
+"DrvSpi.src" \
+"DrvUart.src" \
+"DrvUart1.src" \
+"DrvUltrasonic.src" \
+"Scheduler.src" 
+
+C_DEPS += \
+"./AppAutonomous.d" \
+"./AppMotorTest.d" \
+"./AppObstacle.d" \
+"./AppProtocol.d" \
+"./AppTask.d" \
+"./AppVehicle.d" \
+"./Cpu0_Main.d" \
+"./DrvAdc.d" \
+"./DrvBuzzer.d" \
+"./DrvDio.d" \
+"./DrvFlash.d" \
+"./DrvGtmTimer.d" \
+"./DrvIntc.d" \
+"./DrvMotor.d" \
+"./DrvMpu9250.d" \
+"./DrvPwm.d" \
+"./DrvSensorFusion.d" \
+"./DrvSpi.d" \
+"./DrvUart.d" \
+"./DrvUart1.d" \
+"./DrvUltrasonic.d" \
+"./Scheduler.d" 
+
+OBJS += \
+"AppAutonomous.o" \
+"AppMotorTest.o" \
+"AppObstacle.o" \
+"AppProtocol.o" \
+"AppTask.o" \
+"AppVehicle.o" \
+"Cpu0_Main.o" \
+"DrvAdc.o" \
+"DrvBuzzer.o" \
+"DrvDio.o" \
+"DrvFlash.o" \
+"DrvGtmTimer.o" \
+"DrvIntc.o" \
+"DrvMotor.o" \
+"DrvMpu9250.o" \
+"DrvPwm.o" \
+"DrvSensorFusion.o" \
+"DrvSpi.o" \
+"DrvUart.o" \
+"DrvUart1.o" \
+"DrvUltrasonic.o" \
+"Scheduler.o" 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+"AppAutonomous.src":"../AppAutonomous.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"AppAutonomous.o":"AppAutonomous.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"AppMotorTest.src":"../AppMotorTest.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"AppMotorTest.o":"AppMotorTest.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"AppObstacle.src":"../AppObstacle.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"AppObstacle.o":"AppObstacle.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"AppProtocol.src":"../AppProtocol.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"AppProtocol.o":"AppProtocol.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"AppTask.src":"../AppTask.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"AppTask.o":"AppTask.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"AppVehicle.src":"../AppVehicle.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"AppVehicle.o":"AppVehicle.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"Cpu0_Main.src":"../Cpu0_Main.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"Cpu0_Main.o":"Cpu0_Main.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"DrvAdc.src":"../DrvAdc.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"DrvAdc.o":"DrvAdc.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"DrvBuzzer.src":"../DrvBuzzer.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"DrvBuzzer.o":"DrvBuzzer.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"DrvDio.src":"../DrvDio.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"DrvDio.o":"DrvDio.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"DrvFlash.src":"../DrvFlash.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"DrvFlash.o":"DrvFlash.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"DrvGtmTimer.src":"../DrvGtmTimer.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"DrvGtmTimer.o":"DrvGtmTimer.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"DrvIntc.src":"../DrvIntc.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"DrvIntc.o":"DrvIntc.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"DrvMotor.src":"../DrvMotor.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"DrvMotor.o":"DrvMotor.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"DrvMpu9250.src":"../DrvMpu9250.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"DrvMpu9250.o":"DrvMpu9250.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"DrvPwm.src":"../DrvPwm.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"DrvPwm.o":"DrvPwm.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"DrvSensorFusion.src":"../DrvSensorFusion.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"DrvSensorFusion.o":"DrvSensorFusion.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"DrvSpi.src":"../DrvSpi.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"DrvSpi.o":"DrvSpi.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"DrvUart.src":"../DrvUart.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"DrvUart.o":"DrvUart.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"DrvUart1.src":"../DrvUart1.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"DrvUart1.o":"DrvUart1.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"DrvUltrasonic.src":"../DrvUltrasonic.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"DrvUltrasonic.o":"DrvUltrasonic.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+"Scheduler.src":"../Scheduler.c" "subdir.mk"
+	cctc -cs --dep-file="$*.d" --misrac-version=2012 -D__CPU__=tc23x "-fD:/01_WorkPlace/201_RC_Vehicle/ai_rc_vehicle/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc23x -Y0 -N0 -Z0 -o "$@" "$<"
+"Scheduler.o":"Scheduler.src" "subdir.mk"
+	astc -Og -Os --no-warnings= --error-limit=42 -o  "$@" "$<"
+
+clean: clean--2e-
+
+clean--2e-:
+	-$(RM) ./AppAutonomous.d ./AppAutonomous.o ./AppAutonomous.src ./AppMotorTest.d ./AppMotorTest.o ./AppMotorTest.src ./AppObstacle.d ./AppObstacle.o ./AppObstacle.src ./AppProtocol.d ./AppProtocol.o ./AppProtocol.src ./AppTask.d ./AppTask.o ./AppTask.src ./AppVehicle.d ./AppVehicle.o ./AppVehicle.src ./Cpu0_Main.d ./Cpu0_Main.o ./Cpu0_Main.src ./DrvAdc.d ./DrvAdc.o ./DrvAdc.src ./DrvBuzzer.d ./DrvBuzzer.o ./DrvBuzzer.src ./DrvDio.d ./DrvDio.o ./DrvDio.src ./DrvFlash.d ./DrvFlash.o ./DrvFlash.src ./DrvGtmTimer.d ./DrvGtmTimer.o ./DrvGtmTimer.src ./DrvIntc.d ./DrvIntc.o ./DrvIntc.src ./DrvMotor.d ./DrvMotor.o ./DrvMotor.src ./DrvMpu9250.d ./DrvMpu9250.o ./DrvMpu9250.src ./DrvPwm.d ./DrvPwm.o ./DrvPwm.src ./DrvSensorFusion.d ./DrvSensorFusion.o ./DrvSensorFusion.src ./DrvSpi.d ./DrvSpi.o ./DrvSpi.src ./DrvUart.d ./DrvUart.o ./DrvUart.src ./DrvUart1.d ./DrvUart1.o ./DrvUart1.src ./DrvUltrasonic.d ./DrvUltrasonic.o ./DrvUltrasonic.src ./Scheduler.d ./Scheduler.o ./Scheduler.src
+
+.PHONY: clean--2e-
+

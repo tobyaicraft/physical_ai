@@ -1,0 +1,28 @@
+DrvMpu9250.o :	../DrvMpu9250.c
+../DrvMpu9250.c :
+DrvMpu9250.o :	..\DrvMpu9250.h
+..\DrvMpu9250.h :
+DrvMpu9250.o :	"D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Ifx_Types.h"
+"D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Ifx_Types.h" :
+DrvMpu9250.o :	"D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\Libraries\\Infra\\Platform\Tricore\Compilers\Compilers.h"
+"D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\Libraries\\Infra\\Platform\Tricore\Compilers\Compilers.h" :
+DrvMpu9250.o :	"D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\Configurations\Ifx_Cfg.h"
+"D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\Configurations\Ifx_Cfg.h" :
+DrvMpu9250.o :	"D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h"
+"D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h" :
+DrvMpu9250.o :	"C:\Infineon\AURIX-Studio-1.10.28\tools\Compilers\Tasking_1.1r8\ctc\include\stddef.h"
+"C:\Infineon\AURIX-Studio-1.10.28\tools\Compilers\Tasking_1.1r8\ctc\include\stddef.h" :
+DrvMpu9250.o :	"D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Platform_Types.h"
+"D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Platform_Types.h" :
+DrvMpu9250.o :	"D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Ifx_TypesTasking.h"
+"D:\\01_WorkPlace\\201_RC_Vehicle\\ai_rc_vehicle\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Ifx_TypesTasking.h" :
+DrvMpu9250.o :	..\DrvSpi.h
+..\DrvSpi.h :
+DrvMpu9250.o :	..\DrvUart.h
+..\DrvUart.h :
+DrvMpu9250.o :	..\DrvUart1.h
+..\DrvUart1.h :
+DrvMpu9250.o :	"C:\Infineon\AURIX-Studio-1.10.28\tools\Compilers\Tasking_1.1r8\ctc\include\math.h"
+"C:\Infineon\AURIX-Studio-1.10.28\tools\Compilers\Tasking_1.1r8\ctc\include\math.h" :
+DrvMpu9250.o :	"C:\Infineon\AURIX-Studio-1.10.28\tools\Compilers\Tasking_1.1r8\ctc\include\typeinfo.h"
+"C:\Infineon\AURIX-Studio-1.10.28\tools\Compilers\Tasking_1.1r8\ctc\include\typeinfo.h" :
