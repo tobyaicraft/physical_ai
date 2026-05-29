@@ -11,17 +11,17 @@ static void delay_ms(uint32 ms)
 void AppMotorTest_Sequence(void)
 {
     /* 전진 2초 */
-    DrvMotor_SetDuty(MOTOR_FL, +50);
-    DrvMotor_SetDuty(MOTOR_FR, +50);
-    DrvMotor_SetDuty(MOTOR_RL, +50);
-    DrvMotor_SetDuty(MOTOR_RR, +50);
+    DrvMotor_SetDuty(MOTOR_FL, +100);
+    DrvMotor_SetDuty(MOTOR_FR, +100);
+    DrvMotor_SetDuty(MOTOR_RL, +100);
+    DrvMotor_SetDuty(MOTOR_RR, +100);
     delay_ms(2000);
 
     /* 역회전 2초 */
-    DrvMotor_SetDuty(MOTOR_FL, -50);
-    DrvMotor_SetDuty(MOTOR_FR, -50);
-    DrvMotor_SetDuty(MOTOR_RL, -50);
-    DrvMotor_SetDuty(MOTOR_RR, -50);
+    DrvMotor_SetDuty(MOTOR_FL, -100);
+    DrvMotor_SetDuty(MOTOR_FR, -100);
+    DrvMotor_SetDuty(MOTOR_RL, -100);
+    DrvMotor_SetDuty(MOTOR_RR, -100);
     delay_ms(2000);
 
     /* 제동 2초 */

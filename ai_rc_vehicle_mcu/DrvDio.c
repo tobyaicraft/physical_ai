@@ -84,12 +84,12 @@ void DrvDio_SetMotorFR(MotorDirection dir)
     switch (dir)
     {
     case MOTOR_FORWARD:
-        IfxPort_setPinLow(&MODULE_P33, 1);
-        IfxPort_setPinHigh(&MODULE_P33, 12);
-        break;
-    case MOTOR_REVERSE:
         IfxPort_setPinHigh(&MODULE_P33, 1);
         IfxPort_setPinLow(&MODULE_P33, 12);
+        break;
+    case MOTOR_REVERSE:
+        IfxPort_setPinLow(&MODULE_P33, 1);
+        IfxPort_setPinHigh(&MODULE_P33, 12);
         break;
     case MOTOR_BRAKE:
         IfxPort_setPinHigh(&MODULE_P33, 1);
@@ -108,12 +108,12 @@ void DrvDio_SetMotorRL(MotorDirection dir)
     switch (dir)
     {
     case MOTOR_FORWARD:
-        IfxPort_setPinLow(&MODULE_P00, 0);
-        IfxPort_setPinHigh(&MODULE_P00, 1);
-        break;
-    case MOTOR_REVERSE:
         IfxPort_setPinHigh(&MODULE_P00, 0);
         IfxPort_setPinLow(&MODULE_P00, 1);
+        break;
+    case MOTOR_REVERSE:
+        IfxPort_setPinLow(&MODULE_P00, 0);
+        IfxPort_setPinHigh(&MODULE_P00, 1);
         break;
     case MOTOR_BRAKE:
         IfxPort_setPinHigh(&MODULE_P00, 0);
