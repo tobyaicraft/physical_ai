@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.rt.hightec.agent.launcher.launchConfigurationType">
+    <stringAttribute key="ACC_HW" value="DAS JDS Application Kit TC237 V1.1 AKE2LYN"/>
+    <booleanAttribute key="ENABLE_AGENTLOG" value="false"/>
+    <booleanAttribute key="ENABLE_FLASHING" value="true"/>
+    <booleanAttribute key="ENABLE_STOPPING" value="true"/>
+    <stringAttribute key="EXECUTABLE_PATH" value="${workspace_loc}/ai_rc_vehicle_mcu/TriCore Debug (TASKING)/ai_rc_vehicle_mcu.elf"/>
+    <stringAttribute key="STOP_FUNCTION" value="core0_main"/>
+    <stringAttribute key="SVD" value="C:/Infineon/AURIX-Studio-1.10.28/build_system/bundled-artefacts-repo/svd/tc23xpd/1.1-2/device.svd"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="ai_rc_vehicle_mcu"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/ai_rc_vehicle_mcu"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="4"/>
+    </listAttribute>
+    <stringAttribute key="org.eclipse.debug.ui.ATTR_LOCATION" value="/ai_rc_vehicle_mcu/ai_rc_vehicle_mcu TriCore Debug (TASKING).launch"/>
+    <stringAttribute key="org.eclipse.debug.ui.ATTR_PROJECT_NAME" value="ai_rc_vehicle_mcu"/>
+    <booleanAttribute key="org.eclipse.debug.ui.ATTR_SHARED" value="true"/>
+    <stringAttribute key="org.eclipse.tcf.debug.MemoryMap" value="[{&quot;FileName&quot;:&quot;D:/01_WorkPlace/230_Physical_AI/physical_ai/ai_rc_vehicle_mcu/TriCore Debug (TASKING)/ai_rc_vehicle_mcu.elf&quot;,&quot;ID&quot;:&quot;/DAS JDS Application Kit TC237 V1.1 AKE2LYN/Core 0: CPU0 TriCore 1.6E&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;3a4d0e83-d206-46e3-a5a4-dd1ef7f0f5e3&quot;},{&quot;FileName&quot;:&quot;D:/01_WorkPlace/230_Physical_AI/physical_ai/ai_rc_vehicle_mcu/TriCore Debug (TASKING)/ai_rc_vehicle_mcu.elf&quot;,&quot;ID&quot;:&quot;/DAS JDS Application Kit TC237 V1.1 AKE2LYN/Core 0: CPU0 TriCore 1.6E&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;1cc480eb-b46c-4916-8965-4d08a7d5276c&quot;}]"/>
+    <stringAttribute key="org.eclipse.tcf.debug.PeerID" value="TCP:127.0.0.1:1534"/>
+    <stringAttribute key="org.eclipse.tcf.debug.ProjectName" value="ai_rc_vehicle_mcu"/>
+    <booleanAttribute key="org.eclipse.tcf.debug.RunLocalAgent" value="false"/>
+    <booleanAttribute key="org.eclipse.tcf.debug.RunLocalServer" value="false"/>
+    <booleanAttribute key="org.eclipse.tcf.debug.UseLocalAgent" value="false"/>
+    <stringAttribute key="org.eclipse.tcf.debug.executable_name" value="${workspace_loc}/ai_rc_vehicle_mcu/TriCore Debug (TASKING)/ai_rc_vehicle_mcu.elf"/>
+    <stringAttribute key="sessionID" value="280e0d83-245c-4b14-9ba7-4392304f99de"/>
+</launchConfiguration>

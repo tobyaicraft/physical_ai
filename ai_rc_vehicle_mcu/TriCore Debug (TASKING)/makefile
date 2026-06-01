@@ -73,44 +73,44 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := ai_rc_vehicle
+BUILD_ARTIFACT_NAME := ai_rc_vehicle_mcu
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 SECONDARY_SIZE += \
-ai_rc_vehicle.siz \
+ai_rc_vehicle_mcu.siz \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: ai_rc_vehicle.elf secondary-outputs
+main-build: ai_rc_vehicle_mcu.elf secondary-outputs
 
 # Tool invocations
-ai_rc_vehicle.elf: $(OBJS) makefile $(OPTIONAL_TOOL_DEPS) .ai_rc_vehicle.elf.opt
+ai_rc_vehicle_mcu.elf: $(OBJS) makefile $(OPTIONAL_TOOL_DEPS) .ai_rc_vehicle_mcu.elf.opt
 	@echo 'Building target: $@'
 	@echo 'Invoking: TASKING Linker'
-	cctc -f .ai_rc_vehicle.elf.opt
+	cctc -f .ai_rc_vehicle_mcu.elf.opt
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-.ai_rc_vehicle.elf.opt:
-	@argfile .ai_rc_vehicle.elf.opt --lsl-file="../Lcf_Tasking_Tricore_Tc.lsl" -Wl-Oc -Wl-OL -Wl-Ot -Wl-Ox -Wl-Oy -Wl--map-file="ai_rc_vehicle.map" -Wl-mc -Wl-mf -Wl-mi -Wl-mk -Wl-ml -Wl-mm -Wl-md -Wl-mr -Wl-mu --no-warnings= -Wl--error-limit=42 --fp-model=3 -lrt --lsl-core=vtc --exceptions --strict --anachronisms --force-c++ -Ctc23x -o"ai_rc_vehicle.elf" -Wl-o"ai_rc_vehicle.hex:IHEX" $(OBJS)
+.ai_rc_vehicle_mcu.elf.opt:
+	@argfile .ai_rc_vehicle_mcu.elf.opt --lsl-file="../Lcf_Tasking_Tricore_Tc.lsl" -Wl-Oc -Wl-OL -Wl-Ot -Wl-Ox -Wl-Oy -Wl--map-file="ai_rc_vehicle_mcu.map" -Wl-mc -Wl-mf -Wl-mi -Wl-mk -Wl-ml -Wl-mm -Wl-md -Wl-mr -Wl-mu --no-warnings= -Wl--error-limit=42 --fp-model=3 -lrt --lsl-core=vtc --exceptions --strict --anachronisms --force-c++ -Ctc23x -o"ai_rc_vehicle_mcu.elf" -Wl-o"ai_rc_vehicle_mcu.hex:IHEX" $(OBJS)
 
-.PHONY: .ai_rc_vehicle.elf.opt
+.PHONY: .ai_rc_vehicle_mcu.elf.opt
 
-ai_rc_vehicle.siz: ai_rc_vehicle.elf makefile $(OPTIONAL_TOOL_DEPS)
+ai_rc_vehicle_mcu.siz: ai_rc_vehicle_mcu.elf makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Invoking: Print Size'
-	elfsize  "ai_rc_vehicle.elf"
+	elfsize  "ai_rc_vehicle_mcu.elf"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) ai_rc_vehicle.siz ai_rc_vehicle.elf
+	-$(RM) ai_rc_vehicle_mcu.siz ai_rc_vehicle_mcu.elf
 	-@echo ' '
 
 secondary-outputs: $(SECONDARY_SIZE)
