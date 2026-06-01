@@ -1,0 +1,22 @@
+# 영상 파일
+*.mp4
+
+# 가상환경
+store/06_fine_tune/venv_train/
+
+# 이미지 데이터셋 (용량 큰 이미지들)
+store/05_dataset/images/
+store/05_dataset/preview/
+store/06_fine_tune/my_cat/images/
+
+# SSH 키
+ssh-copy-id*
+
+# Python 캐시
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db

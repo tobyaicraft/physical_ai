@@ -1,0 +1,6 @@
+path: D:/01_WorkPlace/202_Pysical_AI/physical_ai/store/06_fine_tune/my_cat
+train: images/train
+val:   images/val
+nc: 1
+names:
+  0: russian_blue
