@@ -1,0 +1,1099 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc31664a --dep-file=AppAutonomous.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc23x -D__CPU_TC23X__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc23x -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Configurations -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr\\\\TC23A -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr\\\\TC23A\\\\_Reg -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\CStart -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Trap -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Flash -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Flash\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom\\\\Timer -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Port -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Port\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Scu -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Scu\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Src -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Src\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Stm -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Stm\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc\\\\Adc -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Impl -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Lib -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o AppAutonomous.src ../AppAutonomous.c"
+	.compiler_name		"ctc"
+	;source	'../AppAutonomous.c'
+
+	
+$TC16X
+	
+	.sdecl	'.text.AppAutonomous.enterState',code,cluster('enterState')
+	.sect	'.text.AppAutonomous.enterState'
+	.align	2
+	
+; Function enterState
+.L30:
+enterState:	.type	func
+	movh.a	a15,#@his(s_state)
+	lea	a15,[a15]@los(s_state)
+.L188:
+	st.b	[a15],d4
+.L189:
+	movh.a	a15,#@his(s_stateStartMs)
+	lea	a15,[a15]@los(s_stateStartMs)
+.L190:
+	movh.a	a2,#@his(g_1ms_counter)
+	lea	a2,[a2]@los(g_1ms_counter)
+	ld.w	d15,[a2]
+.L191:
+	st.w	[a15],d15
+.L192:
+	ret
+.L76:
+	
+__enterState_function_end:
+	.size	enterState,__enterState_function_end-enterState
+.L60:
+	; End of function
+	
+	.sdecl	'.text.AppAutonomous.AppAutonomous_Start',code,cluster('AppAutonomous_Start')
+	.sect	'.text.AppAutonomous.AppAutonomous_Start'
+	.align	2
+	
+	.global	AppAutonomous_Start
+; Function AppAutonomous_Start
+.L32:
+AppAutonomous_Start:	.type	func
+	movh.a	a15,#@his(g_vehicleSpeed)
+	lea	a15,[a15]@los(g_vehicleSpeed)
+.L96:
+	movh	d15,#17008
+.L97:
+	st.w	[a15],d15
+.L98:
+	mov	d4,#1
+	call	enterState
+.L99:
+	ret
+.L65:
+	
+__AppAutonomous_Start_function_end:
+	.size	AppAutonomous_Start,__AppAutonomous_Start_function_end-AppAutonomous_Start
+.L45:
+	; End of function
+	
+	.sdecl	'.text.AppAutonomous.AppAutonomous_Stop',code,cluster('AppAutonomous_Stop')
+	.sect	'.text.AppAutonomous.AppAutonomous_Stop'
+	.align	2
+	
+	.global	AppAutonomous_Stop
+; Function AppAutonomous_Stop
+.L34:
+AppAutonomous_Stop:	.type	func
+	movh.a	a15,#@his(g_vehicleCmd)
+	lea	a15,[a15]@los(g_vehicleCmd)
+.L104:
+	mov	d15,#0
+.L105:
+	st.b	[a15],d15
+.L106:
+	mov	d4,#0
+	call	enterState
+.L107:
+	ret
+.L66:
+	
+__AppAutonomous_Stop_function_end:
+	.size	AppAutonomous_Stop,__AppAutonomous_Stop_function_end-AppAutonomous_Stop
+.L50:
+	; End of function
+	
+	.sdecl	'.text.AppAutonomous.AppAutonomous_Update',code,cluster('AppAutonomous_Update')
+	.sect	'.text.AppAutonomous.AppAutonomous_Update'
+	.align	2
+	
+	.global	AppAutonomous_Update
+; Function AppAutonomous_Update
+.L36:
+AppAutonomous_Update:	.type	func
+	movh.a	a15,#@his(g_1ms_counter)
+	lea	a15,[a15]@los(g_1ms_counter)
+	ld.w	d8,[a15]
+.L112:
+	movh.a	a15,#@his(s_stateStartMs)
+	lea	a15,[a15]@los(s_stateStartMs)
+	ld.w	d15,[a15]
+.L79:
+	sub	d8,d15
+.L113:
+	call	AppObstacle_Detect
+.L80:
+	movh.a	a15,#@his(s_state)
+	lea	a15,[a15]@los(s_state)
+	ld.bu	d0,[a15]
+.L114:
+	mov	d15,#0
+	jeq	d15,d0,.L2
+.L115:
+	mov	d15,#1
+	jeq	d15,d0,.L3
+.L116:
+	mov	d15,#2
+	jeq	d15,d0,.L4
+.L117:
+	mov	d15,#3
+	jeq	d15,d0,.L5
+.L118:
+	mov	d15,#4
+	jeq	d15,d0,.L6
+.L119:
+	mov	d15,#5
+	jeq	d15,d0,.L7
+.L120:
+	mov	d15,#6
+	jeq	d15,d0,.L8
+	j	.L9
+.L2:
+	movh.a	a15,#@his(g_vehicleCmd)
+	lea	a15,[a15]@los(g_vehicleCmd)
+.L121:
+	mov	d15,#0
+.L122:
+	st.b	[a15],d15
+.L123:
+	j	.L10
+.L3:
+	movh.a	a15,#@his(g_vehicleSpeed)
+	lea	a15,[a15]@los(g_vehicleSpeed)
+.L124:
+	movh	d15,#17008
+.L125:
+	st.w	[a15],d15
+.L126:
+	movh.a	a15,#@his(g_vehicleCmd)
+	lea	a15,[a15]@los(g_vehicleCmd)
+.L127:
+	mov	d15,#1
+.L128:
+	st.b	[a15],d15
+.L129:
+	jeq	d2,#1,.L11
+.L130:
+	jne	d2,#4,.L12
+.L11:
+	movh.a	a15,#@his(g_vehicleCmd)
+	lea	a15,[a15]@los(g_vehicleCmd)
+.L131:
+	mov	d15,#0
+.L132:
+	st.b	[a15],d15
+.L133:
+	mov	d4,#2
+	call	enterState
+.L12:
+	j	.L13
+.L4:
+	movh.a	a15,#@his(g_vehicleSpeed)
+	lea	a15,[a15]@los(g_vehicleSpeed)
+.L134:
+	movh	d15,#17008
+.L135:
+	st.w	[a15],d15
+.L136:
+	movh.a	a15,#@his(g_vehicleCmd)
+	lea	a15,[a15]@los(g_vehicleCmd)
+.L137:
+	mov	d15,#2
+.L138:
+	st.b	[a15],d15
+.L139:
+	mov	d15,#600
+.L140:
+	jlt.u	d8,d15,.L14
+.L141:
+	movh.a	a15,#@his(g_vehicleCmd)
+	lea	a15,[a15]@los(g_vehicleCmd)
+.L142:
+	mov	d15,#0
+.L143:
+	st.b	[a15],d15
+.L144:
+	mov	d4,#3
+	call	enterState
+.L14:
+	j	.L15
+.L5:
+	movh.a	a15,#@his(g_vehicleCmd)
+	lea	a15,[a15]@los(g_vehicleCmd)
+.L145:
+	mov	d15,#0
+.L146:
+	st.b	[a15],d15
+.L147:
+	mov	d15,#100
+.L148:
+	jlt.u	d8,d15,.L16
+.L72:
+	call	DrvSensorFusion_GetIrLeft
+.L81:
+	mov	d15,d2
+.L83:
+	call	DrvSensorFusion_GetIrRight
+.L82:
+	movh.a	a15,#@his(g_vehicleSpeed)
+	lea	a15,[a15]@los(g_vehicleSpeed)
+.L149:
+	movh	d0,#17096
+.L150:
+	st.w	[a15],d0
+.L151:
+	jlt.u	d2,d15,.L17
+.L152:
+	mov	d15,#5
+.L84:
+	j	.L18
+.L17:
+	mov	d15,#6
+.L18:
+	movh.a	a15,#@his(g_vehicleCmd)
+	lea	a15,[a15]@los(g_vehicleCmd)
+.L153:
+	st.b	[a15],d15
+.L154:
+	mov	d4,#4
+	call	enterState
+.L16:
+	j	.L19
+.L6:
+	call	AppVehicle_IsTurning
+.L85:
+	jne	d2,#0,.L20
+.L155:
+	movh.a	a15,#@his(g_vehicleSpeed)
+	lea	a15,[a15]@los(g_vehicleSpeed)
+.L156:
+	movh	d15,#17008
+.L157:
+	st.w	[a15],d15
+.L158:
+	movh.a	a15,#@his(g_vehicleCmd)
+	lea	a15,[a15]@los(g_vehicleCmd)
+.L159:
+	mov	d15,#1
+.L160:
+	st.b	[a15],d15
+.L161:
+	mov	d4,#5
+	call	enterState
+.L20:
+	j	.L21
+.L7:
+	movh.a	a15,#@his(g_vehicleSpeed)
+	lea	a15,[a15]@los(g_vehicleSpeed)
+.L162:
+	movh	d15,#17008
+.L163:
+	st.w	[a15],d15
+.L164:
+	movh.a	a15,#@his(g_vehicleCmd)
+	lea	a15,[a15]@los(g_vehicleCmd)
+.L165:
+	mov	d15,#1
+.L166:
+	st.b	[a15],d15
+.L167:
+	jeq	d2,#1,.L22
+.L168:
+	jne	d2,#4,.L23
+.L22:
+	movh.a	a15,#@his(g_vehicleCmd)
+	lea	a15,[a15]@los(g_vehicleCmd)
+.L169:
+	mov	d15,#0
+.L170:
+	st.b	[a15],d15
+.L171:
+	mov	d4,#2
+	call	enterState
+.L86:
+	j	.L24
+.L23:
+	mov	d15,#1000
+.L172:
+	jlt.u	d8,d15,.L25
+.L173:
+	movh.a	a15,#@his(g_vehicleSpeed)
+	lea	a15,[a15]@los(g_vehicleSpeed)
+.L174:
+	movh	d15,#17096
+.L175:
+	st.w	[a15],d15
+.L176:
+	movh.a	a15,#@his(g_vehicleCmd)
+	lea	a15,[a15]@los(g_vehicleCmd)
+.L177:
+	mov	d15,#7
+.L178:
+	st.b	[a15],d15
+.L179:
+	mov	d4,#6
+	call	enterState
+.L25:
+	j	.L26
+.L8:
+	call	AppVehicle_IsTurning
+.L87:
+	jne	d2,#0,.L27
+.L180:
+	movh.a	a15,#@his(g_vehicleSpeed)
+	lea	a15,[a15]@los(g_vehicleSpeed)
+.L181:
+	movh	d15,#17008
+.L182:
+	st.w	[a15],d15
+.L183:
+	mov	d4,#1
+	call	enterState
+.L27:
+	j	.L28
+.L9:
+.L28:
+.L26:
+.L24:
+.L21:
+.L19:
+.L15:
+.L13:
+.L10:
+	ret
+.L67:
+	
+__AppAutonomous_Update_function_end:
+	.size	AppAutonomous_Update,__AppAutonomous_Update_function_end-AppAutonomous_Update
+.L55:
+	; End of function
+	
+	.sdecl	'.data.AppAutonomous.s_state',data,cluster('s_state')
+	.sect	'.data.AppAutonomous.s_state'
+s_state:	.type	object
+	.size	s_state,1
+	.space	1
+	.sdecl	'.data.AppAutonomous.s_stateStartMs',data,cluster('s_stateStartMs')
+	.sect	'.data.AppAutonomous.s_stateStartMs'
+	.align	2
+s_stateStartMs:	.type	object
+	.size	s_stateStartMs,4
+	.space	4
+	.calls	'AppAutonomous_Start','enterState'
+	.calls	'AppAutonomous_Stop','enterState'
+	.calls	'AppAutonomous_Update','AppObstacle_Detect'
+	.calls	'AppAutonomous_Update','enterState'
+	.calls	'AppAutonomous_Update','DrvSensorFusion_GetIrLeft'
+	.calls	'AppAutonomous_Update','DrvSensorFusion_GetIrRight'
+	.calls	'AppAutonomous_Update','AppVehicle_IsTurning'
+	.calls	'enterState','',0
+	.calls	'AppAutonomous_Start','',0
+	.calls	'AppAutonomous_Stop','',0
+	.extern	g_vehicleCmd
+	.extern	g_vehicleSpeed
+	.extern	AppVehicle_IsTurning
+	.extern	AppObstacle_Detect
+	.extern	DrvSensorFusion_GetIrLeft
+	.extern	DrvSensorFusion_GetIrRight
+	.extern	g_1ms_counter
+	.calls	'AppAutonomous_Update','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L38:
+	.word	1043
+	.half	3
+	.word	.L39
+	.byte	4
+.L37:
+	.byte	1
+	.byte	'../AppAutonomous.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L40
+.L68:
+	.byte	2
+	.byte	'unsigned long int',0,4,7
+.L70:
+	.byte	3,1,20,9,1,4
+	.byte	'OBSTACLE_NONE',0,0,4
+	.byte	'OBSTACLE_FRONT',0,1,4
+	.byte	'OBSTACLE_LEFT',0,2,4
+	.byte	'OBSTACLE_RIGHT',0,3,4
+	.byte	'OBSTACLE_BOTH_SIDES',0,4,0
+.L73:
+	.byte	2
+	.byte	'unsigned short int',0,2,7,2
+	.byte	'unsigned char',0,1,8,5
+	.byte	'AppVehicle_IsTurning',0,2,30,9
+	.word	337
+	.byte	1,1,1,1,5
+	.byte	'AppObstacle_Detect',0,1,29,16
+	.word	221
+	.byte	1,1,1,1,5
+	.byte	'DrvSensorFusion_GetIrLeft',0,3,28,8
+	.word	315
+	.byte	1,1,1,1,5
+	.byte	'DrvSensorFusion_GetIrRight',0,3,29,8
+	.word	315
+	.byte	1,1,1,1
+.L77:
+	.byte	3,4,34,9,1,4
+	.byte	'AUTO_IDLE',0,0,4
+	.byte	'AUTO_FORWARD',0,1,4
+	.byte	'AUTO_BACKWARD',0,2,4
+	.byte	'AUTO_PAUSE',0,3,4
+	.byte	'AUTO_TURNING',0,4,4
+	.byte	'AUTO_BYPASS_FORWARD',0,5,4
+	.byte	'AUTO_YAW_RETURN',0,6,0,2
+	.byte	'short int',0,2,5,6
+	.byte	'__wchar_t',0,4,1,1
+	.word	612
+	.byte	2
+	.byte	'unsigned int',0,4,7,6
+	.byte	'__size_t',0,4,1,1
+	.word	643
+	.byte	2
+	.byte	'int',0,4,5,6
+	.byte	'__ptrdiff_t',0,4,1,1
+	.word	676
+	.byte	7,1,8
+	.word	703
+	.byte	6
+	.byte	'__codeptr',0,4,1,1
+	.word	705
+	.byte	6
+	.byte	'boolean',0,5,104,29
+	.word	337
+	.byte	6
+	.byte	'uint8',0,5,108,29
+	.word	337
+	.byte	6
+	.byte	'uint16',0,5,112,29
+	.word	315
+	.byte	6
+	.byte	'uint32',0,5,116,29
+	.word	200
+	.byte	6
+	.byte	'sint16',0,5,129,1,29
+	.word	612
+	.byte	2
+	.byte	'long int',0,4,5,6
+	.byte	'sint32',0,5,134,1,29
+	.word	804
+	.byte	2
+	.byte	'long long int',0,8,5,6
+	.byte	'sint64',0,5,141,1,29
+	.word	832
+	.byte	2
+	.byte	'float',0,4,4,6
+	.byte	'float32',0,5,170,1,29
+	.word	865
+	.byte	9
+	.byte	'void',0,8
+	.word	891
+	.byte	6
+	.byte	'pvoid',0,6,54,28
+	.word	897
+	.byte	10
+	.word	337
+	.byte	11
+	.byte	'g_vehicleCmd',0,2,25,25
+	.word	916
+	.byte	1,1,10
+	.word	865
+	.byte	11
+	.byte	'g_vehicleSpeed',0,2,26,25
+	.word	944
+	.byte	1,1,6
+	.byte	'ObstacleType_t',0,1,27,3
+	.word	221
+	.byte	10
+	.word	200
+	.byte	11
+	.byte	'g_1ms_counter',0,7,21,24
+	.word	997
+	.byte	1,1,6
+	.byte	'AutoState_t',0,4,43,3
+	.word	495
+	.byte	0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L39:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,4,1,58,15,59,15,57,15,11,15
+	.byte	0,0,4,40,0,3,8,28,13,0,0,5,46,0,3,8,58,15,59,15,57,15,73,19,54,15,39,12,63,12,60,12,0,0,6,22,0,3,8,58
+	.byte	15,59,15,57,15,73,19,0,0,7,21,0,54,15,0,0,8,15,0,73,19,0,0,9,59,0,3,8,0,0,10,53,0,73,19,0,0,11,52,0,3
+	.byte	8,58,15,59,15,57,15,73,19,63,12,60,12,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L40:
+	.word	.L89-.L88
+.L88:
+	.half	3
+	.word	.L91-.L90
+.L90:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'D:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Std',0
+	.byte	0
+	.byte	'..\\AppObstacle.h',0,0,0,0
+	.byte	'..\\AppVehicle.h',0,0,0,0
+	.byte	'..\\DrvSensorFusion.h',0,0,0,0
+	.byte	'../AppAutonomous.c',0,0,0,0
+	.byte	'Platform_Types.h',0,1,0,0
+	.byte	'Ifx_Types.h',0,1,0,0
+	.byte	'..\\DrvGtmTimer.h',0,0,0,0,0
+.L91:
+.L89:
+	.sdecl	'.debug_info',debug,cluster('AppAutonomous_Start')
+	.sect	'.debug_info'
+.L41:
+	.word	255
+	.half	3
+	.word	.L42
+	.byte	4,1
+	.byte	'../AppAutonomous.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L44,.L43
+	.byte	2
+	.word	.L37
+	.byte	3
+	.byte	'AppAutonomous_Start',0,1,57,6,1,1,1
+	.word	.L32,.L65,.L31
+	.byte	4
+	.word	.L32,.L65
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('AppAutonomous_Start')
+	.sect	'.debug_abbrev'
+.L42:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('AppAutonomous_Start')
+	.sect	'.debug_line'
+.L43:
+	.word	.L93-.L92
+.L92:
+	.half	3
+	.word	.L95-.L94
+.L94:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../AppAutonomous.c',0,0,0,0,0
+.L95:
+	.byte	5,5,7,0,5,2
+	.word	.L32
+	.byte	3,58,1,5,22,9
+	.half	.L96-.L32
+	.byte	1,5,20,9
+	.half	.L97-.L96
+	.byte	1,5,16,9
+	.half	.L98-.L97
+	.byte	3,1,1,5,1,9
+	.half	.L99-.L98
+	.byte	3,1,1,7,9
+	.half	.L45-.L99
+	.byte	0,1,1
+.L93:
+	.sdecl	'.debug_ranges',debug,cluster('AppAutonomous_Start')
+	.sect	'.debug_ranges'
+.L44:
+	.word	-1,.L32,0,.L45-.L32,0,0
+	.sdecl	'.debug_info',debug,cluster('AppAutonomous_Stop')
+	.sect	'.debug_info'
+.L46:
+	.word	254
+	.half	3
+	.word	.L47
+	.byte	4,1
+	.byte	'../AppAutonomous.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L49,.L48
+	.byte	2
+	.word	.L37
+	.byte	3
+	.byte	'AppAutonomous_Stop',0,1,63,6,1,1,1
+	.word	.L34,.L66,.L33
+	.byte	4
+	.word	.L34,.L66
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('AppAutonomous_Stop')
+	.sect	'.debug_abbrev'
+.L47:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('AppAutonomous_Stop')
+	.sect	'.debug_line'
+.L48:
+	.word	.L101-.L100
+.L100:
+	.half	3
+	.word	.L103-.L102
+.L102:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../AppAutonomous.c',0,0,0,0,0
+.L103:
+	.byte	5,5,7,0,5,2
+	.word	.L34
+	.byte	3,192,0,1,5,20,9
+	.half	.L104-.L34
+	.byte	1,5,18,9
+	.half	.L105-.L104
+	.byte	1,5,16,9
+	.half	.L106-.L105
+	.byte	3,1,1,5,1,9
+	.half	.L107-.L106
+	.byte	3,1,1,7,9
+	.half	.L50-.L107
+	.byte	0,1,1
+.L101:
+	.sdecl	'.debug_ranges',debug,cluster('AppAutonomous_Stop')
+	.sect	'.debug_ranges'
+.L49:
+	.word	-1,.L34,0,.L50-.L34,0,0
+	.sdecl	'.debug_info',debug,cluster('AppAutonomous_Update')
+	.sect	'.debug_info'
+.L51:
+	.word	342
+	.half	3
+	.word	.L52
+	.byte	4,1
+	.byte	'../AppAutonomous.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L54,.L53
+	.byte	2
+	.word	.L37
+	.byte	3
+	.byte	'AppAutonomous_Update',0,1,69,6,1,1,1
+	.word	.L36,.L67,.L35
+	.byte	4
+	.word	.L36,.L67
+	.byte	5
+	.byte	'elapsed',0,1,71,20
+	.word	.L68,.L69
+	.byte	5
+	.byte	'obs',0,1,72,20
+	.word	.L70,.L71
+	.byte	4
+	.word	.L72,.L16
+	.byte	5
+	.byte	'irLeft',0,1,112,20
+	.word	.L73,.L74
+	.byte	5
+	.byte	'irRight',0,1,113,20
+	.word	.L73,.L75
+	.byte	0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('AppAutonomous_Update')
+	.sect	'.debug_abbrev'
+.L52:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('AppAutonomous_Update')
+	.sect	'.debug_line'
+.L53:
+	.word	.L109-.L108
+.L108:
+	.half	3
+	.word	.L111-.L110
+.L110:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../AppAutonomous.c',0,0,0,0,0
+.L111:
+	.byte	5,30,7,0,5,2
+	.word	.L36
+	.byte	3,198,0,1,5,46,9
+	.half	.L112-.L36
+	.byte	1,5,44,9
+	.half	.L79-.L112
+	.byte	1,5,48,9
+	.half	.L113-.L79
+	.byte	3,1,1,5,13,9
+	.half	.L80-.L113
+	.byte	3,2,1,5,10,9
+	.half	.L114-.L80
+	.byte	3,3,1,9
+	.half	.L115-.L114
+	.byte	3,5,1,9
+	.half	.L116-.L115
+	.byte	3,12,1,9
+	.half	.L117-.L116
+	.byte	3,12,1,9
+	.half	.L118-.L117
+	.byte	3,17,1,9
+	.half	.L119-.L118
+	.byte	3,11,1,9
+	.half	.L120-.L119
+	.byte	3,22,1,5,9,9
+	.half	.L2-.L120
+	.byte	3,178,127,1,5,24,9
+	.half	.L121-.L2
+	.byte	1,5,22,9
+	.half	.L122-.L121
+	.byte	1,5,9,9
+	.half	.L123-.L122
+	.byte	3,1,1,9
+	.half	.L3-.L123
+	.byte	3,4,1,5,26,9
+	.half	.L124-.L3
+	.byte	1,5,24,9
+	.half	.L125-.L124
+	.byte	1,5,9,9
+	.half	.L126-.L125
+	.byte	3,1,1,5,26,9
+	.half	.L127-.L126
+	.byte	1,5,24,9
+	.half	.L128-.L127
+	.byte	1,5,13,9
+	.half	.L129-.L128
+	.byte	3,2,1,5,42,7,9
+	.half	.L130-.L129
+	.byte	1,5,13,7,9
+	.half	.L11-.L130
+	.byte	3,2,1,5,28,9
+	.half	.L131-.L11
+	.byte	1,5,26,9
+	.half	.L132-.L131
+	.byte	1,5,24,9
+	.half	.L133-.L132
+	.byte	3,1,1,5,9,9
+	.half	.L12-.L133
+	.byte	3,2,1,9
+	.half	.L4-.L12
+	.byte	3,4,1,5,26,9
+	.half	.L134-.L4
+	.byte	1,5,24,9
+	.half	.L135-.L134
+	.byte	1,5,9,9
+	.half	.L136-.L135
+	.byte	3,1,1,5,26,9
+	.half	.L137-.L136
+	.byte	1,5,24,9
+	.half	.L138-.L137
+	.byte	1,9
+	.half	.L139-.L138
+	.byte	3,2,1,5,9,9
+	.half	.L140-.L139
+	.byte	1,5,13,7,9
+	.half	.L141-.L140
+	.byte	3,2,1,5,28,9
+	.half	.L142-.L141
+	.byte	1,5,26,9
+	.half	.L143-.L142
+	.byte	1,5,24,9
+	.half	.L144-.L143
+	.byte	3,1,1,5,9,9
+	.half	.L14-.L144
+	.byte	3,2,1,9
+	.half	.L5-.L14
+	.byte	3,4,1,5,24,9
+	.half	.L145-.L5
+	.byte	1,5,22,9
+	.half	.L146-.L145
+	.byte	1,5,24,9
+	.half	.L147-.L146
+	.byte	3,2,1,5,9,9
+	.half	.L148-.L147
+	.byte	1,5,55,7,9
+	.half	.L72-.L148
+	.byte	3,3,1,5,28,9
+	.half	.L81-.L72
+	.byte	1,5,56,9
+	.half	.L83-.L81
+	.byte	3,1,1,5,13,9
+	.half	.L82-.L83
+	.byte	3,2,1,5,30,9
+	.half	.L149-.L82
+	.byte	1,5,28,9
+	.half	.L150-.L149
+	.byte	1,5,30,9
+	.half	.L151-.L150
+	.byte	3,1,1,5,50,7,9
+	.half	.L152-.L151
+	.byte	1,5,51,9
+	.half	.L84-.L152
+	.byte	3,1,1,5,50,9
+	.half	.L17-.L84
+	.byte	3,127,1,5,13,9
+	.half	.L18-.L17
+	.byte	1,5,28,9
+	.half	.L153-.L18
+	.byte	1,5,24,9
+	.half	.L154-.L153
+	.byte	3,2,1,5,9,9
+	.half	.L16-.L154
+	.byte	3,2,1,5,34,9
+	.half	.L6-.L16
+	.byte	3,5,1,5,14,9
+	.half	.L85-.L6
+	.byte	1,5,13,7,9
+	.half	.L155-.L85
+	.byte	3,2,1,5,30,9
+	.half	.L156-.L155
+	.byte	1,5,28,9
+	.half	.L157-.L156
+	.byte	1,5,13,9
+	.half	.L158-.L157
+	.byte	3,1,1,5,30,9
+	.half	.L159-.L158
+	.byte	1,5,28,9
+	.half	.L160-.L159
+	.byte	1,5,24,9
+	.half	.L161-.L160
+	.byte	3,1,1,5,9,9
+	.half	.L20-.L161
+	.byte	3,2,1,9
+	.half	.L7-.L20
+	.byte	3,4,1,5,26,9
+	.half	.L162-.L7
+	.byte	1,5,24,9
+	.half	.L163-.L162
+	.byte	1,5,9,9
+	.half	.L164-.L163
+	.byte	3,1,1,5,26,9
+	.half	.L165-.L164
+	.byte	1,5,24,9
+	.half	.L166-.L165
+	.byte	1,5,13,9
+	.half	.L167-.L166
+	.byte	3,3,1,5,42,7,9
+	.half	.L168-.L167
+	.byte	1,5,13,7,9
+	.half	.L22-.L168
+	.byte	3,2,1,5,28,9
+	.half	.L169-.L22
+	.byte	1,5,26,9
+	.half	.L170-.L169
+	.byte	1,5,24,9
+	.half	.L171-.L170
+	.byte	3,1,1,5,13,9
+	.half	.L86-.L171
+	.byte	3,1,1,5,24,9
+	.half	.L23-.L86
+	.byte	3,3,1,5,9,9
+	.half	.L172-.L23
+	.byte	1,5,13,7,9
+	.half	.L173-.L172
+	.byte	3,3,1,5,30,9
+	.half	.L174-.L173
+	.byte	1,5,28,9
+	.half	.L175-.L174
+	.byte	1,5,13,9
+	.half	.L176-.L175
+	.byte	3,1,1,5,30,9
+	.half	.L177-.L176
+	.byte	1,5,28,9
+	.half	.L178-.L177
+	.byte	1,5,24,9
+	.half	.L179-.L178
+	.byte	3,1,1,5,9,9
+	.half	.L25-.L179
+	.byte	3,2,1,5,34,9
+	.half	.L8-.L25
+	.byte	3,5,1,5,14,9
+	.half	.L87-.L8
+	.byte	1,5,13,7,9
+	.half	.L180-.L87
+	.byte	3,2,1,5,30,9
+	.half	.L181-.L180
+	.byte	1,5,28,9
+	.half	.L182-.L181
+	.byte	1,5,24,9
+	.half	.L183-.L182
+	.byte	3,1,1,5,9,9
+	.half	.L27-.L183
+	.byte	3,2,1,5,1,9
+	.half	.L10-.L27
+	.byte	3,2,1,7,9
+	.half	.L55-.L10
+	.byte	0,1,1
+.L109:
+	.sdecl	'.debug_ranges',debug,cluster('AppAutonomous_Update')
+	.sect	'.debug_ranges'
+.L54:
+	.word	-1,.L36,0,.L55-.L36,0,0
+	.sdecl	'.debug_info',debug,cluster('enterState')
+	.sect	'.debug_info'
+.L56:
+	.word	262
+	.half	3
+	.word	.L57
+	.byte	4,1
+	.byte	'../AppAutonomous.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L59,.L58
+	.byte	2
+	.word	.L37
+	.byte	3
+	.byte	'enterState',0,1,48,13,1,1
+	.word	.L30,.L76,.L29
+	.byte	4
+	.byte	'next',0,1,48,36
+	.word	.L77,.L78
+	.byte	5
+	.word	.L30,.L76
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('enterState')
+	.sect	'.debug_abbrev'
+.L57:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('enterState')
+	.sect	'.debug_line'
+.L58:
+	.word	.L185-.L184
+.L184:
+	.half	3
+	.word	.L187-.L186
+.L186:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../AppAutonomous.c',0,0,0,0,0
+.L187:
+	.byte	5,5,7,0,5,2
+	.word	.L30
+	.byte	3,49,1,5,20,9
+	.half	.L188-.L30
+	.byte	1,5,5,9
+	.half	.L189-.L188
+	.byte	3,1,1,5,22,9
+	.half	.L190-.L189
+	.byte	1,5,20,9
+	.half	.L191-.L190
+	.byte	1,5,1,9
+	.half	.L192-.L191
+	.byte	3,1,1,7,9
+	.half	.L60-.L192
+	.byte	0,1,1
+.L185:
+	.sdecl	'.debug_ranges',debug,cluster('enterState')
+	.sect	'.debug_ranges'
+.L59:
+	.word	-1,.L30,0,.L60-.L30,0,0
+	.sdecl	'.debug_info',debug,cluster('s_state')
+	.sect	'.debug_info'
+.L61:
+	.word	220
+	.half	3
+	.word	.L62
+	.byte	4,1
+	.byte	'../AppAutonomous.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L37
+	.byte	3
+	.byte	's_state',0,4,45,20
+	.word	.L77
+	.byte	5,3
+	.word	s_state
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_state')
+	.sect	'.debug_abbrev'
+.L62:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('s_stateStartMs')
+	.sect	'.debug_info'
+.L63:
+	.word	227
+	.half	3
+	.word	.L64
+	.byte	4,1
+	.byte	'../AppAutonomous.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L37
+	.byte	3
+	.byte	's_stateStartMs',0,4,46,20
+	.word	.L68
+	.byte	5,3
+	.word	s_stateStartMs
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_stateStartMs')
+	.sect	'.debug_abbrev'
+.L64:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_loc',debug,cluster('AppAutonomous_Start')
+	.sect	'.debug_loc'
+.L31:
+	.word	-1,.L32,0,.L65-.L32
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('AppAutonomous_Stop')
+	.sect	'.debug_loc'
+.L33:
+	.word	-1,.L34,0,.L66-.L34
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('AppAutonomous_Update')
+	.sect	'.debug_loc'
+.L35:
+	.word	-1,.L36,0,.L67-.L36
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L69:
+	.word	-1,.L36,.L79-.L36,.L67-.L36
+	.half	1
+	.byte	88
+	.word	0,0
+.L74:
+	.word	-1,.L36,.L81-.L36,.L82-.L36
+	.half	1
+	.byte	82
+	.word	.L83-.L36,.L84-.L36
+	.half	1
+	.byte	95
+	.word	.L17-.L36,.L18-.L36
+	.half	1
+	.byte	95
+	.word	0,0
+.L75:
+	.word	-1,.L36,.L82-.L36,.L16-.L36
+	.half	1
+	.byte	82
+	.word	0,0
+.L71:
+	.word	-1,.L36,.L80-.L36,.L12-.L36
+	.half	1
+	.byte	82
+	.word	.L4-.L36,.L14-.L36
+	.half	1
+	.byte	82
+	.word	.L5-.L36,.L81-.L36
+	.half	1
+	.byte	82
+	.word	.L6-.L36,.L85-.L36
+	.half	1
+	.byte	82
+	.word	.L7-.L36,.L86-.L36
+	.half	1
+	.byte	82
+	.word	.L23-.L36,.L25-.L36
+	.half	1
+	.byte	82
+	.word	.L8-.L36,.L87-.L36
+	.half	1
+	.byte	82
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('enterState')
+	.sect	'.debug_loc'
+.L29:
+	.word	-1,.L30,0,.L76-.L30
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L78:
+	.word	-1,.L30,0,.L76-.L30
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L193:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('enterState')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L193,.L30,.L76-.L30
+	.byte	8,19,8,20,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('AppAutonomous_Start')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L193,.L32,.L65-.L32
+	.sdecl	'.debug_frame',debug,cluster('AppAutonomous_Stop')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L193,.L34,.L66-.L34
+	.sdecl	'.debug_frame',debug,cluster('AppAutonomous_Update')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L193,.L36,.L67-.L36
+	; Module end

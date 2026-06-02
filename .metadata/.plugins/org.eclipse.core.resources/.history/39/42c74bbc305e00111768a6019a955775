@@ -1,0 +1,976 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc23748a --dep-file=DrvMotor.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc23x -D__CPU_TC23X__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc23x -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Configurations -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr\\\\TC23A -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr\\\\TC23A\\\\_Reg -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\CStart -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Trap -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Flash -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Flash\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom\\\\Timer -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Port -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Port\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Scu -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Scu\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Src -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Src\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Stm -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Stm\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc\\\\Adc -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Impl -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Lib -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o DrvMotor.src ../DrvMotor.c"
+	.compiler_name		"ctc"
+	;source	'../DrvMotor.c'
+
+	
+$TC16X
+	
+	.sdecl	'.text.DrvMotor.DrvMotor_Init',code,cluster('DrvMotor_Init')
+	.sect	'.text.DrvMotor.DrvMotor_Init'
+	.align	2
+	
+	.global	DrvMotor_Init
+; Function DrvMotor_Init
+.L14:
+DrvMotor_Init:	.type	func
+	mov	d15,#0
+.L70:
+	j	.L2
+.L3:
+	movh.a	a15,#@his(s_dir)
+	lea	a15,[a15]@los(s_dir)
+.L90:
+	addsc.a	a15,a15,d15,#0
+.L91:
+	mov	d0,#0
+.L92:
+	st.b	[a15],d0
+.L93:
+	add	d15,#1
+.L2:
+	jlt.u	d15,#4,.L3
+.L94:
+	ret
+.L51:
+	
+__DrvMotor_Init_function_end:
+	.size	DrvMotor_Init,__DrvMotor_Init_function_end-DrvMotor_Init
+.L29:
+	; End of function
+	
+	.sdecl	'.text.DrvMotor.DrvMotor_SetDuty',code,cluster('DrvMotor_SetDuty')
+	.sect	'.text.DrvMotor.DrvMotor_SetDuty'
+	.align	2
+	
+	.global	DrvMotor_SetDuty
+; Function DrvMotor_SetDuty
+.L16:
+DrvMotor_SetDuty:	.type	func
+	mov	d8,d4
+.L73:
+	mov	d15,#100
+.L99:
+	jge	d15,d5,.L4
+.L100:
+	mov	d5,#100
+.L4:
+	mov	d15,#-100
+.L101:
+	jge	d5,d15,.L5
+.L102:
+	mov	d5,#-100
+.L5:
+	jlt	d5,#1,.L6
+.L103:
+	mov	d9,#1
+.L74:
+	j	.L7
+.L6:
+	jge	d5,#0,.L8
+.L104:
+	mov	d9,#2
+.L75:
+	j	.L9
+.L8:
+	mov	d9,#0
+.L9:
+.L7:
+	jge	d5,#0,.L10
+.L105:
+	rsub	d5,#0
+.L106:
+	itof	d10,d5
+.L107:
+	j	.L11
+.L10:
+	itof	d10,d5
+.L11:
+	movh.a	a15,#@his(s_dir)
+	lea	a15,[a15]@los(s_dir)
+.L108:
+	addsc.a	a15,a15,d8,#0
+	ld.bu	d15,[a15]
+.L109:
+	jeq	d15,d9,.L12
+.L110:
+	mul	d15,d8,#4
+.L111:
+	movh.a	a15,#@his(s_setDuty)
+	lea	a15,[a15]@los(s_setDuty)
+.L112:
+	addsc.a	a15,a15,d15,#0
+	ld.a	a15,[a15]
+.L113:
+	mov	d4,#0
+.L72:
+	calli	a15
+.L71:
+	mul	d15,d8,#4
+.L114:
+	movh.a	a15,#@his(s_setDir)
+	lea	a15,[a15]@los(s_setDir)
+.L115:
+	addsc.a	a15,a15,d15,#0
+	ld.a	a15,[a15]
+.L116:
+	mov	d4,d9
+.L76:
+	calli	a15
+.L77:
+	movh.a	a15,#@his(s_dir)
+	lea	a15,[a15]@los(s_dir)
+.L117:
+	addsc.a	a15,a15,d8,#0
+.L118:
+	st.b	[a15],d9
+.L12:
+	mul	d15,d8,#4
+.L119:
+	movh.a	a15,#@his(s_setDuty)
+	lea	a15,[a15]@los(s_setDuty)
+.L120:
+	addsc.a	a15,a15,d15,#0
+	ld.a	a15,[a15]
+.L121:
+	mov	d4,d10
+	calli	a15
+.L122:
+	ret
+.L54:
+	
+__DrvMotor_SetDuty_function_end:
+	.size	DrvMotor_SetDuty,__DrvMotor_SetDuty_function_end-DrvMotor_SetDuty
+.L34:
+	; End of function
+	
+	.sdecl	'.text.DrvMotor.DrvMotor_Brake',code,cluster('DrvMotor_Brake')
+	.sect	'.text.DrvMotor.DrvMotor_Brake'
+	.align	2
+	
+	.global	DrvMotor_Brake
+; Function DrvMotor_Brake
+.L18:
+DrvMotor_Brake:	.type	func
+	mov	d8,d4
+.L79:
+	mul	d15,d8,#4
+.L127:
+	movh.a	a15,#@his(s_setDuty)
+	lea	a15,[a15]@los(s_setDuty)
+.L128:
+	addsc.a	a15,a15,d15,#0
+	ld.a	a15,[a15]
+.L129:
+	mov	d4,#0
+.L78:
+	calli	a15
+.L130:
+	mul	d15,d8,#4
+.L131:
+	movh.a	a15,#@his(s_setDir)
+	lea	a15,[a15]@los(s_setDir)
+.L132:
+	addsc.a	a15,a15,d15,#0
+	ld.a	a15,[a15]
+.L133:
+	mov	d4,#3
+	calli	a15
+.L134:
+	movh.a	a15,#@his(s_dir)
+	lea	a15,[a15]@los(s_dir)
+.L135:
+	addsc.a	a15,a15,d8,#0
+.L136:
+	mov	d15,#3
+.L137:
+	st.b	[a15],d15
+.L138:
+	ret
+.L63:
+	
+__DrvMotor_Brake_function_end:
+	.size	DrvMotor_Brake,__DrvMotor_Brake_function_end-DrvMotor_Brake
+.L39:
+	; End of function
+	
+	.sdecl	'.text.DrvMotor.DrvMotor_Coast',code,cluster('DrvMotor_Coast')
+	.sect	'.text.DrvMotor.DrvMotor_Coast'
+	.align	2
+	
+	.global	DrvMotor_Coast
+; Function DrvMotor_Coast
+.L20:
+DrvMotor_Coast:	.type	func
+	mov	d8,d4
+.L81:
+	mul	d15,d8,#4
+.L143:
+	movh.a	a15,#@his(s_setDuty)
+	lea	a15,[a15]@los(s_setDuty)
+.L144:
+	addsc.a	a15,a15,d15,#0
+	ld.a	a15,[a15]
+.L145:
+	mov	d4,#0
+.L80:
+	calli	a15
+.L146:
+	mul	d15,d8,#4
+.L147:
+	movh.a	a15,#@his(s_setDir)
+	lea	a15,[a15]@los(s_setDir)
+.L148:
+	addsc.a	a15,a15,d15,#0
+	ld.a	a15,[a15]
+.L149:
+	mov	d4,#0
+	calli	a15
+.L150:
+	movh.a	a15,#@his(s_dir)
+	lea	a15,[a15]@los(s_dir)
+.L151:
+	addsc.a	a15,a15,d8,#0
+.L152:
+	mov	d15,#0
+.L153:
+	st.b	[a15],d15
+.L154:
+	ret
+.L65:
+	
+__DrvMotor_Coast_function_end:
+	.size	DrvMotor_Coast,__DrvMotor_Coast_function_end-DrvMotor_Coast
+.L44:
+	; End of function
+	
+	.sdecl	'.bss.DrvMotor.s_dir',data,cluster('s_dir')
+	.sect	'.bss.DrvMotor.s_dir'
+s_dir:	.type	object
+	.size	s_dir,4
+	.space	4
+	.sdecl	'.rodata.DrvMotor.s_setDuty',data,rom,cluster('s_setDuty')
+	.sect	'.rodata.DrvMotor.s_setDuty'
+	.align	4
+s_setDuty:	.type	object
+	.size	s_setDuty,16
+	.word	DrvPwm_SetDutyFL,DrvPwm_SetDutyFR,DrvPwm_SetDutyRL,DrvPwm_SetDutyRR
+	.sdecl	'.rodata.DrvMotor.s_setDir',data,rom,cluster('s_setDir')
+	.sect	'.rodata.DrvMotor.s_setDir'
+	.align	4
+s_setDir:	.type	object
+	.size	s_setDir,16
+	.word	DrvDio_SetMotorFL,DrvDio_SetMotorFR,DrvDio_SetMotorRL,DrvDio_SetMotorRR
+	.calls	'__INDIRECT__','DrvPwm_SetDutyFL'
+	.calls	'__INDIRECT__','DrvPwm_SetDutyFR'
+	.calls	'__INDIRECT__','DrvPwm_SetDutyRL'
+	.calls	'__INDIRECT__','DrvPwm_SetDutyRR'
+	.calls	'__INDIRECT__','DrvDio_SetMotorFL'
+	.calls	'__INDIRECT__','DrvDio_SetMotorFR'
+	.calls	'__INDIRECT__','DrvDio_SetMotorRL'
+	.calls	'__INDIRECT__','DrvDio_SetMotorRR'
+	.calls	'DrvMotor_SetDuty','__INDIRECT__'
+	.calls	'DrvMotor_Brake','__INDIRECT__'
+	.calls	'DrvMotor_Coast','__INDIRECT__'
+	.calls	'DrvMotor_Init','',0
+	.calls	'DrvMotor_SetDuty','',0
+	.calls	'DrvMotor_Brake','',0
+	.extern	DrvPwm_SetDutyFL
+	.extern	DrvPwm_SetDutyFR
+	.extern	DrvPwm_SetDutyRL
+	.extern	DrvPwm_SetDutyRR
+	.extern	DrvDio_SetMotorFL
+	.extern	DrvDio_SetMotorFR
+	.extern	DrvDio_SetMotorRL
+	.extern	DrvDio_SetMotorRR
+	.extern	__INDIRECT__
+	.calls	'DrvMotor_Coast','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L22:
+	.word	1164
+	.half	3
+	.word	.L23
+	.byte	4
+.L21:
+	.byte	1
+	.byte	'../DrvMotor.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L24
+.L52:
+	.byte	2
+	.byte	'unsigned char',0,1,8
+.L55:
+	.byte	3,1,18,9,1,4
+	.byte	'MOTOR_FL',0,0,4
+	.byte	'MOTOR_FR',0,1,4
+	.byte	'MOTOR_RL',0,2,4
+	.byte	'MOTOR_RR',0,3,4
+	.byte	'MOTOR_COUNT',0,4,0
+.L57:
+	.byte	2
+	.byte	'short int',0,2,5
+.L59:
+	.byte	3,2,16,9,1,4
+	.byte	'MOTOR_STOP',0,0,4
+	.byte	'MOTOR_FORWARD',0,1,4
+	.byte	'MOTOR_REVERSE',0,2,4
+	.byte	'MOTOR_BRAKE',0,3,0
+.L61:
+	.byte	2
+	.byte	'float',0,4,4,5
+	.byte	'DrvPwm_SetDutyFL',0,3,16,6,1,1,1,1,6
+	.byte	'dutyPercent',0,3,16,31
+	.word	354
+	.byte	0,5
+	.byte	'DrvPwm_SetDutyFR',0,3,17,6,1,1,1,1,6
+	.byte	'dutyPercent',0,3,17,31
+	.word	354
+	.byte	0,5
+	.byte	'DrvPwm_SetDutyRL',0,3,18,6,1,1,1,1,6
+	.byte	'dutyPercent',0,3,18,31
+	.word	354
+	.byte	0,5
+	.byte	'DrvPwm_SetDutyRR',0,3,19,6,1,1,1,1,6
+	.byte	'dutyPercent',0,3,19,31
+	.word	354
+	.byte	0,5
+	.byte	'DrvDio_SetMotorFL',0,2,32,6,1,1,1,1,6
+	.byte	'dir',0,2,32,39
+	.word	289
+	.byte	0,5
+	.byte	'DrvDio_SetMotorFR',0,2,33,6,1,1,1,1,6
+	.byte	'dir',0,2,33,39
+	.word	289
+	.byte	0,5
+	.byte	'DrvDio_SetMotorRL',0,2,34,6,1,1,1,1,6
+	.byte	'dir',0,2,34,39
+	.word	289
+	.byte	0,5
+	.byte	'DrvDio_SetMotorRR',0,2,35,6,1,1,1,1,6
+	.byte	'dir',0,2,35,39
+	.word	289
+	.byte	0,7
+	.byte	'__INDIRECT__',0,4,1,1,1,1,1,8
+	.byte	'__wchar_t',0,4,1,1
+	.word	276
+	.byte	2
+	.byte	'unsigned int',0,4,7,8
+	.byte	'__size_t',0,4,1,1
+	.word	741
+	.byte	2
+	.byte	'int',0,4,5,8
+	.byte	'__ptrdiff_t',0,4,1,1
+	.word	774
+	.byte	9,1,10
+	.word	801
+	.byte	8
+	.byte	'__codeptr',0,4,1,1
+	.word	803
+	.byte	2
+	.byte	'unsigned short int',0,2,7,8
+	.byte	'uint16',0,5,112,29
+	.word	826
+	.byte	2
+	.byte	'unsigned long int',0,4,7,8
+	.byte	'uint32',0,5,116,29
+	.word	863
+	.byte	8
+	.byte	'sint16',0,5,129,1,29
+	.word	276
+	.byte	2
+	.byte	'long int',0,4,5,8
+	.byte	'sint32',0,5,134,1,29
+	.word	915
+	.byte	2
+	.byte	'long long int',0,8,5,8
+	.byte	'sint64',0,5,141,1,29
+	.word	943
+	.byte	8
+	.byte	'float32',0,5,170,1,29
+	.word	354
+	.byte	11
+	.byte	'void',0,10
+	.word	993
+	.byte	8
+	.byte	'pvoid',0,6,54,28
+	.word	999
+	.byte	8
+	.byte	'MotorId',0,1,25,3
+	.word	212
+	.byte	8
+	.byte	'MotorDirection',0,2,22,3
+	.word	289
+.L67:
+	.byte	12,4
+	.word	289
+	.byte	13,3,0,14,1,1,15
+	.word	354
+	.byte	0,10
+	.word	1066
+	.byte	8
+	.byte	'SetDutyFn',0,4,20,16
+	.word	1075
+	.byte	14,1,1,15
+	.word	289
+	.byte	0,10
+	.word	1098
+	.byte	8
+	.byte	'SetDirFn',0,4,21,16
+	.word	1107
+	.byte	12,16
+	.word	1080
+	.byte	13,3,0
+.L68:
+	.byte	16
+	.word	1129
+	.byte	10
+	.word	1066
+	.byte	12,16
+	.word	1112
+	.byte	13,3,0
+.L69:
+	.byte	16
+	.word	1148
+	.byte	10
+	.word	1098
+	.byte	0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L23:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,4,1,58,15,59,15,57,15,11,15
+	.byte	0,0,4,40,0,3,8,28,13,0,0,5,46,1,3,8,58,15,59,15,57,15,54,15,39,12,63,12,60,12,0,0,6,5,0,3,8,58,15,59,15
+	.byte	57,15,73,19,0,0,7,46,0,3,8,58,15,59,15,57,15,54,15,63,12,60,12,0,0,8,22,0,3,8,58,15,59,15,57,15,73,19
+	.byte	0,0,9,21,0,54,15,0,0,10,15,0,73,19,0,0,11,59,0,3,8,0,0,12,1,1,11,15,73,19,0,0,13,33,0,47,15,0,0,14,21
+	.byte	1,54,15,39,12,0,0,15,5,0,73,19,0,0,16,38,0,73,19,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L24:
+	.word	.L83-.L82
+.L82:
+	.half	3
+	.word	.L85-.L84
+.L84:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'D:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Std',0
+	.byte	0
+	.byte	'..\\DrvMotor.h',0,0,0,0
+	.byte	'..\\DrvDio.h',0,0,0,0
+	.byte	'..\\DrvPwm.h',0,0,0,0
+	.byte	'../DrvMotor.c',0,0,0,0
+	.byte	'Platform_Types.h',0,1,0,0
+	.byte	'Ifx_Types.h',0,1,0,0,0
+.L85:
+.L83:
+	.sdecl	'.debug_info',debug,cluster('DrvMotor_Init')
+	.sect	'.debug_info'
+.L25:
+	.word	259
+	.half	3
+	.word	.L26
+	.byte	4,1
+	.byte	'../DrvMotor.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L28,.L27
+	.byte	2
+	.word	.L21
+	.byte	3
+	.byte	'DrvMotor_Init',0,1,34,6,1,1,1
+	.word	.L14,.L51,.L13
+	.byte	4
+	.word	.L14,.L51
+	.byte	5
+	.byte	'i',0,1,36,11
+	.word	.L52,.L53
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('DrvMotor_Init')
+	.sect	'.debug_abbrev'
+.L26:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('DrvMotor_Init')
+	.sect	'.debug_line'
+.L27:
+	.word	.L87-.L86
+.L86:
+	.half	3
+	.word	.L89-.L88
+.L88:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../DrvMotor.c',0,0,0,0,0
+.L89:
+	.byte	5,12,7,0,5,2
+	.word	.L14
+	.byte	3,36,1,5,32,9
+	.half	.L70-.L14
+	.byte	1,5,9,9
+	.half	.L3-.L70
+	.byte	3,1,1,5,14,9
+	.half	.L90-.L3
+	.byte	1,5,20,9
+	.half	.L91-.L90
+	.byte	1,5,18,9
+	.half	.L92-.L91
+	.byte	1,5,35,9
+	.half	.L93-.L92
+	.byte	3,127,1,5,32,9
+	.half	.L2-.L93
+	.byte	1,5,1,7,9
+	.half	.L94-.L2
+	.byte	3,2,1,7,9
+	.half	.L29-.L94
+	.byte	0,1,1
+.L87:
+	.sdecl	'.debug_ranges',debug,cluster('DrvMotor_Init')
+	.sect	'.debug_ranges'
+.L28:
+	.word	-1,.L14,0,.L29-.L14,0,0
+	.sdecl	'.debug_info',debug,cluster('DrvMotor_SetDuty')
+	.sect	'.debug_info'
+.L30:
+	.word	319
+	.half	3
+	.word	.L31
+	.byte	4,1
+	.byte	'../DrvMotor.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L33,.L32
+	.byte	2
+	.word	.L21
+	.byte	3
+	.byte	'DrvMotor_SetDuty',0,1,41,6,1,1,1
+	.word	.L16,.L54,.L15
+	.byte	4
+	.byte	'id',0,1,41,31
+	.word	.L55,.L56
+	.byte	4
+	.byte	'duty',0,1,41,42
+	.word	.L57,.L58
+	.byte	5
+	.word	.L16,.L54
+	.byte	6
+	.byte	'newDir',0,1,43,20
+	.word	.L59,.L60
+	.byte	6
+	.byte	'absDuty',0,1,44,13
+	.word	.L61,.L62
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('DrvMotor_SetDuty')
+	.sect	'.debug_abbrev'
+.L31:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3
+	.byte	8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('DrvMotor_SetDuty')
+	.sect	'.debug_line'
+.L32:
+	.word	.L96-.L95
+.L95:
+	.half	3
+	.word	.L98-.L97
+.L97:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../DrvMotor.c',0,0,0,0,0
+.L98:
+	.byte	5,6,7,0,5,2
+	.word	.L16
+	.byte	3,40,1,5,17,9
+	.half	.L73-.L16
+	.byte	3,5,1,5,5,9
+	.half	.L99-.L73
+	.byte	1,5,27,7,9
+	.half	.L100-.L99
+	.byte	1,5,16,9
+	.half	.L4-.L100
+	.byte	3,1,1,5,5,9
+	.half	.L101-.L4
+	.byte	1,5,27,7,9
+	.half	.L102-.L101
+	.byte	1,5,5,9
+	.half	.L5-.L102
+	.byte	3,2,1,5,31,7,9
+	.half	.L103-.L5
+	.byte	1,5,46,9
+	.half	.L74-.L103
+	.byte	1,5,10,9
+	.half	.L6-.L74
+	.byte	3,1,1,5,31,7,9
+	.half	.L104-.L6
+	.byte	1,5,46,9
+	.half	.L75-.L104
+	.byte	1,5,31,9
+	.half	.L8-.L75
+	.byte	3,1,1,5,15,9
+	.half	.L7-.L8
+	.byte	3,2,1,5,38,7,9
+	.half	.L105-.L7
+	.byte	1,5,28,9
+	.half	.L106-.L105
+	.byte	1,5,45,9
+	.half	.L107-.L106
+	.byte	1,5,47,9
+	.half	.L10-.L107
+	.byte	1,5,19,9
+	.half	.L11-.L10
+	.byte	3,2,1,5,24,9
+	.half	.L108-.L11
+	.byte	1,5,5,9
+	.half	.L109-.L108
+	.byte	1,5,18,7,9
+	.half	.L110-.L109
+	.byte	3,2,1,5,9,9
+	.half	.L111-.L110
+	.byte	1,5,18,9
+	.half	.L112-.L111
+	.byte	1,5,23,9
+	.half	.L113-.L112
+	.byte	1,5,17,9
+	.half	.L71-.L113
+	.byte	3,1,1,5,9,9
+	.half	.L114-.L71
+	.byte	1,5,17,9
+	.half	.L115-.L114
+	.byte	1,5,22,9
+	.half	.L116-.L115
+	.byte	1,5,9,9
+	.half	.L77-.L116
+	.byte	3,1,1,5,14,9
+	.half	.L117-.L77
+	.byte	1,5,19,9
+	.half	.L118-.L117
+	.byte	1,5,14,9
+	.half	.L12-.L118
+	.byte	3,3,1,5,5,9
+	.half	.L119-.L12
+	.byte	1,5,14,9
+	.half	.L120-.L119
+	.byte	1,5,19,9
+	.half	.L121-.L120
+	.byte	1,5,1,9
+	.half	.L122-.L121
+	.byte	3,1,1,7,9
+	.half	.L34-.L122
+	.byte	0,1,1
+.L96:
+	.sdecl	'.debug_ranges',debug,cluster('DrvMotor_SetDuty')
+	.sect	'.debug_ranges'
+.L33:
+	.word	-1,.L16,0,.L34-.L16,0,0
+	.sdecl	'.debug_info',debug,cluster('DrvMotor_Brake')
+	.sect	'.debug_info'
+.L35:
+	.word	260
+	.half	3
+	.word	.L36
+	.byte	4,1
+	.byte	'../DrvMotor.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L38,.L37
+	.byte	2
+	.word	.L21
+	.byte	3
+	.byte	'DrvMotor_Brake',0,1,65,6,1,1,1
+	.word	.L18,.L63,.L17
+	.byte	4
+	.byte	'id',0,1,65,29
+	.word	.L55,.L64
+	.byte	5
+	.word	.L18,.L63
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('DrvMotor_Brake')
+	.sect	'.debug_abbrev'
+.L36:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('DrvMotor_Brake')
+	.sect	'.debug_line'
+.L37:
+	.word	.L124-.L123
+.L123:
+	.half	3
+	.word	.L126-.L125
+.L125:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../DrvMotor.c',0,0,0,0,0
+.L126:
+	.byte	5,6,7,0,5,2
+	.word	.L18
+	.byte	3,192,0,1,5,14,9
+	.half	.L79-.L18
+	.byte	3,2,1,5,5,9
+	.half	.L127-.L79
+	.byte	1,5,14,9
+	.half	.L128-.L127
+	.byte	1,5,19,9
+	.half	.L129-.L128
+	.byte	1,5,13,9
+	.half	.L130-.L129
+	.byte	3,1,1,5,5,9
+	.half	.L131-.L130
+	.byte	1,5,13,9
+	.half	.L132-.L131
+	.byte	1,5,18,9
+	.half	.L133-.L132
+	.byte	1,5,5,9
+	.half	.L134-.L133
+	.byte	3,1,1,5,10,9
+	.half	.L135-.L134
+	.byte	1,5,17,9
+	.half	.L136-.L135
+	.byte	1,5,15,9
+	.half	.L137-.L136
+	.byte	1,5,1,9
+	.half	.L138-.L137
+	.byte	3,1,1,7,9
+	.half	.L39-.L138
+	.byte	0,1,1
+.L124:
+	.sdecl	'.debug_ranges',debug,cluster('DrvMotor_Brake')
+	.sect	'.debug_ranges'
+.L38:
+	.word	-1,.L18,0,.L39-.L18,0,0
+	.sdecl	'.debug_info',debug,cluster('DrvMotor_Coast')
+	.sect	'.debug_info'
+.L40:
+	.word	260
+	.half	3
+	.word	.L41
+	.byte	4,1
+	.byte	'../DrvMotor.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L43,.L42
+	.byte	2
+	.word	.L21
+	.byte	3
+	.byte	'DrvMotor_Coast',0,1,72,6,1,1,1
+	.word	.L20,.L65,.L19
+	.byte	4
+	.byte	'id',0,1,72,29
+	.word	.L55,.L66
+	.byte	5
+	.word	.L20,.L65
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('DrvMotor_Coast')
+	.sect	'.debug_abbrev'
+.L41:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('DrvMotor_Coast')
+	.sect	'.debug_line'
+.L42:
+	.word	.L140-.L139
+.L139:
+	.half	3
+	.word	.L142-.L141
+.L141:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../DrvMotor.c',0,0,0,0,0
+.L142:
+	.byte	5,6,7,0,5,2
+	.word	.L20
+	.byte	3,199,0,1,5,14,9
+	.half	.L81-.L20
+	.byte	3,2,1,5,5,9
+	.half	.L143-.L81
+	.byte	1,5,14,9
+	.half	.L144-.L143
+	.byte	1,5,19,9
+	.half	.L145-.L144
+	.byte	1,5,13,9
+	.half	.L146-.L145
+	.byte	3,1,1,5,5,9
+	.half	.L147-.L146
+	.byte	1,5,13,9
+	.half	.L148-.L147
+	.byte	1,5,18,9
+	.half	.L149-.L148
+	.byte	1,5,5,9
+	.half	.L150-.L149
+	.byte	3,1,1,5,10,9
+	.half	.L151-.L150
+	.byte	1,5,17,9
+	.half	.L152-.L151
+	.byte	1,5,15,9
+	.half	.L153-.L152
+	.byte	1,5,1,9
+	.half	.L154-.L153
+	.byte	3,1,1,7,9
+	.half	.L44-.L154
+	.byte	0,1,1
+.L140:
+	.sdecl	'.debug_ranges',debug,cluster('DrvMotor_Coast')
+	.sect	'.debug_ranges'
+.L43:
+	.word	-1,.L20,0,.L44-.L20,0,0
+	.sdecl	'.debug_info',debug,cluster('s_dir')
+	.sect	'.debug_info'
+.L45:
+	.word	213
+	.half	3
+	.word	.L46
+	.byte	4,1
+	.byte	'../DrvMotor.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L21
+	.byte	3
+	.byte	's_dir',0,4,15,23
+	.word	.L67
+	.byte	5,3
+	.word	s_dir
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_dir')
+	.sect	'.debug_abbrev'
+.L46:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('s_setDuty')
+	.sect	'.debug_info'
+.L47:
+	.word	217
+	.half	3
+	.word	.L48
+	.byte	4,1
+	.byte	'../DrvMotor.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L21
+	.byte	3
+	.byte	's_setDuty',0,4,23,24
+	.word	.L68
+	.byte	5,3
+	.word	s_setDuty
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_setDuty')
+	.sect	'.debug_abbrev'
+.L48:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('s_setDir')
+	.sect	'.debug_info'
+.L49:
+	.word	216
+	.half	3
+	.word	.L50
+	.byte	4,1
+	.byte	'../DrvMotor.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L21
+	.byte	3
+	.byte	's_setDir',0,4,27,23
+	.word	.L69
+	.byte	5,3
+	.word	s_setDir
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_setDir')
+	.sect	'.debug_abbrev'
+.L50:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_loc',debug,cluster('DrvMotor_Brake')
+	.sect	'.debug_loc'
+.L17:
+	.word	-1,.L18,0,.L63-.L18
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L64:
+	.word	-1,.L18,0,.L78-.L18
+	.half	1
+	.byte	84
+	.word	.L79-.L18,.L63-.L18
+	.half	1
+	.byte	88
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('DrvMotor_Coast')
+	.sect	'.debug_loc'
+.L19:
+	.word	-1,.L20,0,.L65-.L20
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L66:
+	.word	-1,.L20,0,.L80-.L20
+	.half	1
+	.byte	84
+	.word	.L81-.L20,.L65-.L20
+	.half	1
+	.byte	88
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('DrvMotor_Init')
+	.sect	'.debug_loc'
+.L13:
+	.word	-1,.L14,0,.L51-.L14
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L53:
+	.word	-1,.L14,.L70-.L14,.L51-.L14
+	.half	1
+	.byte	95
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('DrvMotor_SetDuty')
+	.sect	'.debug_loc'
+.L15:
+	.word	-1,.L16,0,.L54-.L16
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L62:
+	.word	0,0
+.L58:
+	.word	-1,.L16,0,.L71-.L16
+	.half	1
+	.byte	85
+	.word	0,0
+.L56:
+	.word	-1,.L16,0,.L72-.L16
+	.half	1
+	.byte	84
+	.word	.L73-.L16,.L54-.L16
+	.half	1
+	.byte	88
+	.word	0,0
+.L60:
+	.word	-1,.L16,.L74-.L16,.L6-.L16
+	.half	1
+	.byte	89
+	.word	.L75-.L16,.L8-.L16
+	.half	1
+	.byte	89
+	.word	.L7-.L16,.L54-.L16
+	.half	1
+	.byte	89
+	.word	.L76-.L16,.L77-.L16
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L155:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('DrvMotor_Init')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L155,.L14,.L51-.L14
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('DrvMotor_SetDuty')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L155,.L16,.L54-.L16
+	.sdecl	'.debug_frame',debug,cluster('DrvMotor_Brake')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L155,.L18,.L63-.L18
+	.sdecl	'.debug_frame',debug,cluster('DrvMotor_Coast')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L155,.L20,.L65-.L20
+	; Module end

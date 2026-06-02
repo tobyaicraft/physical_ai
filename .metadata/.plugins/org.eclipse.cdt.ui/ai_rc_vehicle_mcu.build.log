@@ -1,0 +1,18 @@
+12:11:30 **** Incremental Build of configuration TriCore Debug (TASKING) for project ai_rc_vehicle_mcu ****
+amk -j24 all 
+TASKING VX-toolset for AURIX Development Studio (non-commercial): program builder v1.1r8 Build 22011964
+Building target: ai_rc_vehicle_mcu.elf
+Invoking: TASKING Linker
+cctc -f .ai_rc_vehicle_mcu.elf.opt
+Finished building target: ai_rc_vehicle_mcu.elf
+ 
+Invoking: Print Size
+elfsize  "ai_rc_vehicle_mcu.elf"
+Total sizes:
+ROM: 0x9cef (40175) = code: 0x95d6 (38358) + romdata: 0x719 (1817)
+RAM: 0x3afe (15102) = data + bss
+Finished building: ai_rc_vehicle_mcu.siz
+ 
+
+12:11:30 Build Finished. 0 errors, 0 warnings. (took 445ms)
+

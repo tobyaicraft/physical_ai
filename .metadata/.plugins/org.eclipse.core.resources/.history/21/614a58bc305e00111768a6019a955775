@@ -1,0 +1,284 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc20124a --dep-file=Scheduler.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc23x -D__CPU_TC23X__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc23x -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Configurations -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr\\\\TC23A -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr\\\\TC23A\\\\_Reg -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\CStart -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Trap -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Flash -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Flash\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom\\\\Timer -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Port -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Port\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Scu -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Scu\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Src -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Src\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Stm -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Stm\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc\\\\Adc -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Impl -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Lib -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o Scheduler.src ../Scheduler.c"
+	.compiler_name		"ctc"
+	;source	'../Scheduler.c'
+
+	
+$TC16X
+	
+	.sdecl	'.text.Scheduler.Scheduler_Run',code,cluster('Scheduler_Run')
+	.sect	'.text.Scheduler.Scheduler_Run'
+	.align	2
+	
+	.global	Scheduler_Run
+; Function Scheduler_Run
+.L8:
+Scheduler_Run:	.type	func
+	movh.a	a15,#@his(g_1ms_counter)
+	lea	a15,[a15]@los(g_1ms_counter)
+	ld.w	d8,[a15]
+.L21:
+	movh.a	a15,#@his(_999001_last_counter)
+	lea	a15,[a15]@los(_999001_last_counter)
+	ld.w	d15,[a15]
+.L30:
+	jne	d15,d8,.L2
+.L31:
+	j	.L3
+.L2:
+	movh.a	a15,#@his(_999001_last_counter)
+	lea	a15,[a15]@los(_999001_last_counter)
+.L32:
+	st.w	[a15],d8
+.L33:
+	mov	d15,#1
+.L34:
+	jeq	d15,#0,.L4
+.L35:
+	call	AppTask_1ms
+.L4:
+	mov	d15,#10
+.L36:
+	div.u	e0,d8,d15
+.L37:
+	jne	d1,#0,.L5
+.L38:
+	call	AppTask_10ms
+.L5:
+	mov	d15,#100
+.L39:
+	div.u	e0,d8,d15
+.L40:
+	jne	d1,#0,.L6
+.L41:
+	call	AppTask_100ms
+.L6:
+.L3:
+	ret
+.L18:
+	
+__Scheduler_Run_function_end:
+	.size	Scheduler_Run,__Scheduler_Run_function_end-Scheduler_Run
+.L17:
+	; End of function
+	
+	.sdecl	'.data.Scheduler._999001_last_counter',data,cluster('_999001_last_counter')
+	.sect	'.data.Scheduler._999001_last_counter'
+	.align	2
+_999001_last_counter:	.type	object
+	.size	_999001_last_counter,4
+	.space	4
+	.calls	'Scheduler_Run','AppTask_1ms'
+	.calls	'Scheduler_Run','AppTask_10ms'
+	.calls	'Scheduler_Run','AppTask_100ms'
+	.extern	g_1ms_counter
+	.extern	AppTask_1ms
+	.extern	AppTask_10ms
+	.extern	AppTask_100ms
+	.calls	'Scheduler_Run','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L10:
+	.word	602
+	.half	3
+	.word	.L11
+	.byte	4
+.L9:
+	.byte	1
+	.byte	'../Scheduler.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L12
+.L19:
+	.byte	2
+	.byte	'unsigned long int',0,4,7,3
+	.byte	'AppTask_1ms',0,1,11,6,1,1,1,1,3
+	.byte	'AppTask_10ms',0,1,14,6,1,1,1,1,3
+	.byte	'AppTask_100ms',0,1,17,6,1,1,1,1,2
+	.byte	'short int',0,2,5,4
+	.byte	'__wchar_t',0,2,1,1
+	.word	280
+	.byte	2
+	.byte	'unsigned int',0,4,7,4
+	.byte	'__size_t',0,2,1,1
+	.word	311
+	.byte	2
+	.byte	'int',0,4,5,4
+	.byte	'__ptrdiff_t',0,2,1,1
+	.word	344
+	.byte	5,1,6
+	.word	371
+	.byte	4
+	.byte	'__codeptr',0,2,1,1
+	.word	373
+	.byte	2
+	.byte	'unsigned short int',0,2,7,4
+	.byte	'uint16',0,3,112,29
+	.word	396
+	.byte	4
+	.byte	'uint32',0,3,116,29
+	.word	196
+	.byte	4
+	.byte	'sint16',0,3,129,1,29
+	.word	280
+	.byte	2
+	.byte	'long int',0,4,5,4
+	.byte	'sint32',0,3,134,1,29
+	.word	464
+	.byte	2
+	.byte	'long long int',0,8,5,4
+	.byte	'sint64',0,3,141,1,29
+	.word	492
+	.byte	2
+	.byte	'float',0,4,4,4
+	.byte	'float32',0,3,170,1,29
+	.word	525
+	.byte	7
+	.byte	'void',0,6
+	.word	551
+	.byte	4
+	.byte	'pvoid',0,4,54,28
+	.word	557
+	.byte	8
+	.word	196
+	.byte	9
+	.byte	'g_1ms_counter',0,5,21,24
+	.word	576
+	.byte	1,1,0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L11:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,46,0,3,8,58,15,59,15,57,15
+	.byte	54,15,39,12,63,12,60,12,0,0,4,22,0,3,8,58,15,59,15,57,15,73,19,0,0,5,21,0,54,15,0,0,6,15,0,73,19,0,0,7
+	.byte	59,0,3,8,0,0,8,53,0,73,19,0,0,9,52,0,3,8,58,15,59,15,57,15,73,19,63,12,60,12,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L12:
+	.word	.L23-.L22
+.L22:
+	.half	3
+	.word	.L25-.L24
+.L24:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'D:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Std',0
+	.byte	0
+	.byte	'..\\AppTask.h',0,0,0,0
+	.byte	'../Scheduler.c',0,0,0,0
+	.byte	'Platform_Types.h',0,1,0,0
+	.byte	'Ifx_Types.h',0,1,0,0
+	.byte	'..\\DrvGtmTimer.h',0,0,0,0,0
+.L25:
+.L23:
+	.sdecl	'.debug_info',debug,cluster('Scheduler_Run')
+	.sect	'.debug_info'
+.L13:
+	.word	289
+	.half	3
+	.word	.L14
+	.byte	4,1
+	.byte	'../Scheduler.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L16,.L15
+	.byte	2
+	.word	.L9
+	.byte	3
+	.byte	'Scheduler_Run',0,1,15,6,1,1,1
+	.word	.L8,.L18,.L7
+	.byte	4
+	.word	.L8,.L18
+	.byte	5
+	.byte	'last_counter',0,1,17,19
+	.word	.L19
+	.byte	5,3
+	.word	_999001_last_counter
+	.byte	6
+	.byte	'now',0,1,18,19
+	.word	.L19,.L20
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Scheduler_Run')
+	.sect	'.debug_abbrev'
+.L14:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,6,52,0
+	.byte	3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Scheduler_Run')
+	.sect	'.debug_line'
+.L15:
+	.word	.L27-.L26
+.L26:
+	.half	3
+	.word	.L29-.L28
+.L28:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../Scheduler.c',0,0,0,0,0
+.L29:
+	.byte	5,25,7,0,5,2
+	.word	.L8
+	.byte	3,17,1,5,16,9
+	.half	.L21-.L8
+	.byte	3,2,1,5,5,9
+	.half	.L30-.L21
+	.byte	1,5,9,7,9
+	.half	.L31-.L30
+	.byte	3,2,1,5,5,9
+	.half	.L2-.L31
+	.byte	3,2,1,5,18,9
+	.half	.L32-.L2
+	.byte	1,5,22,9
+	.half	.L33-.L32
+	.byte	3,2,1,5,5,9
+	.half	.L34-.L33
+	.byte	1,5,40,7,9
+	.half	.L35-.L34
+	.byte	1,5,17,9
+	.half	.L4-.L35
+	.byte	3,1,1,5,14,9
+	.half	.L36-.L4
+	.byte	1,5,5,9
+	.half	.L37-.L36
+	.byte	1,5,41,7,9
+	.half	.L38-.L37
+	.byte	1,5,16,9
+	.half	.L5-.L38
+	.byte	3,1,1,5,14,9
+	.half	.L39-.L5
+	.byte	1,5,5,9
+	.half	.L40-.L39
+	.byte	1,5,42,7,9
+	.half	.L41-.L40
+	.byte	1,5,1,9
+	.half	.L3-.L41
+	.byte	3,1,1,7,9
+	.half	.L17-.L3
+	.byte	0,1,1
+.L27:
+	.sdecl	'.debug_ranges',debug,cluster('Scheduler_Run')
+	.sect	'.debug_ranges'
+.L16:
+	.word	-1,.L8,0,.L17-.L8,0,0
+	.sdecl	'.debug_loc',debug,cluster('Scheduler_Run')
+	.sect	'.debug_loc'
+.L7:
+	.word	-1,.L8,0,.L18-.L8
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L20:
+	.word	-1,.L8,.L21-.L8,.L18-.L8
+	.half	1
+	.byte	88
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L42:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('Scheduler_Run')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L42,.L8,.L18-.L8
+	; Module end

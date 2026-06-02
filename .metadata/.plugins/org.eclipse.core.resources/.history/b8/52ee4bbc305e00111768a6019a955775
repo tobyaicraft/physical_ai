@@ -1,0 +1,3296 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc31500a --dep-file=DrvMpu9250.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc23x -D__CPU_TC23X__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc23x -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Configurations -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr\\\\TC23A -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr\\\\TC23A\\\\_Reg -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\CStart -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Trap -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Flash -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Flash\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom\\\\Timer -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Port -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Port\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Scu -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Scu\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Src -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Src\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Stm -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Stm\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc\\\\Adc -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Impl -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Lib -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o DrvMpu9250.src ../DrvMpu9250.c"
+	.compiler_name		"ctc"
+	;source	'../DrvMpu9250.c'
+
+	
+$TC16X
+	
+	.sdecl	'.text.DrvMpu9250.delay_ms',code,cluster('delay_ms')
+	.sect	'.text.DrvMpu9250.delay_ms'
+	.align	2
+	
+; Function delay_ms
+.L35:
+delay_ms:	.type	func
+	sub.a	a10,#8
+.L198:
+	mov	d15,#0
+.L199:
+	j	.L2
+.L3:
+	mov	d0,#0
+.L341:
+	st.w	[a10],d0
+.L342:
+	j	.L4
+.L5:
+	ld.w	d0,[a10]
+.L343:
+	add	d0,#1
+	st.w	[a10],d0
+.L4:
+	ld.w	d0,[a10]
+.L344:
+	mov	d1,#20000
+.L345:
+	jlt.u	d0,d1,.L5
+.L346:
+	add	d15,#1
+.L2:
+	jlt.u	d15,d4,.L3
+.L347:
+	ret
+.L162:
+	
+__delay_ms_function_end:
+	.size	delay_ms,__delay_ms_function_end-delay_ms
+.L101:
+	; End of function
+	
+	.sdecl	'.text.DrvMpu9250.writeRegVerify',code,cluster('writeRegVerify')
+	.sect	'.text.DrvMpu9250.writeRegVerify'
+	.align	2
+	
+; Function writeRegVerify
+.L37:
+writeRegVerify:	.type	func
+	mov	d8,d4
+.L200:
+	mov	d15,d5
+.L201:
+	mov	d9,#0
+.L202:
+	j	.L6
+.L7:
+	mov	e4,d15,d8
+	call	DrvSpi_WriteReg
+.L352:
+	mov	d4,#5
+	call	delay_ms
+.L353:
+	mov	d4,d8
+.L203:
+	call	DrvSpi_ReadReg
+.L204:
+	jne	d15,d2,.L8
+.L354:
+	mov	d2,#1
+.L355:
+	j	.L9
+.L8:
+	add	d9,#1
+.L6:
+	jlt.u	d9,#5,.L7
+.L356:
+	mov	d2,#0
+.L357:
+	j	.L10
+.L10:
+.L9:
+	ret
+.L168:
+	
+__writeRegVerify_function_end:
+	.size	writeRegVerify,__writeRegVerify_function_end-writeRegVerify
+.L106:
+	; End of function
+	
+	.sdecl	'.text.DrvMpu9250.parseSensorData',code,cluster('parseSensorData')
+	.sect	'.text.DrvMpu9250.parseSensorData'
+	.align	2
+	
+; Function parseSensorData
+.L39:
+parseSensorData:	.type	func
+	movh.a	a15,#@his(s_accelRaw)
+	lea	a15,[a15]@los(s_accelRaw)
+.L362:
+	ld.bu	d15,[a4]
+.L363:
+	sha	d15,d15,#8
+.L364:
+	extr	d0,d15,#0,#16
+.L365:
+	ld.bu	d15,[a4]1
+.L366:
+	or	d0,d15
+.L367:
+	st.h	[a15],d0
+.L368:
+	movh.a	a15,#@his(s_accelRaw)
+	lea	a15,[a15]@los(s_accelRaw)
+.L369:
+	ld.bu	d15,[a4]2
+.L370:
+	sha	d15,d15,#8
+.L371:
+	extr	d0,d15,#0,#16
+.L372:
+	ld.bu	d15,[a4]3
+.L373:
+	or	d0,d15
+.L374:
+	st.h	[a15]2,d0
+.L375:
+	movh.a	a15,#@his(s_accelRaw)
+	lea	a15,[a15]@los(s_accelRaw)
+.L376:
+	ld.bu	d15,[a4]4
+.L377:
+	sha	d15,d15,#8
+.L378:
+	extr	d0,d15,#0,#16
+.L379:
+	ld.bu	d15,[a4]5
+.L380:
+	or	d0,d15
+.L381:
+	st.h	[a15]4,d0
+.L382:
+	movh.a	a15,#@his(s_gyroRaw)
+	lea	a15,[a15]@los(s_gyroRaw)
+.L383:
+	ld.bu	d15,[a4]8
+.L384:
+	sha	d15,d15,#8
+.L385:
+	extr	d0,d15,#0,#16
+.L386:
+	ld.bu	d15,[a4]9
+.L387:
+	or	d0,d15
+.L388:
+	st.h	[a15],d0
+.L389:
+	movh.a	a15,#@his(s_gyroRaw)
+	lea	a15,[a15]@los(s_gyroRaw)
+.L390:
+	ld.bu	d15,[a4]10
+.L391:
+	sha	d15,d15,#8
+.L392:
+	extr	d0,d15,#0,#16
+.L393:
+	ld.bu	d15,[a4]11
+.L394:
+	or	d0,d15
+.L395:
+	st.h	[a15]2,d0
+.L396:
+	movh.a	a15,#@his(s_gyroRaw)
+	lea	a15,[a15]@los(s_gyroRaw)
+.L397:
+	ld.bu	d15,[a4]12
+.L398:
+	sha	d15,d15,#8
+.L399:
+	extr	d0,d15,#0,#16
+.L400:
+	ld.bu	d15,[a4]13
+.L401:
+	or	d0,d15
+.L402:
+	st.h	[a15]4,d0
+.L403:
+	ret
+.L172:
+	
+__parseSensorData_function_end:
+	.size	parseSensorData,__parseSensorData_function_end-parseSensorData
+.L111:
+	; End of function
+	
+	.sdecl	'.text.DrvMpu9250.updateAttitude',code,cluster('updateAttitude')
+	.sect	'.text.DrvMpu9250.updateAttitude'
+	.align	2
+	
+; Function updateAttitude
+.L41:
+updateAttitude:	.type	func
+	movh.a	a15,#@his(s_accelRaw)
+	lea	a15,[a15]@los(s_accelRaw)
+.L408:
+	ld.h	d15,[a15]
+.L409:
+	itof	d15,d15
+.L410:
+	movh	d0,#18048
+.L411:
+	div.f	d8,d15,d0
+.L205:
+	movh.a	a15,#@his(s_accelRaw)
+	lea	a15,[a15]@los(s_accelRaw)
+.L412:
+	ld.h	d15,[a15]2
+.L413:
+	itof	d15,d15
+.L414:
+	movh	d0,#18048
+.L415:
+	div.f	d9,d15,d0
+.L206:
+	movh.a	a15,#@his(s_accelRaw)
+	lea	a15,[a15]@los(s_accelRaw)
+.L416:
+	ld.h	d15,[a15]4
+.L417:
+	itof	d15,d15
+.L418:
+	movh	d0,#18048
+.L419:
+	div.f	d10,d15,d0
+.L207:
+	movh.a	a15,#@his(s_gyroRaw)
+	lea	a15,[a15]@los(s_gyroRaw)
+.L420:
+	ld.h	d15,[a15]2
+.L421:
+	itof	d15,d15
+.L422:
+	insn.t	d15,d15:31,d15:31
+.L423:
+	movh	d0,#17027
+.L424:
+	div.f	d11,d15,d0
+.L208:
+	movh.a	a15,#@his(s_gyroRaw)
+	lea	a15,[a15]@los(s_gyroRaw)
+.L425:
+	ld.h	d15,[a15]
+.L426:
+	itof	d15,d15
+.L427:
+	insn.t	d15,d15:31,d15:31
+.L428:
+	movh	d0,#17027
+.L429:
+	div.f	d12,d15,d0
+.L209:
+	movh.a	a15,#@his(s_gyroRaw)
+	lea	a15,[a15]@los(s_gyroRaw)
+.L430:
+	ld.h	d15,[a15]4
+.L431:
+	itof	d15,d15
+.L432:
+	movh	d0,#17027
+.L433:
+	div.f	d13,d15,d0
+.L210:
+	movh.a	a15,#@his(s_calibrated)
+	lea	a15,[a15]@los(s_calibrated)
+	ld.bu	d15,[a15]
+	jne	d15,#0,.L11
+.L182:
+	insn.t	d4,d8:31,d8:31
+.L434:
+	mov	d5,d10
+.L211:
+	call	atan2f
+.L212:
+	mov	d15,#12001
+	addih	d15,d15,#16997
+.L435:
+	mul.f	d14,d2,d15
+.L213:
+	mul.f	d15,d10,d10
+.L436:
+	madd.f	d4,d15,d8,d8
+	call	sqrtf
+.L437:
+	mov	e4,d2,d9
+	call	atan2f
+.L438:
+	mov	d15,#12001
+	addih	d15,d15,#16997
+.L439:
+	mul.f	d15,d2,d15
+.L214:
+	movh.a	a15,#@his(s_rollOffset)
+	lea	a15,[a15]@los(s_rollOffset)
+	movh.a	a2,#@his(s_rollOffset)
+	lea	a2,[a2]@los(s_rollOffset)
+	ld.w	d0,[a2]
+.L440:
+	add.f	d0,d0,d14
+	st.w	[a15],d0
+.L441:
+	movh.a	a15,#@his(s_pitchOffset)
+	lea	a15,[a15]@los(s_pitchOffset)
+	movh.a	a2,#@his(s_pitchOffset)
+	lea	a2,[a2]@los(s_pitchOffset)
+	ld.w	d0,[a2]
+.L442:
+	add.f	d15,d0,d15
+.L215:
+	st.w	[a15],d15
+.L443:
+	movh.a	a15,#@his(s_gyroOffsetRoll)
+	lea	a15,[a15]@los(s_gyroOffsetRoll)
+	movh.a	a2,#@his(s_gyroOffsetRoll)
+	lea	a2,[a2]@los(s_gyroOffsetRoll)
+	ld.w	d15,[a2]
+.L444:
+	add.f	d15,d15,d11
+	st.w	[a15],d15
+.L445:
+	movh.a	a15,#@his(s_gyroOffsetPitch)
+	lea	a15,[a15]@los(s_gyroOffsetPitch)
+	movh.a	a2,#@his(s_gyroOffsetPitch)
+	lea	a2,[a2]@los(s_gyroOffsetPitch)
+	ld.w	d15,[a2]
+.L446:
+	add.f	d15,d15,d12
+	st.w	[a15],d15
+.L447:
+	movh.a	a15,#@his(s_gyroOffsetYaw)
+	lea	a15,[a15]@los(s_gyroOffsetYaw)
+	movh.a	a2,#@his(s_gyroOffsetYaw)
+	lea	a2,[a2]@los(s_gyroOffsetYaw)
+	ld.w	d15,[a2]
+.L448:
+	add.f	d15,d15,d13
+	st.w	[a15],d15
+.L449:
+	movh.a	a15,#@his(s_calibCount)
+	lea	a15,[a15]@los(s_calibCount)
+	movh.a	a2,#@his(s_calibCount)
+	lea	a2,[a2]@los(s_calibCount)
+	ld.hu	d15,[a2]0
+.L450:
+	add	d15,#1
+	st.h	[a15],d15
+.L451:
+	movh.a	a15,#@his(s_calibCount)
+	lea	a15,[a15]@los(s_calibCount)
+	ld.hu	d0,[a15]0
+.L452:
+	mov	d15,#100
+.L453:
+	jlt.u	d0,d15,.L12
+.L454:
+	movh.a	a15,#@his(s_rollOffset)
+	lea	a15,[a15]@los(s_rollOffset)
+	movh.a	a2,#@his(s_rollOffset)
+	lea	a2,[a2]@los(s_rollOffset)
+	ld.w	d15,[a2]
+.L455:
+	movh	d0,#17096
+.L456:
+	div.f	d15,d15,d0
+	st.w	[a15],d15
+.L457:
+	movh.a	a15,#@his(s_pitchOffset)
+	lea	a15,[a15]@los(s_pitchOffset)
+	movh.a	a2,#@his(s_pitchOffset)
+	lea	a2,[a2]@los(s_pitchOffset)
+	ld.w	d15,[a2]
+.L458:
+	movh	d0,#17096
+.L459:
+	div.f	d15,d15,d0
+	st.w	[a15],d15
+.L460:
+	movh.a	a15,#@his(s_gyroOffsetRoll)
+	lea	a15,[a15]@los(s_gyroOffsetRoll)
+	movh.a	a2,#@his(s_gyroOffsetRoll)
+	lea	a2,[a2]@los(s_gyroOffsetRoll)
+	ld.w	d15,[a2]
+.L461:
+	movh	d0,#17096
+.L462:
+	div.f	d15,d15,d0
+	st.w	[a15],d15
+.L463:
+	movh.a	a15,#@his(s_gyroOffsetPitch)
+	lea	a15,[a15]@los(s_gyroOffsetPitch)
+	movh.a	a2,#@his(s_gyroOffsetPitch)
+	lea	a2,[a2]@los(s_gyroOffsetPitch)
+	ld.w	d15,[a2]
+.L464:
+	movh	d0,#17096
+.L465:
+	div.f	d15,d15,d0
+	st.w	[a15],d15
+.L466:
+	movh.a	a15,#@his(s_gyroOffsetYaw)
+	lea	a15,[a15]@los(s_gyroOffsetYaw)
+	movh.a	a2,#@his(s_gyroOffsetYaw)
+	lea	a2,[a2]@los(s_gyroOffsetYaw)
+	ld.w	d15,[a2]
+.L467:
+	movh	d0,#17096
+.L468:
+	div.f	d15,d15,d0
+	st.w	[a15],d15
+.L469:
+	movh.a	a15,#@his(s_calibrated)
+	lea	a15,[a15]@los(s_calibrated)
+.L470:
+	mov	d15,#1
+.L471:
+	st.b	[a15],d15
+.L472:
+	movh.a	a15,#@his(s_roll)
+	lea	a15,[a15]@los(s_roll)
+.L473:
+	mov	d15,#0
+.L474:
+	st.w	[a15],d15
+.L475:
+	movh.a	a15,#@his(s_pitch)
+	lea	a15,[a15]@los(s_pitch)
+.L476:
+	mov	d15,#0
+.L477:
+	st.w	[a15],d15
+.L478:
+	movh.a	a15,#@his(s_yaw)
+	lea	a15,[a15]@los(s_yaw)
+.L479:
+	mov	d15,#0
+.L480:
+	st.w	[a15],d15
+.L12:
+	j	.L13
+.L11:
+	movh.a	a15,#@his(s_gyroOffsetRoll)
+	lea	a15,[a15]@los(s_gyroOffsetRoll)
+	ld.w	d15,[a15]
+.L481:
+	sub.f	d11,d11,d15
+.L482:
+	movh.a	a15,#@his(s_gyroOffsetPitch)
+	lea	a15,[a15]@los(s_gyroOffsetPitch)
+	ld.w	d15,[a15]
+.L483:
+	sub.f	d12,d12,d15
+.L484:
+	movh.a	a15,#@his(s_gyroOffsetYaw)
+	lea	a15,[a15]@los(s_gyroOffsetYaw)
+	ld.w	d15,[a15]
+.L485:
+	sub.f	d13,d13,d15
+.L185:
+	insn.t	d4,d8:31,d8:31
+.L486:
+	mov	d5,d10
+.L216:
+	call	atan2f
+.L217:
+	mov	d15,#12001
+	addih	d15,d15,#16997
+.L487:
+	mul.f	d15,d2,d15
+.L488:
+	movh.a	a15,#@his(s_rollOffset)
+	lea	a15,[a15]@los(s_rollOffset)
+	ld.w	d0,[a15]
+.L489:
+	sub.f	d14,d15,d0
+.L218:
+	mul.f	d15,d10,d10
+.L490:
+	madd.f	d4,d15,d8,d8
+	call	sqrtf
+.L491:
+	mov	e4,d2,d9
+	call	atan2f
+.L492:
+	mov	d15,#12001
+	addih	d15,d15,#16997
+.L493:
+	mul.f	d15,d2,d15
+.L494:
+	movh.a	a15,#@his(s_pitchOffset)
+	lea	a15,[a15]@los(s_pitchOffset)
+	ld.w	d0,[a15]
+.L495:
+	sub.f	d2,d15,d0
+.L219:
+	movh.a	a15,#@his(s_roll)
+	lea	a15,[a15]@los(s_roll)
+.L496:
+	mov.u	d15,#55050
+	addih	d15,d15,#15395
+.L497:
+	movh.a	a2,#@his(s_roll)
+	lea	a2,[a2]@los(s_roll)
+	ld.w	d0,[a2]
+.L498:
+	madd.f	d15,d0,d11,d15
+.L499:
+	mov.u	d0,#49807
+	addih	d0,d0,#16245
+.L500:
+	mov.u	d1,#55056
+	addih	d1,d1,#15651
+.L501:
+	mul.f	d1,d14,d1
+.L502:
+	madd.f	d15,d1,d15,d0
+.L503:
+	st.w	[a15],d15
+.L504:
+	movh.a	a15,#@his(s_pitch)
+	lea	a15,[a15]@los(s_pitch)
+.L505:
+	mov.u	d15,#55050
+	addih	d15,d15,#15395
+.L506:
+	movh.a	a2,#@his(s_pitch)
+	lea	a2,[a2]@los(s_pitch)
+	ld.w	d0,[a2]
+.L507:
+	madd.f	d15,d0,d12,d15
+.L508:
+	mov.u	d0,#49807
+	addih	d0,d0,#16245
+.L509:
+	mov.u	d1,#55056
+	addih	d1,d1,#15651
+.L510:
+	mul.f	d1,d2,d1
+.L511:
+	madd.f	d15,d1,d15,d0
+.L512:
+	st.w	[a15],d15
+.L513:
+	movh	d15,#16320
+.L514:
+	cmp.f	d15,d13,d15
+	jnz.t	d15:2,.L14
+.L515:
+	movh	d15,#49088
+.L516:
+	cmp.f	d15,d13,d15
+	extr.u	d15,d15,#0,#1
+	jeq	d15,#0,.L15
+.L14:
+	movh.a	a15,#@his(s_yaw)
+	lea	a15,[a15]@los(s_yaw)
+.L517:
+	mov.u	d15,#55050
+	addih	d15,d15,#15395
+.L518:
+	movh.a	a2,#@his(s_yaw)
+	lea	a2,[a2]@los(s_yaw)
+	ld.w	d0,[a2]
+.L519:
+	madd.f	d15,d0,d13,d15
+	st.w	[a15],d15
+.L15:
+.L13:
+	ret
+.L175:
+	
+__updateAttitude_function_end:
+	.size	updateAttitude,__updateAttitude_function_end-updateAttitude
+.L116:
+	; End of function
+	
+	.sdecl	'.text.DrvMpu9250.floatToStr',code,cluster('floatToStr')
+	.sect	'.text.DrvMpu9250.floatToStr'
+	.align	2
+	
+; Function floatToStr
+.L43:
+floatToStr:	.type	func
+	mov	d15,#0
+.L524:
+	cmp.f	d15,d4,d15
+	jnz.t	d15:0,.L16
+.L525:
+	mov	d15,#43
+.L526:
+	j	.L17
+.L16:
+	mov	d15,#45
+.L17:
+	st.b	[a4],d15
+.L527:
+	mov	d15,#0
+.L528:
+	cmp.f	d15,d4,d15
+	extr.u	d15,d15,#0,#1
+.L529:
+	jeq	d15,#0,.L18
+.L530:
+	insn.t	d4,d4:31,d4:31
+.L18:
+	ftoiz	d2,d4
+.L220:
+	itof	d15,d2
+.L531:
+	sub.f	d15,d4,d15
+.L532:
+	movh	d0,#16672
+.L533:
+	movh	d1,#16128
+.L534:
+	madd.f	d15,d1,d15,d0
+.L535:
+	ftouz	d3,d15
+.L221:
+	jlt.u	d3,#10,.L19
+.L536:
+	mov	d3,#0
+.L537:
+	add	d2,#1
+.L19:
+	mov	d15,#999
+.L538:
+	jge.u	d15,d2,.L20
+.L539:
+	mov	d2,#999
+.L20:
+	mov	d15,#100
+.L540:
+	div.u	e0,d2,d15
+.L541:
+	add	d15,d0,#48
+.L542:
+	st.b	[a4]1,d15
+.L543:
+	mov	d15,#10
+.L544:
+	div.u	e0,d2,d15
+.L545:
+	mov	d15,#10
+.L546:
+	div.u	e0,d0,d15
+.L547:
+	add	d15,d1,#48
+.L548:
+	st.b	[a4]2,d15
+.L549:
+	mov	d15,#10
+.L550:
+	div.u	e0,d2,d15
+.L551:
+	add	d15,d1,#48
+.L552:
+	st.b	[a4]3,d15
+.L553:
+	mov	d15,#46
+.L554:
+	st.b	[a4]4,d15
+.L555:
+	add	d15,d3,#48
+.L556:
+	st.b	[a4]5,d15
+.L557:
+	mov	d15,#0
+.L558:
+	st.b	[a4]6,d15
+.L559:
+	ret
+.L188:
+	
+__floatToStr_function_end:
+	.size	floatToStr,__floatToStr_function_end-floatToStr
+.L121:
+	; End of function
+	
+	.sdecl	'.text.DrvMpu9250.DrvMpu9250_Init',code,cluster('DrvMpu9250_Init')
+	.sect	'.text.DrvMpu9250.DrvMpu9250_Init'
+	.align	2
+	
+	.global	DrvMpu9250_Init
+; Function DrvMpu9250_Init
+.L45:
+DrvMpu9250_Init:	.type	func
+	mov	d4,#107
+.L234:
+	mov	d5,#128
+	call	DrvSpi_WriteReg
+.L235:
+	mov	d4,#200
+	call	delay_ms
+.L236:
+	mov	d4,#107
+.L237:
+	mov	d5,#1
+	call	writeRegVerify
+.L238:
+	mov	d4,#50
+	call	delay_ms
+.L239:
+	mov	d4,#106
+.L240:
+	mov	d5,#16
+	call	writeRegVerify
+.L241:
+	mov	d4,#10
+	call	delay_ms
+.L242:
+	mov	d4,#108
+.L243:
+	mov	d5,#0
+	call	writeRegVerify
+.L244:
+	mov	d4,#10
+	call	delay_ms
+.L245:
+	mov	d4,#27
+.L246:
+	mov	d5,#8
+	call	writeRegVerify
+.L247:
+	mov	d4,#28
+.L248:
+	mov	d5,#8
+	call	writeRegVerify
+.L249:
+	mov	d4,#26
+.L250:
+	mov	d5,#3
+	call	writeRegVerify
+.L251:
+	mov	d4,#29
+.L252:
+	mov	d5,#3
+	call	writeRegVerify
+.L253:
+	mov	d4,#25
+.L254:
+	mov	d5,#9
+	call	writeRegVerify
+.L255:
+	mov	d4,#50
+	call	delay_ms
+.L256:
+	movh.a	a15,#@his(s_initialized)
+	lea	a15,[a15]@los(s_initialized)
+.L257:
+	call	DrvMpu9250_IsReady
+.L258:
+	st.b	[a15],d2
+.L259:
+	movh.a	a15,#@his(s_initialized)
+	lea	a15,[a15]@los(s_initialized)
+	ld.bu	d15,[a15]
+.L260:
+	jeq	d15,#0,.L21
+.L261:
+	movh.a	a4,#@his(.1.str)
+	lea	a4,[a4]@los(.1.str)
+	call	DrvUart_SendString
+.L262:
+	j	.L22
+.L21:
+	movh.a	a4,#@his(.2.str)
+	lea	a4,[a4]@los(.2.str)
+	call	DrvUart_SendString
+.L22:
+	ret
+.L148:
+	
+__DrvMpu9250_Init_function_end:
+	.size	DrvMpu9250_Init,__DrvMpu9250_Init_function_end-DrvMpu9250_Init
+.L66:
+	; End of function
+	
+	.sdecl	'.text.DrvMpu9250.DrvMpu9250_IsReady',code,cluster('DrvMpu9250_IsReady')
+	.sect	'.text.DrvMpu9250.DrvMpu9250_IsReady'
+	.align	2
+	
+	.global	DrvMpu9250_IsReady
+; Function DrvMpu9250_IsReady
+.L47:
+DrvMpu9250_IsReady:	.type	func
+	mov	d4,#117
+	call	DrvSpi_ReadReg
+.L222:
+	mov	d15,#113
+.L267:
+	jeq	d15,d2,.L23
+.L268:
+	mov	d15,#112
+.L269:
+	jne	d15,d2,.L24
+.L23:
+	mov	d2,#1
+.L223:
+	j	.L25
+.L24:
+	mov	d2,#0
+.L25:
+	j	.L26
+.L26:
+	ret
+.L150:
+	
+__DrvMpu9250_IsReady_function_end:
+	.size	DrvMpu9250_IsReady,__DrvMpu9250_IsReady_function_end-DrvMpu9250_IsReady
+.L71:
+	; End of function
+	
+	.sdecl	'.text.DrvMpu9250.DrvMpu9250_ReadSensors',code,cluster('DrvMpu9250_ReadSensors')
+	.sect	'.text.DrvMpu9250.DrvMpu9250_ReadSensors'
+	.align	2
+	
+	.global	DrvMpu9250_ReadSensors
+; Function DrvMpu9250_ReadSensors
+.L49:
+DrvMpu9250_ReadSensors:	.type	func
+	sub.a	a10,#16
+.L224:
+	movh.a	a15,#@his(s_initialized)
+	lea	a15,[a15]@los(s_initialized)
+	ld.bu	d15,[a15]
+	jne	d15,#0,.L27
+.L274:
+	j	.L28
+.L27:
+	mov	d4,#59
+.L275:
+	lea	a4,[a10]0
+.L276:
+	mov	d5,#2
+	call	DrvSpi_ReadBurst
+.L277:
+	mov	d4,#61
+.L278:
+	lea	a4,[a10]2
+.L279:
+	mov	d5,#2
+	call	DrvSpi_ReadBurst
+.L280:
+	mov	d4,#63
+.L281:
+	lea	a4,[a10]4
+.L282:
+	mov	d5,#2
+	call	DrvSpi_ReadBurst
+.L283:
+	mov	d15,#0
+.L284:
+	st.b	[a10]6,d15
+.L285:
+	mov	d15,#0
+.L286:
+	st.b	[a10]7,d15
+.L287:
+	mov	d4,#67
+.L288:
+	lea	a4,[a10]8
+.L289:
+	mov	d5,#2
+	call	DrvSpi_ReadBurst
+.L290:
+	mov	d4,#69
+.L291:
+	lea	a4,[a10]10
+.L292:
+	mov	d5,#2
+	call	DrvSpi_ReadBurst
+.L293:
+	mov	d4,#71
+.L294:
+	lea	a4,[a10]12
+.L295:
+	mov	d5,#2
+	call	DrvSpi_ReadBurst
+.L296:
+	lea	a4,[a10]0
+	call	parseSensorData
+.L297:
+	call	updateAttitude
+.L28:
+	ret
+.L152:
+	
+__DrvMpu9250_ReadSensors_function_end:
+	.size	DrvMpu9250_ReadSensors,__DrvMpu9250_ReadSensors_function_end-DrvMpu9250_ReadSensors
+.L76:
+	; End of function
+	
+	.sdecl	'.text.DrvMpu9250.DrvMpu9250_GetRoll',code,cluster('DrvMpu9250_GetRoll')
+	.sect	'.text.DrvMpu9250.DrvMpu9250_GetRoll'
+	.align	2
+	
+	.global	DrvMpu9250_GetRoll
+; Function DrvMpu9250_GetRoll
+.L51:
+DrvMpu9250_GetRoll:	.type	func
+	movh.a	a15,#@his(s_roll)
+	lea	a15,[a15]@los(s_roll)
+	ld.w	d2,[a15]
+.L302:
+	j	.L29
+.L29:
+	ret
+.L156:
+	
+__DrvMpu9250_GetRoll_function_end:
+	.size	DrvMpu9250_GetRoll,__DrvMpu9250_GetRoll_function_end-DrvMpu9250_GetRoll
+.L81:
+	; End of function
+	
+	.sdecl	'.text.DrvMpu9250.DrvMpu9250_GetPitch',code,cluster('DrvMpu9250_GetPitch')
+	.sect	'.text.DrvMpu9250.DrvMpu9250_GetPitch'
+	.align	2
+	
+	.global	DrvMpu9250_GetPitch
+; Function DrvMpu9250_GetPitch
+.L53:
+DrvMpu9250_GetPitch:	.type	func
+	movh.a	a15,#@his(s_pitch)
+	lea	a15,[a15]@los(s_pitch)
+	ld.w	d2,[a15]
+.L307:
+	j	.L30
+.L30:
+	ret
+.L157:
+	
+__DrvMpu9250_GetPitch_function_end:
+	.size	DrvMpu9250_GetPitch,__DrvMpu9250_GetPitch_function_end-DrvMpu9250_GetPitch
+.L86:
+	; End of function
+	
+	.sdecl	'.text.DrvMpu9250.DrvMpu9250_GetYaw',code,cluster('DrvMpu9250_GetYaw')
+	.sect	'.text.DrvMpu9250.DrvMpu9250_GetYaw'
+	.align	2
+	
+	.global	DrvMpu9250_GetYaw
+; Function DrvMpu9250_GetYaw
+.L55:
+DrvMpu9250_GetYaw:	.type	func
+	movh.a	a15,#@his(s_yaw)
+	lea	a15,[a15]@los(s_yaw)
+	ld.w	d2,[a15]
+.L312:
+	j	.L31
+.L31:
+	ret
+.L158:
+	
+__DrvMpu9250_GetYaw_function_end:
+	.size	DrvMpu9250_GetYaw,__DrvMpu9250_GetYaw_function_end-DrvMpu9250_GetYaw
+.L91:
+	; End of function
+	
+	.sdecl	'.text.DrvMpu9250.DrvMpu9250_SendUart',code,cluster('DrvMpu9250_SendUart')
+	.sect	'.text.DrvMpu9250.DrvMpu9250_SendUart'
+	.align	2
+	
+	.global	DrvMpu9250_SendUart
+; Function DrvMpu9250_SendUart
+.L57:
+DrvMpu9250_SendUart:	.type	func
+	sub.a	a10,#8
+.L225:
+	movh.a	a15,#@his(s_initialized)
+	lea	a15,[a15]@los(s_initialized)
+	ld.bu	d15,[a15]
+	jne	d15,#0,.L32
+.L317:
+	j	.L33
+.L32:
+	movh.a	a4,#@his(.3.str)
+	lea	a4,[a4]@los(.3.str)
+	call	DrvUart_SendString
+.L318:
+	movh.a	a4,#@his(.3.str)
+	lea	a4,[a4]@los(.3.str)
+	call	DrvUart1_SendString
+.L319:
+	movh.a	a15,#@his(s_roll)
+	lea	a15,[a15]@los(s_roll)
+	ld.w	d4,[a15]
+.L320:
+	lea	a4,[a10]0
+	call	floatToStr
+.L321:
+	lea	a4,[a10]0
+	call	DrvUart_SendString
+.L322:
+	lea	a4,[a10]0
+	call	DrvUart1_SendString
+.L323:
+	movh.a	a4,#@his(.4.str)
+	lea	a4,[a4]@los(.4.str)
+	call	DrvUart_SendString
+.L324:
+	movh.a	a4,#@his(.4.str)
+	lea	a4,[a4]@los(.4.str)
+	call	DrvUart1_SendString
+.L325:
+	movh.a	a15,#@his(s_pitch)
+	lea	a15,[a15]@los(s_pitch)
+	ld.w	d4,[a15]
+.L326:
+	lea	a4,[a10]0
+	call	floatToStr
+.L327:
+	lea	a4,[a10]0
+	call	DrvUart_SendString
+.L328:
+	lea	a4,[a10]0
+	call	DrvUart1_SendString
+.L329:
+	movh.a	a4,#@his(.5.str)
+	lea	a4,[a4]@los(.5.str)
+	call	DrvUart_SendString
+.L330:
+	movh.a	a4,#@his(.5.str)
+	lea	a4,[a4]@los(.5.str)
+	call	DrvUart1_SendString
+.L331:
+	movh.a	a15,#@his(s_yaw)
+	lea	a15,[a15]@los(s_yaw)
+	ld.w	d4,[a15]
+.L332:
+	lea	a4,[a10]0
+	call	floatToStr
+.L333:
+	lea	a4,[a10]0
+	call	DrvUart_SendString
+.L334:
+	lea	a4,[a10]0
+	call	DrvUart1_SendString
+.L335:
+	movh.a	a4,#@his(.6.str)
+	lea	a4,[a4]@los(.6.str)
+	call	DrvUart_SendString
+.L336:
+	movh.a	a4,#@his(.6.str)
+	lea	a4,[a4]@los(.6.str)
+	call	DrvUart1_SendString
+.L33:
+	ret
+.L159:
+	
+__DrvMpu9250_SendUart_function_end:
+	.size	DrvMpu9250_SendUart,__DrvMpu9250_SendUart_function_end-DrvMpu9250_SendUart
+.L96:
+	; End of function
+	
+	.sdecl	'.data.DrvMpu9250.s_initialized',data,cluster('s_initialized')
+	.sect	'.data.DrvMpu9250.s_initialized'
+s_initialized:	.type	object
+	.size	s_initialized,1
+	.space	1
+	.sdecl	'.bss.DrvMpu9250.s_accelRaw',data,cluster('s_accelRaw')
+	.sect	'.bss.DrvMpu9250.s_accelRaw'
+	.align	2
+s_accelRaw:	.type	object
+	.size	s_accelRaw,6
+	.space	6
+	.sdecl	'.bss.DrvMpu9250.s_gyroRaw',data,cluster('s_gyroRaw')
+	.sect	'.bss.DrvMpu9250.s_gyroRaw'
+	.align	2
+s_gyroRaw:	.type	object
+	.size	s_gyroRaw,6
+	.space	6
+	.sdecl	'.data.DrvMpu9250.s_roll',data,cluster('s_roll')
+	.sect	'.data.DrvMpu9250.s_roll'
+	.align	2
+s_roll:	.type	object
+	.size	s_roll,4
+	.space	4
+	.sdecl	'.data.DrvMpu9250.s_pitch',data,cluster('s_pitch')
+	.sect	'.data.DrvMpu9250.s_pitch'
+	.align	2
+s_pitch:	.type	object
+	.size	s_pitch,4
+	.space	4
+	.sdecl	'.data.DrvMpu9250.s_yaw',data,cluster('s_yaw')
+	.sect	'.data.DrvMpu9250.s_yaw'
+	.align	2
+s_yaw:	.type	object
+	.size	s_yaw,4
+	.space	4
+	.sdecl	'.data.DrvMpu9250.s_rollOffset',data,cluster('s_rollOffset')
+	.sect	'.data.DrvMpu9250.s_rollOffset'
+	.align	2
+s_rollOffset:	.type	object
+	.size	s_rollOffset,4
+	.space	4
+	.sdecl	'.data.DrvMpu9250.s_pitchOffset',data,cluster('s_pitchOffset')
+	.sect	'.data.DrvMpu9250.s_pitchOffset'
+	.align	2
+s_pitchOffset:	.type	object
+	.size	s_pitchOffset,4
+	.space	4
+	.sdecl	'.data.DrvMpu9250.s_gyroOffsetRoll',data,cluster('s_gyroOffsetRoll')
+	.sect	'.data.DrvMpu9250.s_gyroOffsetRoll'
+	.align	2
+s_gyroOffsetRoll:	.type	object
+	.size	s_gyroOffsetRoll,4
+	.space	4
+	.sdecl	'.data.DrvMpu9250.s_gyroOffsetPitch',data,cluster('s_gyroOffsetPitch')
+	.sect	'.data.DrvMpu9250.s_gyroOffsetPitch'
+	.align	2
+s_gyroOffsetPitch:	.type	object
+	.size	s_gyroOffsetPitch,4
+	.space	4
+	.sdecl	'.data.DrvMpu9250.s_gyroOffsetYaw',data,cluster('s_gyroOffsetYaw')
+	.sect	'.data.DrvMpu9250.s_gyroOffsetYaw'
+	.align	2
+s_gyroOffsetYaw:	.type	object
+	.size	s_gyroOffsetYaw,4
+	.space	4
+	.sdecl	'.data.DrvMpu9250.s_calibrated',data,cluster('s_calibrated')
+	.sect	'.data.DrvMpu9250.s_calibrated'
+s_calibrated:	.type	object
+	.size	s_calibrated,1
+	.space	1
+	.sdecl	'.data.DrvMpu9250.s_calibCount',data,cluster('s_calibCount')
+	.sect	'.data.DrvMpu9250.s_calibCount'
+	.align	2
+s_calibCount:	.type	object
+	.size	s_calibCount,2
+	.space	2
+	.sdecl	'.rodata.DrvMpu9250..1.str',data,rom
+	.sect	'.rodata.DrvMpu9250..1.str'
+.1.str:	.type	object
+	.size	.1.str,15
+	.byte	77,80,85,45,57,50,53,48
+	.byte	32,79,75,33
+	.byte	13,10
+	.space	1
+	.sdecl	'.rodata.DrvMpu9250..2.str',data,rom
+	.sect	'.rodata.DrvMpu9250..2.str'
+.2.str:	.type	object
+	.size	.2.str,17
+	.byte	77,80,85,45,57,50,53,48
+	.byte	32,70,65,73,76,33,13,10
+	.space	1
+	.sdecl	'.rodata.DrvMpu9250..3.str',data,rom
+	.sect	'.rodata.DrvMpu9250..3.str'
+.3.str:	.type	object
+	.size	.3.str,3
+	.byte	82,58
+	.space	1
+	.sdecl	'.rodata.DrvMpu9250..4.str',data,rom
+	.sect	'.rodata.DrvMpu9250..4.str'
+.4.str:	.type	object
+	.size	.4.str,4
+	.byte	44,80,58
+	.space	1
+	.sdecl	'.rodata.DrvMpu9250..5.str',data,rom
+	.sect	'.rodata.DrvMpu9250..5.str'
+.5.str:	.type	object
+	.size	.5.str,4
+	.byte	44,89,58
+	.space	1
+	.sdecl	'.rodata.DrvMpu9250..6.str',data,rom
+	.sect	'.rodata.DrvMpu9250..6.str'
+.6.str:	.type	object
+	.size	.6.str,3
+	.byte	13,10
+	.space	1
+	.calls	'writeRegVerify','DrvSpi_WriteReg'
+	.calls	'writeRegVerify','delay_ms'
+	.calls	'writeRegVerify','DrvSpi_ReadReg'
+	.calls	'updateAttitude','atan2f'
+	.calls	'updateAttitude','sqrtf'
+	.calls	'DrvMpu9250_Init','DrvSpi_WriteReg'
+	.calls	'DrvMpu9250_Init','delay_ms'
+	.calls	'DrvMpu9250_Init','writeRegVerify'
+	.calls	'DrvMpu9250_Init','DrvMpu9250_IsReady'
+	.calls	'DrvMpu9250_Init','DrvUart_SendString'
+	.calls	'DrvMpu9250_IsReady','DrvSpi_ReadReg'
+	.calls	'DrvMpu9250_ReadSensors','DrvSpi_ReadBurst'
+	.calls	'DrvMpu9250_ReadSensors','parseSensorData'
+	.calls	'DrvMpu9250_ReadSensors','updateAttitude'
+	.calls	'DrvMpu9250_SendUart','DrvUart_SendString'
+	.calls	'DrvMpu9250_SendUart','DrvUart1_SendString'
+	.calls	'DrvMpu9250_SendUart','floatToStr'
+	.calls	'delay_ms','',8
+	.calls	'writeRegVerify','',0
+	.calls	'parseSensorData','',0
+	.calls	'updateAttitude','',0
+	.calls	'floatToStr','',0
+	.calls	'DrvMpu9250_Init','',0
+	.calls	'DrvMpu9250_IsReady','',0
+	.calls	'DrvMpu9250_ReadSensors','',16
+	.calls	'DrvMpu9250_GetRoll','',0
+	.calls	'DrvMpu9250_GetPitch','',0
+	.calls	'DrvMpu9250_GetYaw','',0
+	.extern	DrvSpi_ReadReg
+	.extern	DrvSpi_WriteReg
+	.extern	DrvSpi_ReadBurst
+	.extern	DrvUart_SendString
+	.extern	DrvUart1_SendString
+	.extern	atan2f
+	.extern	sqrtf
+	.calls	'DrvMpu9250_SendUart','',8
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L59:
+	.word	938
+	.half	3
+	.word	.L60
+	.byte	4
+.L58:
+	.byte	1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L61
+.L149:
+	.byte	2
+	.byte	'unsigned char',0,1,8
+.L153:
+	.byte	3,14
+	.word	197
+	.byte	4,13,0
+.L155:
+	.byte	2
+	.byte	'float',0,4,4,2
+	.byte	'char',0,1,6
+.L160:
+	.byte	3,7
+	.word	232
+	.byte	4,6,0,5
+	.byte	'DrvSpi_ReadReg',0,1,24,7
+	.word	197
+	.byte	1,1,1,1,6
+	.byte	'regAddr',0,1,24,28
+	.word	197
+	.byte	0,7
+	.byte	'DrvSpi_WriteReg',0,1,25,7,1,1,1,1,6
+	.byte	'regAddr',0,1,25,29
+	.word	197
+	.byte	6
+	.byte	'data',0,1,25,44
+	.word	197
+	.byte	0,8
+	.word	197
+.L197:
+	.byte	2
+	.byte	'unsigned short int',0,2,7,7
+	.byte	'DrvSpi_ReadBurst',0,1,26,7,1,1,1,1,6
+	.byte	'regAddr',0,1,26,30
+	.word	197
+	.byte	6
+	.byte	'buf',0,1,26,46
+	.word	347
+	.byte	6
+	.byte	'len',0,1,26,58
+	.word	352
+	.byte	0,9
+	.word	232
+	.byte	8
+	.word	440
+	.byte	7
+	.byte	'DrvUart_SendString',0,2,20,9,1,1,1,1,6
+	.byte	'str',0,2,20,40
+	.word	445
+	.byte	0,7
+	.byte	'DrvUart1_SendString',0,3,20,9,1,1,1,1,6
+	.byte	'str',0,3,20,41
+	.word	445
+	.byte	0,5
+	.byte	'atan2f',0,4,107,25
+	.word	223
+	.byte	1,1,1,1,10,4,107,43
+	.word	223
+	.byte	10,4,107,50
+	.word	223
+	.byte	0,5
+	.byte	'sqrtf',0,4,187,1,25
+	.word	223
+	.byte	1,1,1,1,10,4,187,1,43
+	.word	223
+	.byte	0
+.L163:
+	.byte	2
+	.byte	'unsigned long int',0,4,7
+.L165:
+	.byte	11
+	.word	596
+	.byte	9
+	.word	197
+.L173:
+	.byte	8
+	.word	622
+.L190:
+	.byte	8
+	.word	232
+.L192:
+	.byte	2
+	.byte	'long int',0,4,5,2
+	.byte	'short int',0,2,5,12
+	.byte	'__wchar_t',0,5,1,1
+	.word	649
+	.byte	2
+	.byte	'unsigned int',0,4,7,12
+	.byte	'__size_t',0,5,1,1
+	.word	680
+	.byte	2
+	.byte	'int',0,4,5,12
+	.byte	'__ptrdiff_t',0,5,1,1
+	.word	713
+	.byte	13,1,8
+	.word	740
+	.byte	12
+	.byte	'__codeptr',0,5,1,1
+	.word	742
+	.byte	12
+	.byte	'boolean',0,6,104,29
+	.word	197
+	.byte	12
+	.byte	'uint8',0,6,108,29
+	.word	197
+	.byte	12
+	.byte	'uint16',0,6,112,29
+	.word	352
+	.byte	12
+	.byte	'uint32',0,6,116,29
+	.word	596
+	.byte	12
+	.byte	'sint16',0,6,129,1,29
+	.word	649
+	.byte	12
+	.byte	'sint32',0,6,134,1,29
+	.word	637
+	.byte	2
+	.byte	'long long int',0,8,5,12
+	.byte	'sint64',0,6,141,1,29
+	.word	857
+	.byte	12
+	.byte	'float32',0,6,170,1,29
+	.word	223
+	.byte	14
+	.byte	'void',0,8
+	.word	907
+	.byte	12
+	.byte	'pvoid',0,7,54,28
+	.word	913
+.L196:
+	.byte	3,6
+	.word	649
+	.byte	4,2,0,0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L60:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,1,1,11,15,73,19,0,0,4,33,0
+	.byte	47,15,0,0,5,46,1,3,8,58,15,59,15,57,15,73,19,54,15,39,12,63,12,60,12,0,0,6,5,0,3,8,58,15,59,15,57,15,73
+	.byte	19,0,0,7,46,1,3,8,58,15,59,15,57,15,54,15,39,12,63,12,60,12,0,0,8,15,0,73,19,0,0,9,38,0,73,19,0,0,10,5
+	.byte	0,58,15,59,15,57,15,73,19,0,0,11,53,0,73,19,0,0,12,22,0,3,8,58,15,59,15,57,15,73,19,0,0,13,21,0,54,15
+	.byte	0,0,14,59,0,3,8,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L61:
+	.word	.L227-.L226
+.L226:
+	.half	3
+	.word	.L229-.L228
+.L228:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'C:\\Infineon\\AURIX-Studio-1.10.28\\tools\\Compilers\\Tasking_1.1r8\\ctc\\include\\',0
+	.byte	'D:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Std',0
+	.byte	0
+	.byte	'..\\DrvSpi.h',0,0,0,0
+	.byte	'..\\DrvUart.h',0,0,0,0
+	.byte	'..\\DrvUart1.h',0,0,0,0
+	.byte	'math.h',0,1,0,0
+	.byte	'../DrvMpu9250.c',0,0,0,0
+	.byte	'Platform_Types.h',0,2,0,0
+	.byte	'Ifx_Types.h',0,2,0,0,0
+.L229:
+.L227:
+	.sdecl	'.debug_info',debug,cluster('DrvMpu9250_Init')
+	.sect	'.debug_info'
+.L62:
+	.word	249
+	.half	3
+	.word	.L63
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L65,.L64
+	.byte	2
+	.word	.L58
+	.byte	3
+	.byte	'DrvMpu9250_Init',0,1,185,1,6,1,1,1
+	.word	.L45,.L148,.L44
+	.byte	4
+	.word	.L45,.L148
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('DrvMpu9250_Init')
+	.sect	'.debug_abbrev'
+.L63:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('DrvMpu9250_Init')
+	.sect	'.debug_line'
+.L64:
+	.word	.L231-.L230
+.L230:
+	.half	3
+	.word	.L233-.L232
+.L232:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../DrvMpu9250.c',0,0,0,0,0
+.L233:
+	.byte	5,21,7,0,5,2
+	.word	.L45
+	.byte	3,186,1,1,5,41,9
+	.half	.L234-.L45
+	.byte	1,5,14,9
+	.half	.L235-.L234
+	.byte	3,1,1,5,20,9
+	.half	.L236-.L235
+	.byte	3,2,1,5,40,9
+	.half	.L237-.L236
+	.byte	1,5,14,9
+	.half	.L238-.L237
+	.byte	3,1,1,5,20,9
+	.half	.L239-.L238
+	.byte	3,2,1,5,39,9
+	.half	.L240-.L239
+	.byte	1,5,14,9
+	.half	.L241-.L240
+	.byte	3,1,1,5,20,9
+	.half	.L242-.L241
+	.byte	3,2,1,5,40,9
+	.half	.L243-.L242
+	.byte	1,5,14,9
+	.half	.L244-.L243
+	.byte	3,1,1,5,20,9
+	.half	.L245-.L244
+	.byte	3,2,1,5,41,9
+	.half	.L246-.L245
+	.byte	1,5,20,9
+	.half	.L247-.L246
+	.byte	3,1,1,5,42,9
+	.half	.L248-.L247
+	.byte	1,5,20,9
+	.half	.L249-.L248
+	.byte	3,1,1,5,36,9
+	.half	.L250-.L249
+	.byte	1,5,20,9
+	.half	.L251-.L250
+	.byte	3,1,1,5,43,9
+	.half	.L252-.L251
+	.byte	1,5,20,9
+	.half	.L253-.L252
+	.byte	3,1,1,5,40,9
+	.half	.L254-.L253
+	.byte	1,5,14,9
+	.half	.L255-.L254
+	.byte	3,2,1,5,5,9
+	.half	.L256-.L255
+	.byte	3,2,1,5,39,9
+	.half	.L257-.L256
+	.byte	1,5,19,9
+	.half	.L258-.L257
+	.byte	1,5,9,9
+	.half	.L259-.L258
+	.byte	3,1,1,5,5,9
+	.half	.L260-.L259
+	.byte	1,5,28,7,9
+	.half	.L261-.L260
+	.byte	3,2,1,5,47,9
+	.half	.L262-.L261
+	.byte	1,5,28,9
+	.half	.L21-.L262
+	.byte	3,4,1,5,1,9
+	.half	.L22-.L21
+	.byte	3,2,1,7,9
+	.half	.L66-.L22
+	.byte	0,1,1
+.L231:
+	.sdecl	'.debug_ranges',debug,cluster('DrvMpu9250_Init')
+	.sect	'.debug_ranges'
+.L65:
+	.word	-1,.L45,0,.L66-.L45,0,0
+	.sdecl	'.debug_info',debug,cluster('DrvMpu9250_IsReady')
+	.sect	'.debug_info'
+.L67:
+	.word	273
+	.half	3
+	.word	.L68
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L70,.L69
+	.byte	2
+	.word	.L58
+	.byte	3
+	.byte	'DrvMpu9250_IsReady',0,1,218,1,9
+	.word	.L149
+	.byte	1,1,1
+	.word	.L47,.L150,.L46
+	.byte	4
+	.word	.L47,.L150
+	.byte	5
+	.byte	'id',0,1,220,1,11
+	.word	.L149,.L151
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('DrvMpu9250_IsReady')
+	.sect	'.debug_abbrev'
+.L68:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('DrvMpu9250_IsReady')
+	.sect	'.debug_line'
+.L69:
+	.word	.L264-.L263
+.L263:
+	.half	3
+	.word	.L266-.L265
+.L265:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../DrvMpu9250.c',0,0,0,0,0
+.L266:
+	.byte	5,31,7,0,5,2
+	.word	.L47
+	.byte	3,219,1,1,5,19,9
+	.half	.L222-.L47
+	.byte	3,1,1,5,13,9
+	.half	.L267-.L222
+	.byte	1,5,49,7,9
+	.half	.L268-.L267
+	.byte	1,5,46,9
+	.half	.L269-.L268
+	.byte	1,5,71,7,9
+	.half	.L23-.L269
+	.byte	1,5,78,9
+	.half	.L223-.L23
+	.byte	1,5,71,9
+	.half	.L24-.L223
+	.byte	1,5,5,9
+	.half	.L25-.L24
+	.byte	1,5,1,9
+	.half	.L26-.L25
+	.byte	3,1,1,7,9
+	.half	.L71-.L26
+	.byte	0,1,1
+.L264:
+	.sdecl	'.debug_ranges',debug,cluster('DrvMpu9250_IsReady')
+	.sect	'.debug_ranges'
+.L70:
+	.word	-1,.L47,0,.L71-.L47,0,0
+	.sdecl	'.debug_info',debug,cluster('DrvMpu9250_ReadSensors')
+	.sect	'.debug_info'
+.L72:
+	.word	274
+	.half	3
+	.word	.L73
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L75,.L74
+	.byte	2
+	.word	.L58
+	.byte	3
+	.byte	'DrvMpu9250_ReadSensors',0,1,224,1,6,1,1,1
+	.word	.L49,.L152,.L48
+	.byte	4
+	.word	.L49,.L152
+	.byte	5
+	.byte	'buf',0,1,226,1,11
+	.word	.L153,.L154
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('DrvMpu9250_ReadSensors')
+	.sect	'.debug_abbrev'
+.L73:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('DrvMpu9250_ReadSensors')
+	.sect	'.debug_line'
+.L74:
+	.word	.L271-.L270
+.L270:
+	.half	3
+	.word	.L273-.L272
+.L272:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../DrvMpu9250.c',0,0,0,0,0
+.L273:
+	.byte	5,6,7,0,5,2
+	.word	.L49
+	.byte	3,223,1,1,5,10,9
+	.half	.L224-.L49
+	.byte	3,4,1,5,25,9
+	.half	.L274-.L224
+	.byte	1,5,22,9
+	.half	.L27-.L274
+	.byte	3,3,1,5,30,9
+	.half	.L275-.L27
+	.byte	1,5,39,9
+	.half	.L276-.L275
+	.byte	1,5,22,9
+	.half	.L277-.L276
+	.byte	3,1,1,5,33,9
+	.half	.L278-.L277
+	.byte	1,5,39,9
+	.half	.L279-.L278
+	.byte	1,5,22,9
+	.half	.L280-.L279
+	.byte	3,1,1,5,33,9
+	.half	.L281-.L280
+	.byte	1,5,39,9
+	.half	.L282-.L281
+	.byte	1,5,14,9
+	.half	.L283-.L282
+	.byte	3,1,1,5,12,9
+	.half	.L284-.L283
+	.byte	1,5,27,9
+	.half	.L285-.L284
+	.byte	1,5,25,9
+	.half	.L286-.L285
+	.byte	1,5,22,9
+	.half	.L287-.L286
+	.byte	3,1,1,5,33,9
+	.half	.L288-.L287
+	.byte	1,5,39,9
+	.half	.L289-.L288
+	.byte	1,5,22,9
+	.half	.L290-.L289
+	.byte	3,1,1,5,33,9
+	.half	.L291-.L290
+	.byte	1,5,39,9
+	.half	.L292-.L291
+	.byte	1,5,22,9
+	.half	.L293-.L292
+	.byte	3,1,1,5,33,9
+	.half	.L294-.L293
+	.byte	1,5,39,9
+	.half	.L295-.L294
+	.byte	1,5,21,9
+	.half	.L296-.L295
+	.byte	3,2,1,5,19,9
+	.half	.L297-.L296
+	.byte	3,1,1,5,1,9
+	.half	.L28-.L297
+	.byte	3,1,1,7,9
+	.half	.L76-.L28
+	.byte	0,1,1
+.L271:
+	.sdecl	'.debug_ranges',debug,cluster('DrvMpu9250_ReadSensors')
+	.sect	'.debug_ranges'
+.L75:
+	.word	-1,.L49,0,.L76-.L49,0,0
+	.sdecl	'.debug_info',debug,cluster('DrvMpu9250_GetRoll')
+	.sect	'.debug_info'
+.L77:
+	.word	256
+	.half	3
+	.word	.L78
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L80,.L79
+	.byte	2
+	.word	.L58
+	.byte	3
+	.byte	'DrvMpu9250_GetRoll',0,1,243,1,9
+	.word	.L155
+	.byte	1,1,1
+	.word	.L51,.L156,.L50
+	.byte	4
+	.word	.L51,.L156
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('DrvMpu9250_GetRoll')
+	.sect	'.debug_abbrev'
+.L78:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('DrvMpu9250_GetRoll')
+	.sect	'.debug_line'
+.L79:
+	.word	.L299-.L298
+.L298:
+	.half	3
+	.word	.L301-.L300
+.L300:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../DrvMpu9250.c',0,0,0,0,0
+.L301:
+	.byte	5,44,7,0,5,2
+	.word	.L51
+	.byte	3,242,1,1,5,37,9
+	.half	.L302-.L51
+	.byte	1,5,53,9
+	.half	.L29-.L302
+	.byte	1,7,9
+	.half	.L81-.L29
+	.byte	0,1,1
+.L299:
+	.sdecl	'.debug_ranges',debug,cluster('DrvMpu9250_GetRoll')
+	.sect	'.debug_ranges'
+.L80:
+	.word	-1,.L51,0,.L81-.L51,0,0
+	.sdecl	'.debug_info',debug,cluster('DrvMpu9250_GetPitch')
+	.sect	'.debug_info'
+.L82:
+	.word	257
+	.half	3
+	.word	.L83
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L85,.L84
+	.byte	2
+	.word	.L58
+	.byte	3
+	.byte	'DrvMpu9250_GetPitch',0,1,244,1,9
+	.word	.L155
+	.byte	1,1,1
+	.word	.L53,.L157,.L52
+	.byte	4
+	.word	.L53,.L157
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('DrvMpu9250_GetPitch')
+	.sect	'.debug_abbrev'
+.L83:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('DrvMpu9250_GetPitch')
+	.sect	'.debug_line'
+.L84:
+	.word	.L304-.L303
+.L303:
+	.half	3
+	.word	.L306-.L305
+.L305:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../DrvMpu9250.c',0,0,0,0,0
+.L306:
+	.byte	5,44,7,0,5,2
+	.word	.L53
+	.byte	3,243,1,1,5,37,9
+	.half	.L307-.L53
+	.byte	1,5,53,9
+	.half	.L30-.L307
+	.byte	1,7,9
+	.half	.L86-.L30
+	.byte	0,1,1
+.L304:
+	.sdecl	'.debug_ranges',debug,cluster('DrvMpu9250_GetPitch')
+	.sect	'.debug_ranges'
+.L85:
+	.word	-1,.L53,0,.L86-.L53,0,0
+	.sdecl	'.debug_info',debug,cluster('DrvMpu9250_GetYaw')
+	.sect	'.debug_info'
+.L87:
+	.word	255
+	.half	3
+	.word	.L88
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L90,.L89
+	.byte	2
+	.word	.L58
+	.byte	3
+	.byte	'DrvMpu9250_GetYaw',0,1,245,1,9
+	.word	.L155
+	.byte	1,1,1
+	.word	.L55,.L158,.L54
+	.byte	4
+	.word	.L55,.L158
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('DrvMpu9250_GetYaw')
+	.sect	'.debug_abbrev'
+.L88:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('DrvMpu9250_GetYaw')
+	.sect	'.debug_line'
+.L89:
+	.word	.L309-.L308
+.L308:
+	.half	3
+	.word	.L311-.L310
+.L310:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../DrvMpu9250.c',0,0,0,0,0
+.L311:
+	.byte	5,44,7,0,5,2
+	.word	.L55
+	.byte	3,244,1,1,5,37,9
+	.half	.L312-.L55
+	.byte	1,5,53,9
+	.half	.L31-.L312
+	.byte	1,7,9
+	.half	.L91-.L31
+	.byte	0,1,1
+.L309:
+	.sdecl	'.debug_ranges',debug,cluster('DrvMpu9250_GetYaw')
+	.sect	'.debug_ranges'
+.L90:
+	.word	-1,.L55,0,.L91-.L55,0,0
+	.sdecl	'.debug_info',debug,cluster('DrvMpu9250_SendUart')
+	.sect	'.debug_info'
+.L92:
+	.word	271
+	.half	3
+	.word	.L93
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L95,.L94
+	.byte	2
+	.word	.L58
+	.byte	3
+	.byte	'DrvMpu9250_SendUart',0,1,247,1,6,1,1,1
+	.word	.L57,.L159,.L56
+	.byte	4
+	.word	.L57,.L159
+	.byte	5
+	.byte	'str',0,1,249,1,10
+	.word	.L160,.L161
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('DrvMpu9250_SendUart')
+	.sect	'.debug_abbrev'
+.L93:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('DrvMpu9250_SendUart')
+	.sect	'.debug_line'
+.L94:
+	.word	.L314-.L313
+.L313:
+	.half	3
+	.word	.L316-.L315
+.L315:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../DrvMpu9250.c',0,0,0,0,0
+.L316:
+	.byte	5,6,7,0,5,2
+	.word	.L57
+	.byte	3,246,1,1,5,10,9
+	.half	.L225-.L57
+	.byte	3,4,1,5,25,9
+	.half	.L317-.L225
+	.byte	1,5,24,9
+	.half	.L32-.L317
+	.byte	3,2,1,5,25,9
+	.half	.L318-.L32
+	.byte	3,1,1,5,16,9
+	.half	.L319-.L318
+	.byte	3,1,1,5,24,9
+	.half	.L320-.L319
+	.byte	1,9
+	.half	.L321-.L320
+	.byte	3,1,1,5,25,9
+	.half	.L322-.L321
+	.byte	3,1,1,5,24,9
+	.half	.L323-.L322
+	.byte	3,2,1,5,25,9
+	.half	.L324-.L323
+	.byte	3,1,1,5,16,9
+	.half	.L325-.L324
+	.byte	3,1,1,5,25,9
+	.half	.L326-.L325
+	.byte	1,5,24,9
+	.half	.L327-.L326
+	.byte	3,1,1,5,25,9
+	.half	.L328-.L327
+	.byte	3,1,1,5,24,9
+	.half	.L329-.L328
+	.byte	3,2,1,5,25,9
+	.half	.L330-.L329
+	.byte	3,1,1,5,16,9
+	.half	.L331-.L330
+	.byte	3,1,1,5,23,9
+	.half	.L332-.L331
+	.byte	1,5,24,9
+	.half	.L333-.L332
+	.byte	3,1,1,5,25,9
+	.half	.L334-.L333
+	.byte	3,1,1,5,24,9
+	.half	.L335-.L334
+	.byte	3,2,1,5,25,9
+	.half	.L336-.L335
+	.byte	3,1,1,5,1,9
+	.half	.L33-.L336
+	.byte	3,1,1,7,9
+	.half	.L96-.L33
+	.byte	0,1,1
+.L314:
+	.sdecl	'.debug_ranges',debug,cluster('DrvMpu9250_SendUart')
+	.sect	'.debug_ranges'
+.L95:
+	.word	-1,.L57,0,.L96-.L57,0,0
+	.sdecl	'.debug_info',debug,cluster('delay_ms')
+	.sect	'.debug_info'
+.L97:
+	.word	288
+	.half	3
+	.word	.L98
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L100,.L99
+	.byte	2
+	.word	.L58
+	.byte	3
+	.byte	'delay_ms',0,1,71,13,1,1
+	.word	.L35,.L162,.L34
+	.byte	4
+	.byte	'ms',0,1,71,29
+	.word	.L163,.L164
+	.byte	5
+	.word	.L35,.L162
+	.byte	6
+	.byte	'count',0,1,73,21
+	.word	.L165,.L166
+	.byte	6
+	.byte	'i',0,1,74,12
+	.word	.L163,.L167
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('delay_ms')
+	.sect	'.debug_abbrev'
+.L98:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3,8,58
+	.byte	15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('delay_ms')
+	.sect	'.debug_line'
+.L99:
+	.word	.L338-.L337
+.L337:
+	.half	3
+	.word	.L340-.L339
+.L339:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../DrvMpu9250.c',0,0,0,0,0
+.L340:
+	.byte	5,13,7,0,5,2
+	.word	.L35
+	.byte	3,198,0,1,5,12,9
+	.half	.L198-.L35
+	.byte	3,4,1,5,24,9
+	.half	.L199-.L198
+	.byte	1,5,22,9
+	.half	.L3-.L199
+	.byte	3,2,1,5,20,9
+	.half	.L341-.L3
+	.byte	1,5,40,9
+	.half	.L342-.L341
+	.byte	1,5,42,9
+	.half	.L5-.L342
+	.byte	1,5,47,9
+	.half	.L343-.L5
+	.byte	1,5,26,9
+	.half	.L4-.L343
+	.byte	1,5,34,9
+	.half	.L344-.L4
+	.byte	1,5,40,9
+	.half	.L345-.L344
+	.byte	1,5,27,7,9
+	.half	.L346-.L345
+	.byte	3,126,1,5,24,9
+	.half	.L2-.L346
+	.byte	1,5,1,7,9
+	.half	.L347-.L2
+	.byte	3,4,1,7,9
+	.half	.L101-.L347
+	.byte	0,1,1
+.L338:
+	.sdecl	'.debug_ranges',debug,cluster('delay_ms')
+	.sect	'.debug_ranges'
+.L100:
+	.word	-1,.L35,0,.L101-.L35,0,0
+	.sdecl	'.debug_info',debug,cluster('writeRegVerify')
+	.sect	'.debug_info'
+.L102:
+	.word	306
+	.half	3
+	.word	.L103
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L105,.L104
+	.byte	2
+	.word	.L58
+	.byte	3
+	.byte	'writeRegVerify',0,1,81,16
+	.word	.L149
+	.byte	1,1
+	.word	.L37,.L168,.L36
+	.byte	4
+	.byte	'regAddr',0,1,81,37
+	.word	.L149,.L169
+	.byte	4
+	.byte	'data',0,1,81,52
+	.word	.L149,.L170
+	.byte	5
+	.word	.L37,.L168
+	.byte	6
+	.byte	'retry',0,1,83,11
+	.word	.L149,.L171
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('writeRegVerify')
+	.sect	'.debug_abbrev'
+.L103:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3
+	.byte	8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('writeRegVerify')
+	.sect	'.debug_line'
+.L104:
+	.word	.L349-.L348
+.L348:
+	.half	3
+	.word	.L351-.L350
+.L350:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../DrvMpu9250.c',0,0,0,0,0
+.L351:
+	.byte	5,16,7,0,5,2
+	.word	.L37
+	.byte	3,208,0,1,9
+	.half	.L201-.L37
+	.byte	3,3,1,5,32,9
+	.half	.L202-.L201
+	.byte	1,5,34,9
+	.half	.L7-.L202
+	.byte	3,2,1,5,18,9
+	.half	.L352-.L7
+	.byte	3,1,1,5,28,9
+	.half	.L353-.L352
+	.byte	3,1,1,5,9,9
+	.half	.L204-.L353
+	.byte	1,5,53,7,9
+	.half	.L354-.L204
+	.byte	1,5,46,9
+	.half	.L355-.L354
+	.byte	1,5,39,9
+	.half	.L8-.L355
+	.byte	3,124,1,5,32,9
+	.half	.L6-.L8
+	.byte	1,5,12,7,9
+	.half	.L356-.L6
+	.byte	3,6,1,5,5,9
+	.half	.L357-.L356
+	.byte	1,5,1,9
+	.half	.L9-.L357
+	.byte	3,1,1,7,9
+	.half	.L106-.L9
+	.byte	0,1,1
+.L349:
+	.sdecl	'.debug_ranges',debug,cluster('writeRegVerify')
+	.sect	'.debug_ranges'
+.L105:
+	.word	-1,.L37,0,.L106-.L37,0,0
+	.sdecl	'.debug_info',debug,cluster('parseSensorData')
+	.sect	'.debug_info'
+.L107:
+	.word	263
+	.half	3
+	.word	.L108
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L110,.L109
+	.byte	2
+	.word	.L58
+	.byte	3
+	.byte	'parseSensorData',0,1,93,13,1,1
+	.word	.L39,.L172,.L38
+	.byte	4
+	.byte	'buf',0,1,93,42
+	.word	.L173,.L174
+	.byte	5
+	.word	.L39,.L172
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('parseSensorData')
+	.sect	'.debug_abbrev'
+.L108:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('parseSensorData')
+	.sect	'.debug_line'
+.L109:
+	.word	.L359-.L358
+.L358:
+	.half	3
+	.word	.L361-.L360
+.L360:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../DrvMpu9250.c',0,0,0,0,0
+.L361:
+	.byte	5,5,7,0,5,2
+	.word	.L39
+	.byte	3,222,0,1,5,41,9
+	.half	.L362-.L39
+	.byte	1,5,46,9
+	.half	.L363-.L362
+	.byte	1,5,21,9
+	.half	.L364-.L363
+	.byte	1,5,58,9
+	.half	.L365-.L364
+	.byte	1,5,53,9
+	.half	.L366-.L365
+	.byte	1,5,19,9
+	.half	.L367-.L366
+	.byte	1,5,5,9
+	.half	.L368-.L367
+	.byte	3,1,1,5,41,9
+	.half	.L369-.L368
+	.byte	1,5,46,9
+	.half	.L370-.L369
+	.byte	1,5,21,9
+	.half	.L371-.L370
+	.byte	1,5,58,9
+	.half	.L372-.L371
+	.byte	1,5,53,9
+	.half	.L373-.L372
+	.byte	1,5,19,9
+	.half	.L374-.L373
+	.byte	1,5,5,9
+	.half	.L375-.L374
+	.byte	3,1,1,5,41,9
+	.half	.L376-.L375
+	.byte	1,5,46,9
+	.half	.L377-.L376
+	.byte	1,5,21,9
+	.half	.L378-.L377
+	.byte	1,5,58,9
+	.half	.L379-.L378
+	.byte	1,5,53,9
+	.half	.L380-.L379
+	.byte	1,5,19,9
+	.half	.L381-.L380
+	.byte	1,5,5,9
+	.half	.L382-.L381
+	.byte	3,1,1,5,41,9
+	.half	.L383-.L382
+	.byte	1,5,46,9
+	.half	.L384-.L383
+	.byte	1,5,21,9
+	.half	.L385-.L384
+	.byte	1,5,58,9
+	.half	.L386-.L385
+	.byte	1,5,53,9
+	.half	.L387-.L386
+	.byte	1,5,19,9
+	.half	.L388-.L387
+	.byte	1,5,5,9
+	.half	.L389-.L388
+	.byte	3,1,1,5,41,9
+	.half	.L390-.L389
+	.byte	1,5,46,9
+	.half	.L391-.L390
+	.byte	1,5,21,9
+	.half	.L392-.L391
+	.byte	1,5,58,9
+	.half	.L393-.L392
+	.byte	1,5,53,9
+	.half	.L394-.L393
+	.byte	1,5,19,9
+	.half	.L395-.L394
+	.byte	1,5,5,9
+	.half	.L396-.L395
+	.byte	3,1,1,5,41,9
+	.half	.L397-.L396
+	.byte	1,5,46,9
+	.half	.L398-.L397
+	.byte	1,5,21,9
+	.half	.L399-.L398
+	.byte	1,5,58,9
+	.half	.L400-.L399
+	.byte	1,5,53,9
+	.half	.L401-.L400
+	.byte	1,5,19,9
+	.half	.L402-.L401
+	.byte	1,5,1,9
+	.half	.L403-.L402
+	.byte	3,1,1,7,9
+	.half	.L111-.L403
+	.byte	0,1,1
+.L359:
+	.sdecl	'.debug_ranges',debug,cluster('parseSensorData')
+	.sect	'.debug_ranges'
+.L110:
+	.word	-1,.L39,0,.L111-.L39,0,0
+	.sdecl	'.debug_info',debug,cluster('updateAttitude')
+	.sect	'.debug_info'
+.L112:
+	.word	459
+	.half	3
+	.word	.L113
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L115,.L114
+	.byte	2
+	.word	.L58
+	.byte	3
+	.byte	'updateAttitude',0,1,103,13,1,1
+	.word	.L41,.L175,.L40
+	.byte	4
+	.word	.L41,.L175
+	.byte	5
+	.byte	'ax',0,1,105,13
+	.word	.L155,.L176
+	.byte	5
+	.byte	'ay',0,1,106,13
+	.word	.L155,.L177
+	.byte	5
+	.byte	'az',0,1,107,13
+	.word	.L155,.L178
+	.byte	5
+	.byte	'rollRate',0,1,109,13
+	.word	.L155,.L179
+	.byte	5
+	.byte	'pitchRate',0,1,110,13
+	.word	.L155,.L180
+	.byte	5
+	.byte	'yawRate',0,1,111,13
+	.word	.L155,.L181
+	.byte	4
+	.word	.L182,.L11
+	.byte	5
+	.byte	'rollAcc',0,1,116,17
+	.word	.L155,.L183
+	.byte	5
+	.byte	'pitchAcc',0,1,117,17
+	.word	.L155,.L184
+	.byte	0,4
+	.word	.L185,.L175
+	.byte	5
+	.byte	'rollAcc',0,1,145,1,13
+	.word	.L155,.L186
+	.byte	5
+	.byte	'pitchAcc',0,1,146,1,13
+	.word	.L155,.L187
+	.byte	0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('updateAttitude')
+	.sect	'.debug_abbrev'
+.L113:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('updateAttitude')
+	.sect	'.debug_line'
+.L114:
+	.word	.L405-.L404
+.L404:
+	.half	3
+	.word	.L407-.L406
+.L406:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../DrvMpu9250.c',0,0,0,0,0
+.L407:
+	.byte	5,27,7,0,5,2
+	.word	.L41
+	.byte	3,232,0,1,5,37,9
+	.half	.L408-.L41
+	.byte	1,5,18,9
+	.half	.L409-.L408
+	.byte	1,5,43,9
+	.half	.L410-.L409
+	.byte	1,5,41,9
+	.half	.L411-.L410
+	.byte	1,5,27,9
+	.half	.L205-.L411
+	.byte	3,1,1,5,37,9
+	.half	.L412-.L205
+	.byte	1,5,18,9
+	.half	.L413-.L412
+	.byte	1,5,43,9
+	.half	.L414-.L413
+	.byte	1,5,41,9
+	.half	.L415-.L414
+	.byte	1,5,27,9
+	.half	.L206-.L415
+	.byte	3,1,1,5,37,9
+	.half	.L416-.L206
+	.byte	1,5,18,9
+	.half	.L417-.L416
+	.byte	1,5,43,9
+	.half	.L418-.L417
+	.byte	1,5,41,9
+	.half	.L419-.L418
+	.byte	1,5,35,9
+	.half	.L207-.L419
+	.byte	3,2,1,5,44,9
+	.half	.L420-.L207
+	.byte	1,5,26,9
+	.half	.L421-.L420
+	.byte	1,5,25,9
+	.half	.L422-.L421
+	.byte	1,5,50,9
+	.half	.L423-.L422
+	.byte	1,5,48,9
+	.half	.L424-.L423
+	.byte	1,5,35,9
+	.half	.L208-.L424
+	.byte	3,1,1,5,44,9
+	.half	.L425-.L208
+	.byte	1,5,26,9
+	.half	.L426-.L425
+	.byte	1,5,25,9
+	.half	.L427-.L426
+	.byte	1,5,50,9
+	.half	.L428-.L427
+	.byte	1,5,48,9
+	.half	.L429-.L428
+	.byte	1,5,35,9
+	.half	.L209-.L429
+	.byte	3,1,1,5,44,9
+	.half	.L430-.L209
+	.byte	1,5,26,9
+	.half	.L431-.L430
+	.byte	1,5,50,9
+	.half	.L432-.L431
+	.byte	1,5,48,9
+	.half	.L433-.L432
+	.byte	1,5,10,9
+	.half	.L210-.L433
+	.byte	3,3,1,5,35,9
+	.half	.L182-.L210
+	.byte	3,2,1,5,40,9
+	.half	.L434-.L182
+	.byte	1,5,46,9
+	.half	.L212-.L434
+	.byte	1,5,44,9
+	.half	.L435-.L212
+	.byte	1,5,58,9
+	.half	.L213-.L435
+	.byte	3,1,1,5,53,9
+	.half	.L436-.L213
+	.byte	1,5,44,9
+	.half	.L437-.L436
+	.byte	1,5,67,9
+	.half	.L438-.L437
+	.byte	1,5,65,9
+	.half	.L439-.L438
+	.byte	1,5,9,9
+	.half	.L214-.L439
+	.byte	3,2,1,5,27,9
+	.half	.L440-.L214
+	.byte	1,5,9,9
+	.half	.L441-.L440
+	.byte	3,1,1,5,27,9
+	.half	.L442-.L441
+	.byte	1,5,9,9
+	.half	.L443-.L442
+	.byte	3,1,1,5,27,9
+	.half	.L444-.L443
+	.byte	1,5,9,9
+	.half	.L445-.L444
+	.byte	3,1,1,5,27,9
+	.half	.L446-.L445
+	.byte	1,5,9,9
+	.half	.L447-.L446
+	.byte	3,1,1,5,27,9
+	.half	.L448-.L447
+	.byte	1,5,9,9
+	.half	.L449-.L448
+	.byte	3,1,1,5,21,9
+	.half	.L450-.L449
+	.byte	1,5,13,9
+	.half	.L451-.L450
+	.byte	3,2,1,5,29,9
+	.half	.L452-.L451
+	.byte	1,5,9,9
+	.half	.L453-.L452
+	.byte	1,5,13,7,9
+	.half	.L454-.L453
+	.byte	3,2,1,5,34,9
+	.half	.L455-.L454
+	.byte	1,5,31,9
+	.half	.L456-.L455
+	.byte	1,5,13,9
+	.half	.L457-.L456
+	.byte	3,1,1,5,34,9
+	.half	.L458-.L457
+	.byte	1,5,31,9
+	.half	.L459-.L458
+	.byte	1,5,13,9
+	.half	.L460-.L459
+	.byte	3,1,1,5,34,9
+	.half	.L461-.L460
+	.byte	1,5,31,9
+	.half	.L462-.L461
+	.byte	1,5,13,9
+	.half	.L463-.L462
+	.byte	3,1,1,5,34,9
+	.half	.L464-.L463
+	.byte	1,5,31,9
+	.half	.L465-.L464
+	.byte	1,5,13,9
+	.half	.L466-.L465
+	.byte	3,1,1,5,34,9
+	.half	.L467-.L466
+	.byte	1,5,31,9
+	.half	.L468-.L467
+	.byte	1,5,13,9
+	.half	.L469-.L468
+	.byte	3,1,1,5,28,9
+	.half	.L470-.L469
+	.byte	1,5,26,9
+	.half	.L471-.L470
+	.byte	1,5,13,9
+	.half	.L472-.L471
+	.byte	3,1,1,5,22,9
+	.half	.L473-.L472
+	.byte	1,5,20,9
+	.half	.L474-.L473
+	.byte	1,5,28,9
+	.half	.L475-.L474
+	.byte	1,5,38,9
+	.half	.L476-.L475
+	.byte	1,5,36,9
+	.half	.L477-.L476
+	.byte	1,5,44,9
+	.half	.L478-.L477
+	.byte	1,5,52,9
+	.half	.L479-.L478
+	.byte	1,5,50,9
+	.half	.L480-.L479
+	.byte	1,5,9,9
+	.half	.L12-.L480
+	.byte	3,2,1,5,18,9
+	.half	.L11-.L12
+	.byte	3,4,1,5,15,9
+	.half	.L481-.L11
+	.byte	1,5,18,9
+	.half	.L482-.L481
+	.byte	3,1,1,5,15,9
+	.half	.L483-.L482
+	.byte	1,5,18,9
+	.half	.L484-.L483
+	.byte	3,1,1,5,15,9
+	.half	.L485-.L484
+	.byte	1,5,31,9
+	.half	.L185-.L485
+	.byte	3,3,1,5,36,9
+	.half	.L486-.L185
+	.byte	1,5,42,9
+	.half	.L217-.L486
+	.byte	1,5,40,9
+	.half	.L487-.L217
+	.byte	1,5,55,9
+	.half	.L488-.L487
+	.byte	1,5,53,9
+	.half	.L489-.L488
+	.byte	1,5,54,9
+	.half	.L218-.L489
+	.byte	3,1,1,5,49,9
+	.half	.L490-.L218
+	.byte	1,5,40,9
+	.half	.L491-.L490
+	.byte	1,5,63,9
+	.half	.L492-.L491
+	.byte	1,5,61,9
+	.half	.L493-.L492
+	.byte	1,5,76,9
+	.half	.L494-.L493
+	.byte	1,5,74,9
+	.half	.L495-.L494
+	.byte	1,5,5,9
+	.half	.L219-.L495
+	.byte	3,3,1,5,53,9
+	.half	.L496-.L219
+	.byte	1,5,31,9
+	.half	.L497-.L496
+	.byte	1,5,39,9
+	.half	.L498-.L497
+	.byte	1,5,15,9
+	.half	.L499-.L498
+	.byte	1,5,65,9
+	.half	.L500-.L499
+	.byte	1,5,83,9
+	.half	.L501-.L500
+	.byte	1,5,57,9
+	.half	.L502-.L501
+	.byte	1,5,13,9
+	.half	.L503-.L502
+	.byte	1,5,5,9
+	.half	.L504-.L503
+	.byte	3,1,1,5,53,9
+	.half	.L505-.L504
+	.byte	1,5,31,9
+	.half	.L506-.L505
+	.byte	1,5,39,9
+	.half	.L507-.L506
+	.byte	1,5,15,9
+	.half	.L508-.L507
+	.byte	1,5,65,9
+	.half	.L509-.L508
+	.byte	1,5,83,9
+	.half	.L510-.L509
+	.byte	1,5,57,9
+	.half	.L511-.L510
+	.byte	1,5,13,9
+	.half	.L512-.L511
+	.byte	1,5,19,9
+	.half	.L513-.L512
+	.byte	3,3,1,5,9,9
+	.half	.L514-.L513
+	.byte	1,5,45,9
+	.half	.L515-.L514
+	.byte	1,5,43,9
+	.half	.L516-.L515
+	.byte	1,5,9,9
+	.half	.L14-.L516
+	.byte	3,2,1,5,28,9
+	.half	.L517-.L14
+	.byte	1,5,9,9
+	.half	.L518-.L517
+	.byte	1,5,15,9
+	.half	.L519-.L518
+	.byte	1,5,1,9
+	.half	.L13-.L519
+	.byte	3,2,1,7,9
+	.half	.L116-.L13
+	.byte	0,1,1
+.L405:
+	.sdecl	'.debug_ranges',debug,cluster('updateAttitude')
+	.sect	'.debug_ranges'
+.L115:
+	.word	-1,.L41,0,.L116-.L41,0,0
+	.sdecl	'.debug_info',debug,cluster('floatToStr')
+	.sect	'.debug_info'
+.L117:
+	.word	341
+	.half	3
+	.word	.L118
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L120,.L119
+	.byte	2
+	.word	.L58
+	.byte	3
+	.byte	'floatToStr',0,1,159,1,13,1,1
+	.word	.L43,.L188,.L42
+	.byte	4
+	.byte	'val',0,1,159,1,32
+	.word	.L155,.L189
+	.byte	4
+	.byte	'buf',0,1,159,1,43
+	.word	.L190,.L191
+	.byte	5
+	.word	.L43,.L188
+	.byte	6
+	.byte	'intPart',0,1,161,1,12
+	.word	.L192,.L193
+	.byte	6
+	.byte	'absInt',0,1,162,1,12
+	.word	.L163,.L194
+	.byte	6
+	.byte	'fracPart',0,1,162,1,20
+	.word	.L163,.L195
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('floatToStr')
+	.sect	'.debug_abbrev'
+.L118:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3,8,58
+	.byte	15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('floatToStr')
+	.sect	'.debug_line'
+.L119:
+	.word	.L521-.L520
+.L520:
+	.half	3
+	.word	.L523-.L522
+.L522:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../DrvMpu9250.c',0,0,0,0,0
+.L523:
+	.byte	5,21,7,0,5,2
+	.word	.L43
+	.byte	3,163,1,1,5,14,9
+	.half	.L524-.L43
+	.byte	1,5,27,9
+	.half	.L525-.L524
+	.byte	1,5,33,9
+	.half	.L526-.L525
+	.byte	1,5,27,9
+	.half	.L16-.L526
+	.byte	1,5,12,9
+	.half	.L17-.L16
+	.byte	1,5,15,9
+	.half	.L527-.L17
+	.byte	3,1,1,5,13,9
+	.half	.L528-.L527
+	.byte	1,5,5,9
+	.half	.L529-.L528
+	.byte	1,5,27,7,9
+	.half	.L530-.L529
+	.byte	1,5,16,9
+	.half	.L18-.L530
+	.byte	3,2,1,5,32,9
+	.half	.L220-.L18
+	.byte	3,1,1,5,30,9
+	.half	.L531-.L220
+	.byte	1,5,52,9
+	.half	.L532-.L531
+	.byte	1,5,60,9
+	.half	.L533-.L532
+	.byte	1,5,58,9
+	.half	.L534-.L533
+	.byte	1,5,16,9
+	.half	.L535-.L534
+	.byte	1,5,5,9
+	.half	.L221-.L535
+	.byte	3,1,1,5,37,7,9
+	.half	.L536-.L221
+	.byte	1,5,50,9
+	.half	.L537-.L536
+	.byte	1,5,18,9
+	.half	.L19-.L537
+	.byte	3,3,1,5,5,9
+	.half	.L538-.L19
+	.byte	1,5,31,7,9
+	.half	.L539-.L538
+	.byte	1,5,37,9
+	.half	.L20-.L539
+	.byte	3,2,1,5,35,9
+	.half	.L540-.L20
+	.byte	1,5,25,9
+	.half	.L541-.L540
+	.byte	1,5,12,9
+	.half	.L542-.L541
+	.byte	1,5,38,9
+	.half	.L543-.L542
+	.byte	3,1,1,5,36,9
+	.half	.L544-.L543
+	.byte	1,5,45,9
+	.half	.L545-.L544
+	.byte	1,5,43,9
+	.half	.L546-.L545
+	.byte	1,5,25,9
+	.half	.L547-.L546
+	.byte	1,5,12,9
+	.half	.L548-.L547
+	.byte	1,5,37,9
+	.half	.L549-.L548
+	.byte	3,1,1,5,35,9
+	.half	.L550-.L549
+	.byte	1,5,25,9
+	.half	.L551-.L550
+	.byte	1,5,12,9
+	.half	.L552-.L551
+	.byte	1,5,14,9
+	.half	.L553-.L552
+	.byte	3,1,1,5,12,9
+	.half	.L554-.L553
+	.byte	1,5,25,9
+	.half	.L555-.L554
+	.byte	3,1,1,5,12,9
+	.half	.L556-.L555
+	.byte	1,5,14,9
+	.half	.L557-.L556
+	.byte	3,1,1,5,12,9
+	.half	.L558-.L557
+	.byte	1,5,1,9
+	.half	.L559-.L558
+	.byte	3,1,1,7,9
+	.half	.L121-.L559
+	.byte	0,1,1
+.L521:
+	.sdecl	'.debug_ranges',debug,cluster('floatToStr')
+	.sect	'.debug_ranges'
+.L120:
+	.word	-1,.L43,0,.L121-.L43,0,0
+	.sdecl	'.debug_info',debug,cluster('s_initialized')
+	.sect	'.debug_info'
+.L122:
+	.word	223
+	.half	3
+	.word	.L123
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L58
+	.byte	3
+	.byte	's_initialized',0,5,50,16
+	.word	.L149
+	.byte	5,3
+	.word	s_initialized
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_initialized')
+	.sect	'.debug_abbrev'
+.L123:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('s_accelRaw')
+	.sect	'.debug_info'
+.L124:
+	.word	220
+	.half	3
+	.word	.L125
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L58
+	.byte	3
+	.byte	's_accelRaw',0,5,52,16
+	.word	.L196
+	.byte	5,3
+	.word	s_accelRaw
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_accelRaw')
+	.sect	'.debug_abbrev'
+.L125:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('s_gyroRaw')
+	.sect	'.debug_info'
+.L126:
+	.word	219
+	.half	3
+	.word	.L127
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L58
+	.byte	3
+	.byte	's_gyroRaw',0,5,53,16
+	.word	.L196
+	.byte	5,3
+	.word	s_gyroRaw
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_gyroRaw')
+	.sect	'.debug_abbrev'
+.L127:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('s_roll')
+	.sect	'.debug_info'
+.L128:
+	.word	216
+	.half	3
+	.word	.L129
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L58
+	.byte	3
+	.byte	's_roll',0,5,55,16
+	.word	.L155
+	.byte	5,3
+	.word	s_roll
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_roll')
+	.sect	'.debug_abbrev'
+.L129:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('s_pitch')
+	.sect	'.debug_info'
+.L130:
+	.word	217
+	.half	3
+	.word	.L131
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L58
+	.byte	3
+	.byte	's_pitch',0,5,56,16
+	.word	.L155
+	.byte	5,3
+	.word	s_pitch
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_pitch')
+	.sect	'.debug_abbrev'
+.L131:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('s_yaw')
+	.sect	'.debug_info'
+.L132:
+	.word	215
+	.half	3
+	.word	.L133
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L58
+	.byte	3
+	.byte	's_yaw',0,5,57,16
+	.word	.L155
+	.byte	5,3
+	.word	s_yaw
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_yaw')
+	.sect	'.debug_abbrev'
+.L133:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('s_rollOffset')
+	.sect	'.debug_info'
+.L134:
+	.word	222
+	.half	3
+	.word	.L135
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L58
+	.byte	3
+	.byte	's_rollOffset',0,5,60,16
+	.word	.L155
+	.byte	5,3
+	.word	s_rollOffset
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_rollOffset')
+	.sect	'.debug_abbrev'
+.L135:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('s_pitchOffset')
+	.sect	'.debug_info'
+.L136:
+	.word	223
+	.half	3
+	.word	.L137
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L58
+	.byte	3
+	.byte	's_pitchOffset',0,5,61,16
+	.word	.L155
+	.byte	5,3
+	.word	s_pitchOffset
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_pitchOffset')
+	.sect	'.debug_abbrev'
+.L137:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('s_gyroOffsetRoll')
+	.sect	'.debug_info'
+.L138:
+	.word	226
+	.half	3
+	.word	.L139
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L58
+	.byte	3
+	.byte	's_gyroOffsetRoll',0,5,62,16
+	.word	.L155
+	.byte	5,3
+	.word	s_gyroOffsetRoll
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_gyroOffsetRoll')
+	.sect	'.debug_abbrev'
+.L139:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('s_gyroOffsetPitch')
+	.sect	'.debug_info'
+.L140:
+	.word	227
+	.half	3
+	.word	.L141
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L58
+	.byte	3
+	.byte	's_gyroOffsetPitch',0,5,63,16
+	.word	.L155
+	.byte	5,3
+	.word	s_gyroOffsetPitch
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_gyroOffsetPitch')
+	.sect	'.debug_abbrev'
+.L141:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('s_gyroOffsetYaw')
+	.sect	'.debug_info'
+.L142:
+	.word	225
+	.half	3
+	.word	.L143
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L58
+	.byte	3
+	.byte	's_gyroOffsetYaw',0,5,64,16
+	.word	.L155
+	.byte	5,3
+	.word	s_gyroOffsetYaw
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_gyroOffsetYaw')
+	.sect	'.debug_abbrev'
+.L143:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('s_calibrated')
+	.sect	'.debug_info'
+.L144:
+	.word	222
+	.half	3
+	.word	.L145
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L58
+	.byte	3
+	.byte	's_calibrated',0,5,65,16
+	.word	.L149
+	.byte	5,3
+	.word	s_calibrated
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_calibrated')
+	.sect	'.debug_abbrev'
+.L145:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('s_calibCount')
+	.sect	'.debug_info'
+.L146:
+	.word	222
+	.half	3
+	.word	.L147
+	.byte	4,1
+	.byte	'../DrvMpu9250.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L58
+	.byte	3
+	.byte	's_calibCount',0,5,66,16
+	.word	.L197
+	.byte	5,3
+	.word	s_calibCount
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('s_calibCount')
+	.sect	'.debug_abbrev'
+.L147:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_loc',debug,cluster('DrvMpu9250_GetPitch')
+	.sect	'.debug_loc'
+.L52:
+	.word	-1,.L53,0,.L157-.L53
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('DrvMpu9250_GetRoll')
+	.sect	'.debug_loc'
+.L50:
+	.word	-1,.L51,0,.L156-.L51
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('DrvMpu9250_GetYaw')
+	.sect	'.debug_loc'
+.L54:
+	.word	-1,.L55,0,.L158-.L55
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('DrvMpu9250_Init')
+	.sect	'.debug_loc'
+.L44:
+	.word	-1,.L45,0,.L148-.L45
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('DrvMpu9250_IsReady')
+	.sect	'.debug_loc'
+.L46:
+	.word	-1,.L47,0,.L150-.L47
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L151:
+	.word	-1,.L47,.L222-.L47,.L223-.L47
+	.half	1
+	.byte	82
+	.word	.L24-.L47,.L25-.L47
+	.half	1
+	.byte	82
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('DrvMpu9250_ReadSensors')
+	.sect	'.debug_loc'
+.L48:
+	.word	-1,.L49,0,.L224-.L49
+	.half	2
+	.byte	138,0
+	.word	.L224-.L49,.L152-.L49
+	.half	2
+	.byte	138,16
+	.word	.L152-.L49,.L152-.L49
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L154:
+	.word	-1,.L49,0,.L152-.L49
+	.half	2
+	.byte	145,112
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('DrvMpu9250_SendUart')
+	.sect	'.debug_loc'
+.L56:
+	.word	-1,.L57,0,.L225-.L57
+	.half	2
+	.byte	138,0
+	.word	.L225-.L57,.L159-.L57
+	.half	2
+	.byte	138,8
+	.word	.L159-.L57,.L159-.L57
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L161:
+	.word	-1,.L57,0,.L159-.L57
+	.half	2
+	.byte	145,120
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('delay_ms')
+	.sect	'.debug_loc'
+.L166:
+	.word	-1,.L35,0,.L162-.L35
+	.half	2
+	.byte	145,120
+	.word	0,0
+.L34:
+	.word	-1,.L35,0,.L198-.L35
+	.half	2
+	.byte	138,0
+	.word	.L198-.L35,.L162-.L35
+	.half	2
+	.byte	138,8
+	.word	.L162-.L35,.L162-.L35
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L167:
+	.word	-1,.L35,.L199-.L35,.L162-.L35
+	.half	1
+	.byte	95
+	.word	0,0
+.L164:
+	.word	-1,.L35,0,.L162-.L35
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('floatToStr')
+	.sect	'.debug_loc'
+.L194:
+	.word	0,0
+.L191:
+	.word	-1,.L43,0,.L188-.L43
+	.half	1
+	.byte	100
+	.word	0,0
+.L42:
+	.word	-1,.L43,0,.L188-.L43
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L195:
+	.word	-1,.L43,.L221-.L43,.L188-.L43
+	.half	1
+	.byte	83
+	.word	0,0
+.L193:
+	.word	-1,.L43,.L220-.L43,.L188-.L43
+	.half	1
+	.byte	82
+	.word	0,0
+.L189:
+	.word	-1,.L43,0,.L188-.L43
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('parseSensorData')
+	.sect	'.debug_loc'
+.L174:
+	.word	-1,.L39,0,.L172-.L39
+	.half	1
+	.byte	100
+	.word	0,0
+.L38:
+	.word	-1,.L39,0,.L172-.L39
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('updateAttitude')
+	.sect	'.debug_loc'
+.L176:
+	.word	-1,.L41,.L205-.L41,.L175-.L41
+	.half	1
+	.byte	88
+	.word	0,0
+.L177:
+	.word	-1,.L41,.L206-.L41,.L175-.L41
+	.half	1
+	.byte	89
+	.word	0,0
+.L178:
+	.word	-1,.L41,.L207-.L41,.L175-.L41
+	.half	1
+	.byte	90
+	.word	.L211-.L41,.L212-.L41
+	.half	1
+	.byte	85
+	.word	.L216-.L41,.L217-.L41
+	.half	1
+	.byte	85
+	.word	0,0
+.L184:
+	.word	-1,.L41,.L214-.L41,.L215-.L41
+	.half	1
+	.byte	95
+	.word	0,0
+.L187:
+	.word	-1,.L41,.L219-.L41,.L13-.L41
+	.half	1
+	.byte	82
+	.word	0,0
+.L180:
+	.word	-1,.L41,.L209-.L41,.L13-.L41
+	.half	1
+	.byte	92
+	.word	0,0
+.L183:
+	.word	-1,.L41,.L213-.L41,.L11-.L41
+	.half	1
+	.byte	94
+	.word	0,0
+.L186:
+	.word	-1,.L41,.L218-.L41,.L13-.L41
+	.half	1
+	.byte	94
+	.word	0,0
+.L179:
+	.word	-1,.L41,.L208-.L41,.L13-.L41
+	.half	1
+	.byte	91
+	.word	0,0
+.L40:
+	.word	-1,.L41,0,.L175-.L41
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L181:
+	.word	-1,.L41,.L210-.L41,.L13-.L41
+	.half	1
+	.byte	93
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('writeRegVerify')
+	.sect	'.debug_loc'
+.L170:
+	.word	-1,.L37,0,.L7-.L37
+	.half	1
+	.byte	85
+	.word	.L201-.L37,.L168-.L37
+	.half	1
+	.byte	95
+	.word	0,0
+.L169:
+	.word	-1,.L37,0,.L7-.L37
+	.half	1
+	.byte	84
+	.word	.L200-.L37,.L168-.L37
+	.half	1
+	.byte	88
+	.word	.L203-.L37,.L204-.L37
+	.half	1
+	.byte	84
+	.word	0,0
+.L171:
+	.word	-1,.L37,.L202-.L37,.L168-.L37
+	.half	1
+	.byte	89
+	.word	0,0
+.L36:
+	.word	-1,.L37,0,.L168-.L37
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L560:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('delay_ms')
+	.sect	'.debug_frame'
+	.word	48
+	.word	.L560,.L35,.L162-.L35
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23,4
+	.word	(.L198-.L35)/2
+	.byte	19,8,22,26,3,19,138,8,4
+	.word	(.L162-.L198)/2
+	.byte	19,0,8,26,0,0
+	.sdecl	'.debug_frame',debug,cluster('writeRegVerify')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L560,.L37,.L168-.L37
+	.sdecl	'.debug_frame',debug,cluster('parseSensorData')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L560,.L39,.L172-.L39
+	.byte	8,18,8,19,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('updateAttitude')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L560,.L41,.L175-.L41
+	.sdecl	'.debug_frame',debug,cluster('floatToStr')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L560,.L43,.L188-.L43
+	.byte	8,18,8,19,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('DrvMpu9250_Init')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L560,.L45,.L148-.L45
+	.sdecl	'.debug_frame',debug,cluster('DrvMpu9250_IsReady')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L560,.L47,.L150-.L47
+	.sdecl	'.debug_frame',debug,cluster('DrvMpu9250_ReadSensors')
+	.sect	'.debug_frame'
+	.word	36
+	.word	.L560,.L49,.L152-.L49
+	.byte	4
+	.word	(.L224-.L49)/2
+	.byte	19,16,22,26,3,19,138,16,4
+	.word	(.L152-.L224)/2
+	.byte	19,0,8,26,0,0
+	.sdecl	'.debug_frame',debug,cluster('DrvMpu9250_GetRoll')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L560,.L51,.L156-.L51
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('DrvMpu9250_GetPitch')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L560,.L53,.L157-.L53
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('DrvMpu9250_GetYaw')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L560,.L55,.L158-.L55
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('DrvMpu9250_SendUart')
+	.sect	'.debug_frame'
+	.word	36
+	.word	.L560,.L57,.L159-.L57
+	.byte	4
+	.word	(.L225-.L57)/2
+	.byte	19,8,22,26,3,19,138,8,4
+	.word	(.L159-.L225)/2
+	.byte	19,0,8,26,0,0
+	; Module end

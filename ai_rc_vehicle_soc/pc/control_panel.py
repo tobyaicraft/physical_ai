@@ -390,6 +390,22 @@ class ControlPanel:
             showvalue=False, command=self._on_resume_size_change)
         self.resume_size_slider.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(4, 4))
 
+        # Search Flip slider (탐색 방향 전환 주기, 초)
+        sflip_frame = ttk.Frame(key_frame, style="Dark.TFrame")
+        sflip_frame.pack(fill=tk.X, padx=10, pady=(4, 0))
+        ttk.Label(sflip_frame, text="Search Flip:", style="Stat.TLabel").pack(side=tk.LEFT)
+        self.search_flip_var = tk.IntVar(value=4)
+        self.search_flip_label = tk.Label(sflip_frame, text="4s", bg=BG_COLOR,
+                                           fg=ACCENT_L, font=("Consolas", 11, "bold"))
+        self.search_flip_label.pack(side=tk.RIGHT)
+        self.search_flip_slider = tk.Scale(
+            sflip_frame, from_=1, to=10, orient=tk.HORIZONTAL,
+            variable=self.search_flip_var, bg=BG_COLOR, fg=FG_COLOR,
+            troughcolor=SURFACE, highlightthickness=0,
+            showvalue=False, command=lambda v: self.search_flip_label.configure(
+                text=f"{self.search_flip_var.get()}s"))
+        self.search_flip_slider.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(4, 4))
+
         # --- Right Column ---
         right_col = ttk.Frame(main, style="Dark.TFrame")
         right_col.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=(5, 0))
@@ -1083,7 +1099,12 @@ class ControlPanel:
             #         pass
             self.cat_track_running = True
             self.cat_no_detect_count = 0
-            self._cat_turning = 0  # 0=직진, -1=좌회전, +1=우회전
+            self._cat_turning = 0          # 0=직진, -1=좌회전, +1=우회전
+            self._cat_lost_time = None     # 고양이 소실 시각
+            self._cat_search_dir = 1       # 탐색 방향: 1=우, -1=좌
+            self._cat_search_flip_time = 0.0
+            self._cat_pulse_time = 0.0     # 현재 펄스 시작 시각
+            self._cat_pulse_rotating = False  # True=회전 중, False=정지 중
             threading.Thread(target=self._cat_track_loop, daemon=True).start()
             self.cmd_var.set("MODE: CAT_TRACK")
 
@@ -1123,14 +1144,43 @@ class ControlPanel:
 
             if box is None:
                 self.cat_no_detect_count += 1
-                if self.cat_no_detect_count > 2:  # 2프레임(300ms) 이후 정지
+                if self.cat_no_detect_count > 2:
+                    now = time.time()
+                    # 처음 소실된 시각 기록
+                    if self._cat_lost_time is None:
+                        self._cat_lost_time        = now
+                        self._cat_search_flip_time = now
+                        self._cat_search_dir       = 1
+                        self._cat_pulse_time       = now
+                        self._cat_pulse_rotating   = True  # 회전부터 시작
+                    # Search Flip 주기마다 방향 반전
+                    flip_sec = self.search_flip_var.get()
+                    if now - self._cat_search_flip_time >= flip_sec:
+                        self._cat_search_dir      *= -1
+                        self._cat_search_flip_time = now
+                    # 200ms 회전 → 200ms 정지 펄스
+                    if now - self._cat_pulse_time >= 0.2:
+                        self._cat_pulse_rotating = not self._cat_pulse_rotating
+                        self._cat_pulse_time = now
+                    if self._cat_pulse_rotating:
+                        move = 4 if self._cat_search_dir == 1 else 3
+                        label = "SEARCH→R" if self._cat_search_dir == 1 else "SEARCH→L"
+                        self._send_move(move)
+                    else:
+                        self._send_move(0)
+                        label = "SEARCH·PAUSE"
+                    self.root.after(0, lambda l=label: self.cmd_var.set(
+                        f"CAT: {l} ({self.cat_no_detect_count})"))
+                else:
                     self._send_move(0)
-                self.root.after(0, lambda: self.cmd_var.set(
-                    f"CAT: LOST ({self.cat_no_detect_count})"))
+                    self.root.after(0, lambda: self.cmd_var.set(
+                        f"CAT: LOST ({self.cat_no_detect_count})"))
                 time.sleep(0.15)
                 continue
 
+            # 고양이 재감지 → 탐색 상태 초기화
             self.cat_no_detect_count = 0
+            self._cat_lost_time = None
             x1, y1, x2, y2 = box
             box_cx = (x1 + x2) / 2.0
             box_w = x2 - x1

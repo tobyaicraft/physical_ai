@@ -27,8 +27,8 @@ MODEL_DIR = "/home/toby/rccar/models"
 
 # 커스텀 고양이 ONNX (best.onnx)
 CAT_ONNX_PATH = f"{MODEL_DIR}/best.onnx"
-CAT_ONNX_CONF = 0.2
-YOLO_IMGSZ = 320
+CAT_ONNX_CONF = 0.4
+YOLO_IMGSZ    = 224
 
 # 파랑색 HSV 범위
 BLUE_LOW  = np.array([100, 80, 50])
@@ -72,14 +72,22 @@ class _TrackingFSM:
     LOST     = "LOST"
     STOPPED  = "STOPPED"
 
+    _SEARCH_FLIP_SEC = 4.0   # 이 초마다 탐색 방향 반전
+    _SEARCH_TIMEOUT  = 30.0  # 총 탐색 시간 초과 시 IDLE
+
     def __init__(self):
-        self.state = self.IDLE
+        self.state         = self.IDLE
         self._last_seen    = 0.0
         self._search_start = 0.0
+        self._search_flip  = 0.0
+        self._search_dir   = "R"
 
     def start(self):
         self.state = self.SEARCH
-        self._search_start = time.time()
+        now = time.time()
+        self._search_start = now
+        self._search_flip  = now
+        self._search_dir   = "R"
 
     def stop(self):
         self.state = self.IDLE
@@ -100,10 +108,14 @@ class _TrackingFSM:
                 self.state = self.TRACKING
                 self._last_seen = now
                 return None
-            if now - self._search_start > 30:
+            if now - self._search_start > self._SEARCH_TIMEOUT:
                 self.state = self.IDLE
                 return "S"
-            return "R"   # 오른쪽 회전하며 탐색
+            # 4초마다 탐색 방향 반전 (R → L → R ...)
+            if now - self._search_flip > self._SEARCH_FLIP_SEC:
+                self._search_dir  = "L" if self._search_dir == "R" else "R"
+                self._search_flip = now
+            return self._search_dir
 
         if self.state == self.TRACKING:
             if not cat_detected:
@@ -121,8 +133,10 @@ class _TrackingFSM:
                 self._last_seen = now
                 return None
             if now - self._last_seen > 2.0:
-                self.state = self.SEARCH
+                self.state         = self.SEARCH
                 self._search_start = now
+                self._search_flip  = now
+                self._search_dir   = "R"
                 return "R"
             return "F"   # 2초간 직진 대기
 
@@ -378,7 +392,7 @@ def _run_cat_custom_inference(frame):
 
 
 def detect_cat_custom(frame):
-    """커스텀 고양이 ONNX INT8 검출 (87장 학습 모델)"""
+    """커스텀 고양이 ONNX 검출 (best.onnx)"""
     if cat_onnx_session is None:
         cv2.putText(frame, "Cat model not loaded", (10, 30),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
@@ -465,7 +479,15 @@ class FrameBuffer:
 
 
 def capture_loop(picam, buffer):
+    interval = 1.0 / 20  # 최대 20 FPS (CPU 여유 확보)
+    last_t   = 0.0
+
     while True:
+        now = time.time()
+        if now - last_t < interval:
+            time.sleep(0.005)
+            continue
+        last_t = now
         frame = picam.capture_array()
 
         with detect_lock:
@@ -608,7 +630,7 @@ try:
     print("  RPi5 Camera + Detection")
     print("=" * 40)
     print(f"  Stream : http://0.0.0.0:8000/stream.mjpg")
-    print(f"  Mode   : none | blue | ssd | yolo_onnx | yolo_tflite")
+    print(f"  Mode   : none | blue | cat_custom | cat_track")
     print(f"  Current: {detect_mode}")
     print("=" * 40)
     server.serve_forever()

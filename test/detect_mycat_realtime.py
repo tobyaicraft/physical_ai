@@ -66,18 +66,11 @@ class FrameBuffer:
 
 
 def capture_loop(picam, buf):
-    interval    = 1.0 / 10
-    last_time   = 0
     fps_time    = time.time()
     fps         = 0.0
     frame_count = 0
 
     while True:
-        now = time.time()
-        if now - last_time < interval:
-            continue
-        last_time = now
-
         frame   = picam.capture_array()
         inp     = preprocess(frame)
         outputs = session.run(None, {inp_name: inp})
