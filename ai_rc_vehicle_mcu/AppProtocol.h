@@ -41,8 +41,9 @@
 #define CMD_CAL_DUTY 0x23u
 #define CMD_CAL_TURN  0x24u
 #define CMD_CAL_QUERY 0x25u
-#define CMD_CAL_ERASE 0x26u
-#define CMD_RESET   0x30u
+#define CMD_CAL_ERASE     0x26u
+#define CMD_SET_US_THRESH 0x28u  /* 초음파 정지 거리 설정: dist_cm(1B) */
+#define CMD_RESET         0x30u
 #define CMD_ACK     0x80u
 #define CMD_NACK    0xE0u
 
@@ -57,10 +58,11 @@
 #define DIR_YAW_ZERO  7u
 
 /* MODE - mode (payload[0]) */
-#define VEHICLE_MODE_MANUAL  0u
-#define VEHICLE_MODE_CALIB   1u
-#define VEHICLE_MODE_AUTO    2u
-#define VEHICLE_MODE_TEST    3u
+#define VEHICLE_MODE_MANUAL    0u
+#define VEHICLE_MODE_CALIB     1u
+#define VEHICLE_MODE_AUTO      2u
+#define VEHICLE_MODE_TEST      3u
+#define VEHICLE_MODE_CAT_TRACK 4u   /* 고양이 추적: 초음파 자동 정지 */
 
 /* NACK error codes */
 #define NACK_ERR_CHK    0x01u
@@ -72,6 +74,9 @@ extern uint32 g_lastMoveTime;
 
 /* Current vehicle mode */
 extern volatile uint8 g_vehicleMode;
+
+/* 초음파 정지 거리 (cm) — 패널에서 실시간 변경 가능 */
+extern volatile uint8 g_usStopThresh_cm;
 
 void AppProtocol_Init(void);
 void AppProtocol_Feed(uint8 byte, uint8 ch);   /* ch: 0=HC-12, 1=HM-10 BLE */

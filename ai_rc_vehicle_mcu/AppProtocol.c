@@ -40,8 +40,9 @@ typedef struct
 /******************************************************************************/
 static Parser s_parser[2];
 
-volatile uint8 g_vehicleMode = VEHICLE_MODE_MANUAL;
-uint32         g_lastMoveTime = 0u;
+volatile uint8 g_vehicleMode     = VEHICLE_MODE_MANUAL;
+volatile uint8 g_usStopThresh_cm = 15u;
+uint32         g_lastMoveTime    = 0u;
 
 /******************************************************************************/
 /*                           Static Functions                                 */
@@ -121,7 +122,7 @@ static void dispatchPacket(const Parser *p, uint8 ch)
         if (p->payloadLen == 1u)
         {
             uint8 mode = p->payload[0];
-            if (mode <= VEHICLE_MODE_TEST)
+            if (mode <= VEHICLE_MODE_CAT_TRACK)
                 g_vehicleMode = mode;
             sendAck(CMD_MODE, ch);
         }
@@ -297,6 +298,20 @@ static void dispatchPacket(const Parser *p, uint8 ch)
                 sendAck(CMD_CAL_ERASE, ch);
             else
                 sendNack(NACK_ERR_CMD, ch);
+        }
+        else
+        {
+            sendNack(NACK_ERR_LEN, ch);
+        }
+        break;
+
+    case CMD_SET_US_THRESH:
+        if (p->payloadLen == 1u)
+        {
+            uint8 thresh = p->payload[0];
+            if (thresh >= 5u && thresh <= 100u)
+                g_usStopThresh_cm = thresh;
+            sendAck(CMD_SET_US_THRESH, ch);
         }
         else
         {

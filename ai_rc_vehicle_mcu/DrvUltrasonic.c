@@ -31,8 +31,8 @@
 static Ifx_GTM_TIM_CH *s_echoTimCh;
 static float32 s_echoClkFreq;
 
-/* Last measured distance */
-static volatile float32 s_distanceCm = 0.0f;
+/* Last measured distance (초기값: 300cm) */
+static volatile float32 s_distanceCm = 300.0f;
 
 /******************************************************************************/
 /*                           Functions                                        */
@@ -106,11 +106,9 @@ void DrvUltrasonic_Trigger(void)
             /* Distance(cm) = pulse(us) / 58 */
             float32 dist = pulseUs / 58.0f;
 
-            /* Clamp to valid range: 2-400cm */
-            if (dist < 2.0f) dist = 2.0f;
-            if (dist > 400.0f) dist = 400.0f;
-
-            s_distanceCm = dist;
+            /* 5cm 미만: 허위 에코 무시, 유효 범위 5~300cm */
+            if (dist >= 5.0f && dist <= 300.0f)
+                s_distanceCm = dist;
         }
 
         IfxGtm_Tim_Ch_clearNewValueEvent(s_echoTimCh);

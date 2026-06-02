@@ -39,19 +39,14 @@
  * 100ms 단위로 한 음씩 재생, 끝나면 반복
  * ♪ Super Mario Bros Theme                                    */
 static const uint16 s_lowBatMelody[] = {
-    /* E5 E5 . E5 . C5 E5 . G5 . . . G4 . . .   */
-    659, 659, 0, 659, 0, 523, 659, 0,
-    784, 0, 0, 0, 392, 0, 0, 0,
-    /* C5 . . G4 . . E4 . . A4 . B4 . Bb4 A4 . */
-    523, 0, 0, 392, 0, 0, 330, 0,
-    0, 440, 0, 494, 0, 466, 440, 0,
-    /* G4 E5 . G5 A5 . F5 G5 . E5 . C5 D5 B4 . */
-    392, 659, 0, 784, 880, 0, 698, 784,
-    0, 659, 0, 523, 587, 494, 0, 0,
-    /* pause 2s */
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-};
+/* E5 E5 . E5 . C5 E5 . G5 . . . G4 . . .   */
+659, 659, 0, 659, 0, 523, 659, 0, 784, 0, 0, 0, 392, 0, 0, 0,
+/* C5 . . G4 . . E4 . . A4 . B4 . Bb4 A4 . */
+523, 0, 0, 392, 0, 0, 330, 0, 0, 440, 0, 494, 0, 466, 440, 0,
+/* G4 E5 . G5 A5 . F5 G5 . E5 . C5 D5 B4 . */
+392, 659, 0, 784, 880, 0, 698, 784, 0, 659, 0, 523, 587, 494, 0, 0,
+/* pause 2s */
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 #define MELODY_LEN  (sizeof(s_lowBatMelody) / sizeof(s_lowBatMelody[0]))
 
 static uint8 s_melodyIdx = 0u;
@@ -59,7 +54,7 @@ static uint8 s_melodyIdx = 0u;
 /******************************************************************************/
 /*                           1ms Task                                         */
 /******************************************************************************/
-void AppTask_1ms(void)
+void AppTask_1ms (void)
 {
     uint8 rxByte;
 
@@ -79,7 +74,7 @@ void AppTask_1ms(void)
 /******************************************************************************/
 /*                           10ms Task                                        */
 /******************************************************************************/
-void AppTask_10ms(void)
+void AppTask_10ms (void)
 {
     static uint8 s_prevMode = VEHICLE_MODE_MANUAL;
 
@@ -98,13 +93,13 @@ void AppTask_10ms(void)
     {
         if (!AppVehicle_IsTurning())
         {
-            float32 yaw    = DrvMpu9250_GetYaw();
+            float32 yaw = DrvMpu9250_GetYaw();
             float32 absYaw = (yaw < 0.0f) ? -yaw : yaw;
 
             if (absYaw > TEST_YAW_TRIGGER)
-                g_vehicleCmd = VEHICLE_YAW_ZERO;   /* 보정 회전 */
+                g_vehicleCmd = VEHICLE_YAW_ZERO; /* 보정 회전 */
             else
-                g_vehicleCmd = VEHICLE_FORWARD;     /* 직진 유지 */
+                g_vehicleCmd = VEHICLE_FORWARD; /* 직진 유지 */
         }
     }
     /* ── AUTO 모드: Bug Algorithm 자율주행 ─────────────── */
@@ -113,12 +108,28 @@ void AppTask_10ms(void)
         AppAutonomous_Update();
     }
     else if (g_vehicleMode == VEHICLE_MODE_MANUAL ||
-             g_vehicleMode == VEHICLE_MODE_CALIB)
+             g_vehicleMode == VEHICLE_MODE_CALIB  ||
+             g_vehicleMode == VEHICLE_MODE_CAT_TRACK)
     {
-        /* MOVE 타임아웃: 200ms 동안 MOVE 명령 없으면 정지 (수동 모드만) */
+        /* MOVE 타임아웃: 200ms 동안 MOVE 명령 없으면 정지 */
         if ((g_1ms_counter - g_lastMoveTime) > MOVE_TIMEOUT_MS)
         {
             g_vehicleCmd = VEHICLE_STOP;
+        }
+    }
+
+    /* ── 공통 초음파 안전 정지 (MANUAL + CAT_TRACK): 전진만 차단 ── */
+    if (g_vehicleMode == VEHICLE_MODE_MANUAL    ||
+        g_vehicleMode == VEHICLE_MODE_CALIB     ||
+        g_vehicleMode == VEHICLE_MODE_CAT_TRACK)
+    {
+        if (g_vehicleCmd == VEHICLE_FORWARD)
+        {
+            float32 dist = DrvUltrasonic_GetDistanceCm();
+            if (dist > 0.0f && dist <= (float32)g_usStopThresh_cm)
+            {
+                g_vehicleCmd = VEHICLE_STOP;
+            }
         }
     }
 
@@ -133,10 +144,10 @@ void AppTask_10ms(void)
 /******************************************************************************/
 /*                           100ms Task                                       */
 /******************************************************************************/
-static void Uint16ToStr(uint16 val, char *buf)
+static void Uint16ToStr (uint16 val, char *buf)
 {
     char tmp[6];
-    int  i = 0;
+    int i = 0;
 
     if (val == 0u)
     {
@@ -147,7 +158,7 @@ static void Uint16ToStr(uint16 val, char *buf)
 
     while (val > 0u)
     {
-        tmp[i++] = '0' + (char)(val % 10u);
+        tmp[i++] = '0' + (char) (val % 10u);
         val /= 10u;
     }
 
@@ -157,15 +168,15 @@ static void Uint16ToStr(uint16 val, char *buf)
     buf[j] = '\0';
 }
 
-void AppTask_100ms(void)
+void AppTask_100ms (void)
 {
     DrvDio_ToggleLed0();
 
-    uint16 irLeft  = DrvSensorFusion_GetIrLeft();
+    uint16 irLeft = DrvSensorFusion_GetIrLeft();
     uint16 irRight = DrvSensorFusion_GetIrRight();
-    uint16 usDist  = DrvSensorFusion_GetUltrasonic();
-    uint16 batMv   = DrvAdc_GetBatteryMv();
-    uint8  obstacle = (uint8)AppObstacle_Detect();
+    uint16 usDist = DrvSensorFusion_GetUltrasonic();
+    uint16 batMv = DrvAdc_GetBatteryMv();
+    uint8 obstacle = (uint8) AppObstacle_Detect();
     char str[8];
 
     DrvUart_SendString("L:");
@@ -190,7 +201,7 @@ void AppTask_100ms(void)
     DrvUart1_SendString(str);
     DrvUart_SendString(",O:");
     DrvUart1_SendString(",O:");
-    Uint16ToStr((uint16)obstacle, str);
+    Uint16ToStr((uint16) obstacle, str);
     DrvUart_SendString(str);
     DrvUart1_SendString(str);
     DrvUart_SendString("\r\n");
