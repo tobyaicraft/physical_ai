@@ -1,6 +1,7 @@
 - [Toby 프로필](user_toby.md) — 임베디드 15년차, YouTube AI Craft Toby, 한국어 작업
-- [physical_ai 프로젝트 구조](project_physical_ai.md) — MCU(TC23A) + SoC(RPi5) 통합 레포, 실행 방법
+- [physical_ai 프로젝트 구조](project_physical_ai.md) — MCU(TC23A) + SoC(RPi5) 통합 레포, ~/rccar/ 기준 실행
 - [RPi5 접속 정보](reference_rpi5_connection.md) — ssh toby@toby.local, 포트 8000/9000/9001
 - [IP 대신 toby.local 사용](feedback_use_toby_local.md) — WiFi 변경 대응, mDNS 필수
-- [RPi5 프로세스 정리 후 재시작](feedback_process_cleanup.md) — 재실행 전 pkill 필요
-- [AI 검출 모델 현황](project_ai_detection.md) — RPi5 모델 4종, yolo_onnx 최고, 전력 주의
+- [RPi5 프로세스 정리 후 재시작](feedback_process_cleanup.md) — virenv.sh + fstart.sh/start.sh 사용
+- [AI 검출 모델 현황](project_ai_detection.md) — best.onnx 단일 모델, mAP50=98.4%
+- [7장 고양이 추적 RC카 구현](project_cat_tracking.md) — PC 판단 아키텍처, 파라미터, 상태머신

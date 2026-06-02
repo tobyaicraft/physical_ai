@@ -343,6 +343,38 @@ class ControlPanel:
             showvalue=False, command=self._on_us_thresh_change)
         self.us_thresh_slider.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(4, 4))
 
+        # Turn Threshold slider
+        turn_frame = ttk.Frame(key_frame, style="Dark.TFrame")
+        turn_frame.pack(fill=tk.X, padx=10, pady=(4, 0))
+        ttk.Label(turn_frame, text="Turn:", style="Stat.TLabel").pack(side=tk.LEFT)
+        self.turn_thr_var = tk.IntVar(value=25)
+        self.turn_thr_label = tk.Label(turn_frame, text="25%", bg=BG_COLOR,
+                                        fg=ACCENT_Y, font=("Consolas", 11, "bold"))
+        self.turn_thr_label.pack(side=tk.RIGHT)
+        self.turn_thr_slider = tk.Scale(
+            turn_frame, from_=5, to=50, orient=tk.HORIZONTAL,
+            variable=self.turn_thr_var, bg=BG_COLOR, fg=FG_COLOR,
+            troughcolor=SURFACE, highlightthickness=0,
+            showvalue=False, command=lambda v: self.turn_thr_label.configure(
+                text=f"{self.turn_thr_var.get()}%"))
+        self.turn_thr_slider.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(4, 4))
+
+        # Turn Speed slider
+        tspd_frame = ttk.Frame(key_frame, style="Dark.TFrame")
+        tspd_frame.pack(fill=tk.X, padx=10, pady=(4, 0))
+        ttk.Label(tspd_frame, text="Turn Spd:", style="Stat.TLabel").pack(side=tk.LEFT)
+        self.turn_spd_var = tk.IntVar(value=30)
+        self.turn_spd_label = tk.Label(tspd_frame, text="30%", bg=BG_COLOR,
+                                        fg=ACCENT_Y, font=("Consolas", 11, "bold"))
+        self.turn_spd_label.pack(side=tk.RIGHT)
+        self.turn_spd_slider = tk.Scale(
+            tspd_frame, from_=10, to=100, orient=tk.HORIZONTAL,
+            variable=self.turn_spd_var, bg=BG_COLOR, fg=FG_COLOR,
+            troughcolor=SURFACE, highlightthickness=0,
+            showvalue=False, command=lambda v: self.turn_spd_label.configure(
+                text=f"{self.turn_spd_var.get()}%"))
+        self.turn_spd_slider.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(4, 4))
+
         # Resume Size slider (FAR_THRESHOLD %)
         resume_frame = ttk.Frame(key_frame, style="Dark.TFrame")
         resume_frame.pack(fill=tk.X, padx=10, pady=(4, 0))
@@ -658,6 +690,14 @@ class ControlPanel:
             self.cmd_sock.sendall(cmd)
         except OSError:
             pass
+
+    def _set_speed(self, speed):
+        """uart_server로 속도 즉시 전송 (표시 업데이트 없음)"""
+        if self.cmd_sock:
+            try:
+                self.cmd_sock.sendall(b'V' + bytes([max(10, min(100, speed))]))
+            except OSError:
+                pass
 
     def _on_speed_change(self, val=None):
         speed = self.speed_var.get()
@@ -1043,6 +1083,7 @@ class ControlPanel:
             #         pass
             self.cat_track_running = True
             self.cat_no_detect_count = 0
+            self._cat_turning = 0  # 0=직진, -1=좌회전, +1=우회전
             threading.Thread(target=self._cat_track_loop, daemon=True).start()
             self.cmd_var.set("MODE: CAT_TRACK")
 
@@ -1098,9 +1139,12 @@ class ControlPanel:
             frame_area = frame_w * frame_h
 
             area_ratio = box_area / frame_area
+            box_cx     = (x1 + x2) / 2.0
+            offset_x   = (box_cx - frame_w / 2.0) / (frame_w / 2.0)  # -1.0 ~ +1.0
 
             close_thr  = self.stop_size_var.get() / 100.0
             resume_thr = self.resume_size_var.get() / 100.0
+            TURN_THRESHOLD = self.turn_thr_var.get() / 100.0
 
             if area_ratio > close_thr:
                 self.cat_no_detect_count = -1  # 가까움 상태
@@ -1108,14 +1152,36 @@ class ControlPanel:
                 self.root.after(0, lambda: self.cmd_var.set(
                     f"CAT: STOP ({area_ratio*100:.1f}%)"))
             elif self.cat_no_detect_count == -1:
-                # 충분히 멀어져야 재출발
                 if area_ratio < resume_thr:
                     self.cat_no_detect_count = 0
                 self._send_move(0)
                 self.root.after(0, lambda: self.cmd_var.set(
                     f"CAT: WAIT ({area_ratio*100:.1f}%)"))
+            # 히스테리시스: 진입=TURN_THRESHOLD, 복귀=TURN_THRESHOLD * 0.5
+            TURN_EXIT = TURN_THRESHOLD * 0.5
+
+            if self._cat_turning == -1:  # 좌회전 중
+                if offset_x > -TURN_EXIT:
+                    self._cat_turning = 0  # 충분히 중심으로 → 직진 복귀
+            elif self._cat_turning == 1:  # 우회전 중
+                if offset_x < TURN_EXIT:
+                    self._cat_turning = 0  # 충분히 중심으로 → 직진 복귀
+            else:  # 직진 중
+                if offset_x < -TURN_THRESHOLD:
+                    self._cat_turning = -1
+                elif offset_x > TURN_THRESHOLD:
+                    self._cat_turning = 1
+
+            if self._cat_turning == -1:
+                self._send_move(3)  # LEFT
+                self.root.after(0, lambda: self.cmd_var.set(
+                    f"CAT: LEFT ({offset_x:.2f})"))
+            elif self._cat_turning == 1:
+                self._send_move(4)  # RIGHT
+                self.root.after(0, lambda: self.cmd_var.set(
+                    f"CAT: RIGHT ({offset_x:.2f})"))
             else:
-                self._send_move(1)
+                self._send_move(1)  # FORWARD
                 self.root.after(0, lambda: self.cmd_var.set(
                     f"CAT: FWD ({area_ratio*100:.1f}%)"))
 
