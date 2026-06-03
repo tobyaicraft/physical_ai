@@ -236,7 +236,7 @@ class ControlPanel:
         # Detection mode selector
         self.detect_combo = ttk.Combobox(top, width=8, state="readonly",
                                           font=("Consolas", 10))
-        self.detect_combo["values"] = ["none", "blue", "ssd", "cat_custom", "yolo_onnx", "yolo_tflite"]
+        self.detect_combo["values"] = ["none", "blue", "cat_custom"]
         self.detect_combo.set("none")
         self.detect_combo.pack(side=tk.RIGHT, padx=(5, 0))
         self.detect_combo.bind("<<ComboboxSelected>>", self._on_detect_mode_change)
