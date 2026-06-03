@@ -31,4 +31,4 @@ else
     USER_HOME="$HOME"
 fi
 
-exec bash "$USER_HOME/rccar/start.sh"
+exec bash "$USER_HOME/rccar/rccar_start.sh"

@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc30244a --dep-file=DrvSensorFusion.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc23x -D__CPU_TC23X__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc23x -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Configurations -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr\\\\TC23A -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr\\\\TC23A\\\\_Reg -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\CStart -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Trap -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Flash -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Flash\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom\\\\Timer -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Port -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Port\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Scu -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Scu\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Src -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Src\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Stm -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Stm\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc\\\\Adc -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc\\\\Std -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Impl -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Lib -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o DrvSensorFusion.src ../DrvSensorFusion.c"
+	.compiler_invocation	"ctc -f cc23900a --dep-file=DrvSensorFusion.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc23x -D__CPU_TC23X__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc23x -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Configurations -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr\\\\TC23A -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Infra\\\\Sfr\\\\TC23A\\\\_Reg -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\CStart -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Trap -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Dma\\\\Std -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Flash -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Flash\\\\Std -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Gtm\\\\Tom\\\\Timer -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Port -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Port\\\\Std -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Scu -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Scu\\\\Std -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Src -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Src\\\\Std -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Stm -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Stm\\\\Std -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc\\\\Adc -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Vadc\\\\Std -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Impl -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Lib -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o DrvSensorFusion.src ../DrvSensorFusion.c"
 	.compiler_name		"ctc"
 	;source	'../DrvSensorFusion.c'
 
@@ -13,37 +13,37 @@ $TC16X
 	
 	.global	MovingAvg_Init
 ; Function MovingAvg_Init
-.L23:
+.L22:
 MovingAvg_Init:	.type	func
 	mov	d0,#0
-.L104:
+.L100:
 	j	.L2
 .L3:
 	mul	d15,d0,#2
 	addsc.a	a15,a4,d15,#0
-.L127:
+.L120:
 	mov	d15,#0
-.L128:
+.L121:
 	st.h	[a15],d15
-.L129:
+.L122:
 	add	d0,#1
 .L2:
 	jlt.u	d0,#3,.L3
-.L130:
+.L123:
 	mov	d15,#0
-.L131:
+.L124:
 	st.b	[a4]6,d15
-.L132:
+.L125:
 	mov	d15,#0
-.L133:
+.L126:
 	st.b	[a4]7,d15
-.L134:
+.L127:
 	ret
-.L80:
+.L79:
 	
 __MovingAvg_Init_function_end:
 	.size	MovingAvg_Init,__MovingAvg_Init_function_end-MovingAvg_Init
-.L42:
+.L41:
 	; End of function
 	
 	.sdecl	'.text.DrvSensorFusion.MovingAvg_Update',code,cluster('MovingAvg_Update')
@@ -52,67 +52,67 @@ __MovingAvg_Init_function_end:
 	
 	.global	MovingAvg_Update
 ; Function MovingAvg_Update
-.L25:
+.L24:
 MovingAvg_Update:	.type	func
 	ld.bu	d15,[a4]6
-.L139:
+.L132:
 	mul	d15,d15,#2
 	addsc.a	a15,a4,d15,#0
-.L140:
+.L133:
 	st.h	[a15],d4
-.L141:
+.L134:
 	ld.bu	d15,[a4]6
-.L142:
+.L135:
 	add	d15,#1
-.L143:
+.L136:
 	mov	d0,#3
-.L144:
+.L137:
 	div.u	e0,d15,d0
-.L145:
+.L138:
 	st.b	[a4]6,d1
-.L146:
+.L139:
 	ld.bu	d15,[a4]6
-.L147:
+.L140:
 	jne	d15,#0,.L4
-.L148:
+.L141:
 	mov	d15,#1
-.L149:
+.L142:
 	st.b	[a4]7,d15
 .L4:
 	ld.bu	d15,[a4]7
-.L150:
+.L143:
 	jeq	d15,#0,.L5
-.L151:
+.L144:
 	mov	d5,#3
-.L106:
+.L102:
 	j	.L6
 .L5:
 	ld.bu	d5,[a4]6
 .L6:
 	mov	d4,#0
-.L105:
+.L101:
 	jne	d5,#0,.L7
-.L152:
+.L145:
 	mov	d2,#0
-.L153:
+.L146:
 	j	.L8
 .L7:
 	jlt.u	d5,#3,.L9
-.L93:
+.L92:
 	mov.u	d0,#65535
-.L107:
+.L103:
 	mov	d2,#0
-.L109:
+.L105:
 	mov	d1,#0
-.L111:
+.L107:
 	j	.L10
 .L11:
 	mul	d15,d1,#2
 	addsc.a	a15,a4,d15,#0
 	ld.hu	d3,[a15]0
-.L154:
+.L147:
 	jge.u	d3,d0,.L12
-.L155:
+.L148:
 	mul	d15,d1,#2
 	addsc.a	a15,a4,d15,#0
 	ld.hu	d0,[a15]0
@@ -120,9 +120,9 @@ MovingAvg_Update:	.type	func
 	mul	d15,d1,#2
 	addsc.a	a15,a4,d15,#0
 	ld.hu	d3,[a15]0
-.L156:
+.L149:
 	jge.u	d2,d3,.L13
-.L157:
+.L150:
 	mul	d15,d1,#2
 	addsc.a	a15,a4,d15,#0
 	ld.hu	d2,[a15]0
@@ -130,57 +130,57 @@ MovingAvg_Update:	.type	func
 	mul	d15,d1,#2
 	addsc.a	a15,a4,d15,#0
 	ld.hu	d3,[a15]0
-.L158:
+.L151:
 	add	d4,d3
-.L159:
+.L152:
 	add	d1,#1
-.L112:
+.L108:
 	extr.u	d1,d1,#0,#8
 .L10:
 	jlt.u	d1,d5,.L11
-.L160:
+.L153:
 	sub	d4,d0
-.L161:
+.L154:
 	sub	d4,d2
-.L162:
+.L155:
 	add	d15,d5,#-2
-.L163:
+.L156:
 	div.u	e0,d4,d15
-.L108:
+.L104:
 	extr.u	d2,d0,#0,#16
-.L110:
+.L106:
 	j	.L14
 .L9:
 	mov	d0,#0
-.L113:
+.L109:
 	j	.L15
 .L16:
 	mul	d15,d0,#2
 	addsc.a	a15,a4,d15,#0
 	ld.hu	d15,[a15]0
-.L164:
+.L157:
 	add	d4,d15
-.L165:
+.L158:
 	add	d0,#1
-.L114:
+.L110:
 	extr.u	d0,d0,#0,#8
 .L15:
 	jlt.u	d0,d5,.L16
-.L166:
+.L159:
 	div.u	e0,d4,d5
-.L115:
+.L111:
 	extr.u	d2,d0,#0,#16
-.L167:
+.L160:
 	j	.L17
 .L17:
 .L14:
 .L8:
 	ret
-.L86:
+.L85:
 	
 __MovingAvg_Update_function_end:
 	.size	MovingAvg_Update,__MovingAvg_Update_function_end-MovingAvg_Update
-.L47:
+.L46:
 	; End of function
 	
 	.sdecl	'.text.DrvSensorFusion.DrvSensorFusion_Update',code,cluster('DrvSensorFusion_Update')
@@ -189,66 +189,56 @@ __MovingAvg_Update_function_end:
 	
 	.global	DrvSensorFusion_Update
 ; Function DrvSensorFusion_Update
-.L27:
+.L26:
 DrvSensorFusion_Update:	.type	func
 	call	DrvAdc_GetIrLeft
-.L172:
+.L165:
 	movh.a	a15,#@his(s_irLeftFiltered)
 	lea	a15,[a15]@los(s_irLeftFiltered)
-.L173:
+.L166:
 	movh.a	a4,#@his(s_filterIrLeft)
 	lea	a4,[a4]@los(s_filterIrLeft)
-.L174:
+.L167:
 	mov	d4,d2
 	call	MovingAvg_Update
-.L175:
+.L168:
 	st.h	[a15],d2
-.L176:
+.L169:
 	call	DrvAdc_GetIrRight
-.L177:
+.L170:
 	movh.a	a15,#@his(s_irRightFiltered)
 	lea	a15,[a15]@los(s_irRightFiltered)
-.L178:
+.L171:
 	movh.a	a4,#@his(s_filterIrRight)
 	lea	a4,[a4]@los(s_filterIrRight)
-.L179:
+.L172:
 	mov	d4,d2
 	call	MovingAvg_Update
-.L180:
+.L173:
 	st.h	[a15],d2
-.L97:
+.L174:
 	call	DrvUltrasonic_GetDistanceCm
-.L116:
-	movh	d15,#16544
-.L181:
-	cmp.f	d15,d2,d15
-	and	d15,#6
-	ne	d15,d15,#0
-.L182:
-	jeq	d15,#0,.L18
-.L183:
+.L175:
+	mov	d4,d2
+	call	__f_ftous
+.L176:
 	movh.a	a15,#@his(s_usFiltered)
 	lea	a15,[a15]@los(s_usFiltered)
-.L184:
-	movh.a	a12,#@his(s_filterUs)
-	lea	a12,[a12]@los(s_filterUs)
-.L185:
-	mov	d4,d2
-.L118:
-	call	__f_ftous
-.L117:
-	mov.aa	a4,a12
+.L177:
+	movh.a	a4,#@his(s_filterUs)
+	lea	a4,[a4]@los(s_filterUs)
+.L178:
 	mov	d4,d2
 	call	MovingAvg_Update
-.L186:
+.L179:
 	st.h	[a15],d2
-.L18:
+.L180:
 	ret
-.L96:
+.L95:
 	
 __DrvSensorFusion_Update_function_end:
 	.size	DrvSensorFusion_Update,__DrvSensorFusion_Update_function_end-DrvSensorFusion_Update
-.L52:
+.L51:
 	; End of function
 	
 	.sdecl	'.text.DrvSensorFusion.DrvSensorFusion_GetIrLeft',code,cluster('DrvSensorFusion_GetIrLeft')
@@ -257,20 +247,20 @@ __DrvSensorFusion_Update_function_end:
 	
 	.global	DrvSensorFusion_GetIrLeft
 ; Function DrvSensorFusion_GetIrLeft
-.L29:
+.L28:
 DrvSensorFusion_GetIrLeft:	.type	func
 	movh.a	a15,#@his(s_irLeftFiltered)
 	lea	a15,[a15]@los(s_irLeftFiltered)
 	ld.hu	d2,[a15]0
-.L191:
-	j	.L19
-.L19:
+.L185:
+	j	.L18
+.L18:
 	ret
-.L100:
+.L96:
 	
 __DrvSensorFusion_GetIrLeft_function_end:
 	.size	DrvSensorFusion_GetIrLeft,__DrvSensorFusion_GetIrLeft_function_end-DrvSensorFusion_GetIrLeft
-.L57:
+.L56:
 	; End of function
 	
 	.sdecl	'.text.DrvSensorFusion.DrvSensorFusion_GetIrRight',code,cluster('DrvSensorFusion_GetIrRight')
@@ -279,20 +269,20 @@ __DrvSensorFusion_GetIrLeft_function_end:
 	
 	.global	DrvSensorFusion_GetIrRight
 ; Function DrvSensorFusion_GetIrRight
-.L31:
+.L30:
 DrvSensorFusion_GetIrRight:	.type	func
 	movh.a	a15,#@his(s_irRightFiltered)
 	lea	a15,[a15]@los(s_irRightFiltered)
 	ld.hu	d2,[a15]0
-.L196:
-	j	.L20
-.L20:
+.L190:
+	j	.L19
+.L19:
 	ret
-.L101:
+.L97:
 	
 __DrvSensorFusion_GetIrRight_function_end:
 	.size	DrvSensorFusion_GetIrRight,__DrvSensorFusion_GetIrRight_function_end-DrvSensorFusion_GetIrRight
-.L62:
+.L61:
 	; End of function
 	
 	.sdecl	'.text.DrvSensorFusion.DrvSensorFusion_GetUltrasonic',code,cluster('DrvSensorFusion_GetUltrasonic')
@@ -301,20 +291,20 @@ __DrvSensorFusion_GetIrRight_function_end:
 	
 	.global	DrvSensorFusion_GetUltrasonic
 ; Function DrvSensorFusion_GetUltrasonic
-.L33:
+.L32:
 DrvSensorFusion_GetUltrasonic:	.type	func
 	movh.a	a15,#@his(s_usFiltered)
 	lea	a15,[a15]@los(s_usFiltered)
 	ld.hu	d2,[a15]0
-.L201:
-	j	.L21
-.L21:
+.L195:
+	j	.L20
+.L20:
 	ret
-.L102:
+.L98:
 	
 __DrvSensorFusion_GetUltrasonic_function_end:
 	.size	DrvSensorFusion_GetUltrasonic,__DrvSensorFusion_GetUltrasonic_function_end-DrvSensorFusion_GetUltrasonic
-.L67:
+.L66:
 	; End of function
 	
 	.sdecl	'.bss.DrvSensorFusion.s_filterIrLeft',data,cluster('s_filterIrLeft')
@@ -370,123 +360,121 @@ s_usFiltered:	.type	object
 	.calls	'DrvSensorFusion_GetUltrasonic','',0
 	.sdecl	'.debug_info',debug
 	.sect	'.debug_info'
-.L35:
-	.word	749
-	.half	3
-	.word	.L36
-	.byte	4
 .L34:
+	.word	750
+	.half	3
+	.word	.L35
+	.byte	4
+.L33:
 	.byte	1
 	.byte	'../DrvSensorFusion.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
-	.word	.L37
-.L85:
+	.byte	'D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L36
+.L84:
 	.byte	2
 	.byte	'unsigned short int',0,2,7,3,6
-	.word	202
+	.word	203
 	.byte	4,2,0
-.L83:
+.L82:
 	.byte	2
 	.byte	'unsigned char',0,1,8
-.L103:
+.L99:
 	.byte	5,1,16,9,8,6
 	.byte	'buffer',0
-	.word	224
+	.word	225
 	.byte	6,2,35,0,6
 	.byte	'index',0
-	.word	233
+	.word	234
 	.byte	1,2,35,6,6
 	.byte	'filled',0
-	.word	233
+	.word	234
 	.byte	1,2,35,7,0
-.L81:
+.L80:
 	.byte	7
-	.word	250
-.L90:
+	.word	251
+.L89:
 	.byte	2
-	.byte	'unsigned long int',0,4,7
-.L98:
-	.byte	2
-	.byte	'float',0,4,4,8
+	.byte	'unsigned long int',0,4,7,8
 	.byte	'DrvAdc_GetIrLeft',0,2,16,8
-	.word	202
+	.word	203
 	.byte	1,1,1,1,8
 	.byte	'DrvAdc_GetIrRight',0,2,17,8
-	.word	202
-	.byte	1,1,1,1,8
+	.word	203
+	.byte	1,1,1,1,2
+	.byte	'float',0,4,4,8
 	.byte	'DrvUltrasonic_GetDistanceCm',0,3,15,9
-	.word	329
+	.word	389
 	.byte	1,1,1,1,2
 	.byte	'short int',0,2,5,9
 	.byte	'__wchar_t',0,4,1,1
-	.word	437
+	.word	438
 	.byte	2
 	.byte	'unsigned int',0,4,7,9
 	.byte	'__size_t',0,4,1,1
-	.word	468
+	.word	469
 	.byte	2
 	.byte	'int',0,4,5,9
 	.byte	'__ptrdiff_t',0,4,1,1
-	.word	501
+	.word	502
 	.byte	10,1,7
-	.word	528
+	.word	529
 	.byte	9
 	.byte	'__codeptr',0,4,1,1
-	.word	530
+	.word	531
 	.byte	9
 	.byte	'boolean',0,5,104,29
-	.word	233
+	.word	234
 	.byte	9
 	.byte	'uint8',0,5,108,29
-	.word	233
+	.word	234
 	.byte	9
 	.byte	'uint16',0,5,112,29
-	.word	202
+	.word	203
 	.byte	9
 	.byte	'uint32',0,5,116,29
-	.word	308
+	.word	309
 	.byte	9
 	.byte	'sint16',0,5,129,1,29
-	.word	437
+	.word	438
 	.byte	2
 	.byte	'long int',0,4,5,9
 	.byte	'sint32',0,5,134,1,29
-	.word	629
+	.word	630
 	.byte	2
 	.byte	'long long int',0,8,5,9
 	.byte	'sint64',0,5,141,1,29
-	.word	657
+	.word	658
 	.byte	9
 	.byte	'float32',0,5,170,1,29
-	.word	329
+	.word	389
 	.byte	11
 	.byte	'void',0,7
-	.word	707
+	.word	708
 	.byte	9
 	.byte	'pvoid',0,6,54,28
-	.word	713
+	.word	714
 	.byte	9
 	.byte	'MovingAvg_t',0,1,21,3
-	.word	250
+	.word	251
 	.byte	0
 	.sdecl	'.debug_abbrev',debug
 	.sect	'.debug_abbrev'
-.L36:
+.L35:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,1,1,11,15,73,19,0,0,4,33,0
 	.byte	47,15,0,0,5,19,1,58,15,59,15,57,15,11,15,0,0,6,13,0,3,8,73,19,11,15,56,9,0,0,7,15,0,73,19,0,0,8,46,0,3
 	.byte	8,58,15,59,15,57,15,73,19,54,15,39,12,63,12,60,12,0,0,9,22,0,3,8,58,15,59,15,57,15,73,19,0,0,10,21,0,54
 	.byte	15,0,0,11,59,0,3,8,0,0,0
 	.sdecl	'.debug_line',debug
 	.sect	'.debug_line'
-.L37:
-	.word	.L120-.L119
-.L119:
+.L36:
+	.word	.L113-.L112
+.L112:
 	.half	3
-	.word	.L122-.L121
-.L121:
+	.word	.L115-.L114
+.L114:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
-	.byte	'D:\\\\01_WorkPlace\\\\202_Pysical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Std',0
+	.byte	'D:\\\\01_WorkPlace\\\\230_Physical_AI\\\\physical_ai\\\\ai_rc_vehicle_mcu\\\\Libraries\\\\iLLD\\\\TC23A\\\\Tricore\\\\Cpu\\\\Std',0
 	.byte	0
 	.byte	'..\\DrvSensorFusion.h',0,0,0,0
 	.byte	'..\\DrvAdc.h',0,0,0,0
@@ -494,732 +482,721 @@ s_usFiltered:	.type	object
 	.byte	'../DrvSensorFusion.c',0,0,0,0
 	.byte	'Platform_Types.h',0,1,0,0
 	.byte	'Ifx_Types.h',0,1,0,0,0
-.L122:
-.L120:
+.L115:
+.L113:
 	.sdecl	'.debug_info',debug,cluster('MovingAvg_Init')
 	.sect	'.debug_info'
-.L38:
-	.word	281
+.L37:
+	.word	282
 	.half	3
-	.word	.L39
+	.word	.L38
 	.byte	4,1
 	.byte	'../DrvSensorFusion.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
-	.word	.L41,.L40
+	.byte	'D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L40,.L39
 	.byte	2
-	.word	.L34
+	.word	.L33
 	.byte	3
 	.byte	'MovingAvg_Init',0,1,28,6,1,1,1
-	.word	.L23,.L80,.L22
+	.word	.L22,.L79,.L21
 	.byte	4
 	.byte	'f',0,1,28,34
-	.word	.L81,.L82
+	.word	.L80,.L81
 	.byte	5
-	.word	.L23,.L80
+	.word	.L22,.L79
 	.byte	6
 	.byte	'i',0,1,30,11
-	.word	.L83,.L84
+	.word	.L82,.L83
 	.byte	0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('MovingAvg_Init')
 	.sect	'.debug_abbrev'
-.L39:
+.L38:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3
 	.byte	8,58,15,59,15,57,15,73,16,2,6,0,0,0
 	.sdecl	'.debug_line',debug,cluster('MovingAvg_Init')
 	.sect	'.debug_line'
-.L40:
-	.word	.L124-.L123
-.L123:
+.L39:
+	.word	.L117-.L116
+.L116:
 	.half	3
-	.word	.L126-.L125
-.L125:
+	.word	.L119-.L118
+.L118:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../DrvSensorFusion.c',0,0,0,0,0
-.L126:
+.L119:
 	.byte	5,12,7,0,5,2
-	.word	.L23
+	.word	.L22
 	.byte	3,30,1,5,40,9
-	.half	.L104-.L23
+	.half	.L100-.L22
 	.byte	1,5,18,9
-	.half	.L3-.L104
+	.half	.L3-.L100
 	.byte	3,2,1,5,24,9
-	.half	.L127-.L3
+	.half	.L120-.L3
 	.byte	1,5,22,9
-	.half	.L128-.L127
+	.half	.L121-.L120
 	.byte	1,5,43,9
-	.half	.L129-.L128
+	.half	.L122-.L121
 	.byte	3,126,1,5,40,9
-	.half	.L2-.L129
+	.half	.L2-.L122
 	.byte	1,5,17,7,9
-	.half	.L130-.L2
+	.half	.L123-.L2
 	.byte	3,4,1,5,15,9
-	.half	.L131-.L130
+	.half	.L124-.L123
 	.byte	1,5,17,9
-	.half	.L132-.L131
+	.half	.L125-.L124
 	.byte	3,1,1,5,15,9
-	.half	.L133-.L132
+	.half	.L126-.L125
 	.byte	1,5,1,9
-	.half	.L134-.L133
+	.half	.L127-.L126
 	.byte	3,1,1,7,9
-	.half	.L42-.L134
+	.half	.L41-.L127
 	.byte	0,1,1
-.L124:
+.L117:
 	.sdecl	'.debug_ranges',debug,cluster('MovingAvg_Init')
 	.sect	'.debug_ranges'
-.L41:
-	.word	-1,.L23,0,.L42-.L23,0,0
+.L40:
+	.word	-1,.L22,0,.L41-.L22,0,0
 	.sdecl	'.debug_info',debug,cluster('MovingAvg_Update')
 	.sect	'.debug_info'
-.L43:
-	.word	400
+.L42:
+	.word	401
 	.half	3
-	.word	.L44
+	.word	.L43
 	.byte	4,1
 	.byte	'../DrvSensorFusion.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
-	.word	.L46,.L45
+	.byte	'D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L45,.L44
 	.byte	2
-	.word	.L34
+	.word	.L33
 	.byte	3
 	.byte	'MovingAvg_Update',0,1,39,8
-	.word	.L85
+	.word	.L84
 	.byte	1,1,1
-	.word	.L25,.L86,.L24
+	.word	.L24,.L85,.L23
 	.byte	4
 	.byte	'f',0,1,39,38
-	.word	.L81,.L87
+	.word	.L80,.L86
 	.byte	4
 	.byte	'newValue',0,1,39,48
-	.word	.L85,.L88
+	.word	.L84,.L87
 	.byte	5
-	.word	.L25,.L86
+	.word	.L24,.L85
 	.byte	5
-	.word	.L4,.L86
+	.word	.L4,.L85
 	.byte	6
 	.byte	'count',0,1,49,12
-	.word	.L83,.L89
+	.word	.L82,.L88
 	.byte	6
 	.byte	'sum',0,1,50,12
-	.word	.L90,.L91
+	.word	.L89,.L90
 	.byte	6
 	.byte	'i',0,1,51,12
-	.word	.L83,.L92
+	.word	.L82,.L91
 	.byte	5
-	.word	.L93,.L9
+	.word	.L92,.L9
 	.byte	6
 	.byte	'minVal',0,1,58,16
-	.word	.L85,.L94
+	.word	.L84,.L93
 	.byte	6
 	.byte	'maxVal',0,1,59,16
-	.word	.L85,.L95
+	.word	.L84,.L94
 	.byte	0,0,0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('MovingAvg_Update')
 	.sect	'.debug_abbrev'
-.L44:
+.L43:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
 	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
 	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
 	.sdecl	'.debug_line',debug,cluster('MovingAvg_Update')
 	.sect	'.debug_line'
-.L45:
-	.word	.L136-.L135
-.L135:
+.L44:
+	.word	.L129-.L128
+.L128:
 	.half	3
-	.word	.L138-.L137
-.L137:
+	.word	.L131-.L130
+.L130:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../DrvSensorFusion.c',0,0,0,0,0
-.L138:
+.L131:
 	.byte	5,16,7,0,5,2
-	.word	.L25
+	.word	.L24
 	.byte	3,40,1,5,14,9
-	.half	.L139-.L25
+	.half	.L132-.L24
 	.byte	1,5,25,9
-	.half	.L140-.L139
+	.half	.L133-.L132
 	.byte	1,5,18,9
-	.half	.L141-.L140
+	.half	.L134-.L133
 	.byte	3,1,1,5,26,9
-	.half	.L142-.L141
+	.half	.L135-.L134
 	.byte	1,5,34,9
-	.half	.L143-.L142
+	.half	.L136-.L135
 	.byte	1,5,32,9
-	.half	.L144-.L143
+	.half	.L137-.L136
 	.byte	1,5,14,9
-	.half	.L145-.L144
+	.half	.L138-.L137
 	.byte	1,5,10,9
-	.half	.L146-.L145
+	.half	.L139-.L138
 	.byte	3,2,1,5,5,9
-	.half	.L147-.L146
+	.half	.L140-.L139
 	.byte	1,5,21,7,9
-	.half	.L148-.L147
+	.half	.L141-.L140
 	.byte	3,2,1,5,19,9
-	.half	.L149-.L148
+	.half	.L142-.L141
 	.byte	1,5,21,9
-	.half	.L4-.L149
+	.half	.L4-.L142
 	.byte	3,3,1,5,20,9
-	.half	.L150-.L4
+	.half	.L143-.L4
 	.byte	1,5,30,7,9
-	.half	.L151-.L150
+	.half	.L144-.L143
 	.byte	1,5,51,9
-	.half	.L106-.L151
+	.half	.L102-.L144
 	.byte	1,5,54,9
-	.half	.L5-.L106
+	.half	.L5-.L102
 	.byte	1,5,18,9
 	.half	.L6-.L5
 	.byte	3,1,1,5,5,9
-	.half	.L105-.L6
+	.half	.L101-.L6
 	.byte	3,3,1,5,29,7,9
-	.half	.L152-.L105
+	.half	.L145-.L101
 	.byte	1,5,22,9
-	.half	.L153-.L152
+	.half	.L146-.L145
 	.byte	1,5,5,9
-	.half	.L7-.L153
+	.half	.L7-.L146
 	.byte	3,3,1,5,23,7,9
-	.half	.L93-.L7
+	.half	.L92-.L7
 	.byte	3,2,1,9
-	.half	.L107-.L93
+	.half	.L103-.L92
 	.byte	3,1,1,5,16,9
-	.half	.L109-.L107
+	.half	.L105-.L103
 	.byte	3,2,1,5,31,9
-	.half	.L111-.L109
+	.half	.L107-.L105
 	.byte	1,5,26,9
-	.half	.L11-.L111
+	.half	.L11-.L107
 	.byte	3,2,1,5,13,9
-	.half	.L154-.L11
+	.half	.L147-.L11
 	.byte	1,5,58,7,9
-	.half	.L155-.L154
+	.half	.L148-.L147
 	.byte	1,5,26,9
-	.half	.L12-.L155
+	.half	.L12-.L148
 	.byte	3,1,1,5,13,9
-	.half	.L156-.L12
+	.half	.L149-.L12
 	.byte	1,5,58,7,9
-	.half	.L157-.L156
+	.half	.L150-.L149
 	.byte	1,5,29,9
-	.half	.L13-.L157
+	.half	.L13-.L150
 	.byte	3,1,1,5,17,9
-	.half	.L158-.L13
+	.half	.L151-.L13
 	.byte	1,5,34,9
-	.half	.L159-.L158
+	.half	.L152-.L151
 	.byte	3,124,1,5,31,9
-	.half	.L10-.L159
+	.half	.L10-.L152
 	.byte	1,5,19,7,9
-	.half	.L160-.L10
+	.half	.L153-.L10
 	.byte	3,8,1,5,28,9
-	.half	.L161-.L160
+	.half	.L154-.L153
 	.byte	1,5,38,9
-	.half	.L162-.L161
+	.half	.L155-.L154
 	.byte	3,1,1,5,29,9
-	.half	.L163-.L162
+	.half	.L156-.L155
 	.byte	1,5,16,9
-	.half	.L108-.L163
+	.half	.L104-.L156
 	.byte	1,5,9,9
-	.half	.L110-.L108
+	.half	.L106-.L104
 	.byte	1,5,16,9
-	.half	.L9-.L110
+	.half	.L9-.L106
 	.byte	3,5,1,5,31,9
-	.half	.L113-.L9
+	.half	.L109-.L9
 	.byte	1,5,29,9
-	.half	.L16-.L113
+	.half	.L16-.L109
 	.byte	3,2,1,5,17,9
-	.half	.L164-.L16
+	.half	.L157-.L16
 	.byte	1,5,34,9
-	.half	.L165-.L164
+	.half	.L158-.L157
 	.byte	3,126,1,5,31,9
-	.half	.L15-.L165
+	.half	.L15-.L158
 	.byte	1,5,29,7,9
-	.half	.L166-.L15
+	.half	.L159-.L15
 	.byte	3,4,1,5,16,9
-	.half	.L115-.L166
+	.half	.L111-.L159
 	.byte	1,5,9,9
-	.half	.L167-.L115
+	.half	.L160-.L111
 	.byte	1,5,1,9
-	.half	.L8-.L167
+	.half	.L8-.L160
 	.byte	3,2,1,7,9
-	.half	.L47-.L8
+	.half	.L46-.L8
 	.byte	0,1,1
-.L136:
+.L129:
 	.sdecl	'.debug_ranges',debug,cluster('MovingAvg_Update')
 	.sect	'.debug_ranges'
-.L46:
-	.word	-1,.L25,0,.L47-.L25,0,0
+.L45:
+	.word	-1,.L24,0,.L46-.L24,0,0
 	.sdecl	'.debug_info',debug,cluster('DrvSensorFusion_Update')
 	.sect	'.debug_info'
-.L48:
-	.word	291
+.L47:
+	.word	261
 	.half	3
-	.word	.L49
+	.word	.L48
 	.byte	4,1
 	.byte	'../DrvSensorFusion.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
-	.word	.L51,.L50
+	.byte	'D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L50,.L49
 	.byte	2
-	.word	.L34
+	.word	.L33
 	.byte	3
 	.byte	'DrvSensorFusion_Update',0,1,86,6,1,1,1
-	.word	.L27,.L96,.L26
+	.word	.L26,.L95,.L25
 	.byte	4
-	.word	.L27,.L96
-	.byte	4
-	.word	.L97,.L18
-	.byte	5
-	.byte	'rawDist',0,1,91,17
-	.word	.L98,.L99
-	.byte	0,0,0,0
+	.word	.L26,.L95
+	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('DrvSensorFusion_Update')
 	.sect	'.debug_abbrev'
-.L49:
+.L48:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
-	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('DrvSensorFusion_Update')
 	.sect	'.debug_line'
-.L50:
-	.word	.L169-.L168
-.L168:
+.L49:
+	.word	.L162-.L161
+.L161:
 	.half	3
-	.word	.L171-.L170
-.L170:
+	.word	.L164-.L163
+.L163:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../DrvSensorFusion.c',0,0,0,0,0
-.L171:
+.L164:
 	.byte	5,76,7,0,5,2
-	.word	.L27
+	.word	.L26
 	.byte	3,215,0,1,5,5,9
-	.half	.L172-.L27
+	.half	.L165-.L26
 	.byte	1,5,43,9
-	.half	.L173-.L172
+	.half	.L166-.L165
 	.byte	1,5,76,9
-	.half	.L174-.L173
+	.half	.L167-.L166
 	.byte	1,5,23,9
-	.half	.L175-.L174
+	.half	.L168-.L167
 	.byte	1,5,77,9
-	.half	.L176-.L175
+	.half	.L169-.L168
 	.byte	3,1,1,5,5,9
-	.half	.L177-.L176
+	.half	.L170-.L169
 	.byte	1,5,43,9
-	.half	.L178-.L177
+	.half	.L171-.L170
 	.byte	1,5,77,9
-	.half	.L179-.L178
+	.half	.L172-.L171
 	.byte	1,5,23,9
-	.half	.L180-.L179
-	.byte	1,5,54,9
-	.half	.L97-.L180
-	.byte	3,2,1,5,24,9
-	.half	.L116-.L97
-	.byte	3,1,1,5,21,9
-	.half	.L181-.L116
-	.byte	1,5,9,9
-	.half	.L182-.L181
-	.byte	1,5,13,7,9
-	.half	.L183-.L182
-	.byte	3,1,1,5,46,9
-	.half	.L184-.L183
-	.byte	1,5,58,9
-	.half	.L185-.L184
-	.byte	1,5,26,9
-	.half	.L186-.L185
+	.half	.L173-.L172
+	.byte	1,5,90,9
+	.half	.L174-.L173
+	.byte	3,1,1,5,55,9
+	.half	.L175-.L174
+	.byte	1,5,5,9
+	.half	.L176-.L175
+	.byte	1,5,43,9
+	.half	.L177-.L176
+	.byte	1,5,55,9
+	.half	.L178-.L177
+	.byte	1,5,23,9
+	.half	.L179-.L178
 	.byte	1,5,1,9
-	.half	.L18-.L186
-	.byte	3,2,1,7,9
-	.half	.L52-.L18
+	.half	.L180-.L179
+	.byte	3,1,1,7,9
+	.half	.L51-.L180
 	.byte	0,1,1
-.L169:
+.L162:
 	.sdecl	'.debug_ranges',debug,cluster('DrvSensorFusion_Update')
 	.sect	'.debug_ranges'
-.L51:
-	.word	-1,.L27,0,.L52-.L27,0,0
+.L50:
+	.word	-1,.L26,0,.L51-.L26,0,0
 	.sdecl	'.debug_info',debug,cluster('DrvSensorFusion_GetIrLeft')
 	.sect	'.debug_info'
-.L53:
-	.word	267
+.L52:
+	.word	268
 	.half	3
-	.word	.L54
+	.word	.L53
 	.byte	4,1
 	.byte	'../DrvSensorFusion.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
-	.word	.L56,.L55
+	.byte	'D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L55,.L54
 	.byte	2
-	.word	.L34
+	.word	.L33
 	.byte	3
-	.byte	'DrvSensorFusion_GetIrLeft',0,1,97,8
-	.word	.L85
+	.byte	'DrvSensorFusion_GetIrLeft',0,1,93,8
+	.word	.L84
 	.byte	1,1,1
-	.word	.L29,.L100,.L28
+	.word	.L28,.L96,.L27
 	.byte	4
-	.word	.L29,.L100
+	.word	.L28,.L96
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('DrvSensorFusion_GetIrLeft')
 	.sect	'.debug_abbrev'
-.L54:
+.L53:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
 	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('DrvSensorFusion_GetIrLeft')
 	.sect	'.debug_line'
-.L55:
-	.word	.L188-.L187
-.L187:
+.L54:
+	.word	.L182-.L181
+.L181:
 	.half	3
-	.word	.L190-.L189
-.L189:
+	.word	.L184-.L183
+.L183:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../DrvSensorFusion.c',0,0,0,0,0
-.L190:
+.L184:
 	.byte	5,53,7,0,5,2
-	.word	.L29
-	.byte	3,224,0,1,5,46,9
-	.half	.L191-.L29
+	.word	.L28
+	.byte	3,220,0,1,5,46,9
+	.half	.L185-.L28
 	.byte	1,5,71,9
-	.half	.L19-.L191
+	.half	.L18-.L185
 	.byte	1,7,9
-	.half	.L57-.L19
+	.half	.L56-.L18
 	.byte	0,1,1
-.L188:
+.L182:
 	.sdecl	'.debug_ranges',debug,cluster('DrvSensorFusion_GetIrLeft')
 	.sect	'.debug_ranges'
-.L56:
-	.word	-1,.L29,0,.L57-.L29,0,0
+.L55:
+	.word	-1,.L28,0,.L56-.L28,0,0
 	.sdecl	'.debug_info',debug,cluster('DrvSensorFusion_GetIrRight')
 	.sect	'.debug_info'
-.L58:
-	.word	268
+.L57:
+	.word	269
 	.half	3
-	.word	.L59
+	.word	.L58
 	.byte	4,1
 	.byte	'../DrvSensorFusion.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
-	.word	.L61,.L60
+	.byte	'D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L60,.L59
 	.byte	2
-	.word	.L34
+	.word	.L33
 	.byte	3
-	.byte	'DrvSensorFusion_GetIrRight',0,1,98,8
-	.word	.L85
+	.byte	'DrvSensorFusion_GetIrRight',0,1,94,8
+	.word	.L84
 	.byte	1,1,1
-	.word	.L31,.L101,.L30
+	.word	.L30,.L97,.L29
 	.byte	4
-	.word	.L31,.L101
+	.word	.L30,.L97
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('DrvSensorFusion_GetIrRight')
 	.sect	'.debug_abbrev'
-.L59:
+.L58:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
 	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('DrvSensorFusion_GetIrRight')
 	.sect	'.debug_line'
-.L60:
-	.word	.L193-.L192
-.L192:
+.L59:
+	.word	.L187-.L186
+.L186:
 	.half	3
-	.word	.L195-.L194
-.L194:
+	.word	.L189-.L188
+.L188:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../DrvSensorFusion.c',0,0,0,0,0
-.L195:
+.L189:
 	.byte	5,53,7,0,5,2
-	.word	.L31
-	.byte	3,225,0,1,5,46,9
-	.half	.L196-.L31
+	.word	.L30
+	.byte	3,221,0,1,5,46,9
+	.half	.L190-.L30
 	.byte	1,5,72,9
-	.half	.L20-.L196
+	.half	.L19-.L190
 	.byte	1,7,9
-	.half	.L62-.L20
+	.half	.L61-.L19
 	.byte	0,1,1
-.L193:
+.L187:
 	.sdecl	'.debug_ranges',debug,cluster('DrvSensorFusion_GetIrRight')
 	.sect	'.debug_ranges'
-.L61:
-	.word	-1,.L31,0,.L62-.L31,0,0
+.L60:
+	.word	-1,.L30,0,.L61-.L30,0,0
 	.sdecl	'.debug_info',debug,cluster('DrvSensorFusion_GetUltrasonic')
 	.sect	'.debug_info'
-.L63:
-	.word	271
+.L62:
+	.word	272
 	.half	3
-	.word	.L64
+	.word	.L63
 	.byte	4,1
 	.byte	'../DrvSensorFusion.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
-	.word	.L66,.L65
+	.byte	'D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L65,.L64
 	.byte	2
-	.word	.L34
+	.word	.L33
 	.byte	3
-	.byte	'DrvSensorFusion_GetUltrasonic',0,1,99,8
-	.word	.L85
+	.byte	'DrvSensorFusion_GetUltrasonic',0,1,95,8
+	.word	.L84
 	.byte	1,1,1
-	.word	.L33,.L102,.L32
+	.word	.L32,.L98,.L31
 	.byte	4
-	.word	.L33,.L102
+	.word	.L32,.L98
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('DrvSensorFusion_GetUltrasonic')
 	.sect	'.debug_abbrev'
-.L64:
+.L63:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
 	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('DrvSensorFusion_GetUltrasonic')
 	.sect	'.debug_line'
-.L65:
-	.word	.L198-.L197
-.L197:
+.L64:
+	.word	.L192-.L191
+.L191:
 	.half	3
-	.word	.L200-.L199
-.L199:
+	.word	.L194-.L193
+.L193:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../DrvSensorFusion.c',0,0,0,0,0
-.L200:
+.L194:
 	.byte	5,53,7,0,5,2
-	.word	.L33
-	.byte	3,226,0,1,5,46,9
-	.half	.L201-.L33
+	.word	.L32
+	.byte	3,222,0,1,5,46,9
+	.half	.L195-.L32
 	.byte	1,5,67,9
-	.half	.L21-.L201
+	.half	.L20-.L195
 	.byte	1,7,9
-	.half	.L67-.L21
+	.half	.L66-.L20
 	.byte	0,1,1
-.L198:
+.L192:
 	.sdecl	'.debug_ranges',debug,cluster('DrvSensorFusion_GetUltrasonic')
 	.sect	'.debug_ranges'
-.L66:
-	.word	-1,.L33,0,.L67-.L33,0,0
+.L65:
+	.word	-1,.L32,0,.L66-.L32,0,0
 	.sdecl	'.debug_info',debug,cluster('s_filterIrLeft')
 	.sect	'.debug_info'
-.L68:
-	.word	229
+.L67:
+	.word	230
 	.half	3
-	.word	.L69
+	.word	.L68
 	.byte	4,1
 	.byte	'../DrvSensorFusion.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
-	.word	.L34
+	.byte	'D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.byte	2
+	.word	.L33
 	.byte	3
 	.byte	's_filterIrLeft',0,4,17,20
-	.word	.L103
+	.word	.L99
 	.byte	5,3
 	.word	s_filterIrLeft
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('s_filterIrLeft')
 	.sect	'.debug_abbrev'
-.L69:
+.L68:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
 	.sdecl	'.debug_info',debug,cluster('s_filterIrRight')
 	.sect	'.debug_info'
-.L70:
-	.word	230
+.L69:
+	.word	231
 	.half	3
-	.word	.L71
+	.word	.L70
 	.byte	4,1
 	.byte	'../DrvSensorFusion.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
-	.word	.L34
+	.byte	'D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.byte	2
+	.word	.L33
 	.byte	3
 	.byte	's_filterIrRight',0,4,18,20
-	.word	.L103
+	.word	.L99
 	.byte	5,3
 	.word	s_filterIrRight
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('s_filterIrRight')
 	.sect	'.debug_abbrev'
-.L71:
+.L70:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
 	.sdecl	'.debug_info',debug,cluster('s_filterUs')
 	.sect	'.debug_info'
-.L72:
-	.word	225
+.L71:
+	.word	226
 	.half	3
-	.word	.L73
+	.word	.L72
 	.byte	4,1
 	.byte	'../DrvSensorFusion.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
-	.word	.L34
+	.byte	'D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.byte	2
+	.word	.L33
 	.byte	3
 	.byte	's_filterUs',0,4,19,20
-	.word	.L103
+	.word	.L99
 	.byte	5,3
 	.word	s_filterUs
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('s_filterUs')
 	.sect	'.debug_abbrev'
-.L73:
+.L72:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
 	.sdecl	'.debug_info',debug,cluster('s_irLeftFiltered')
 	.sect	'.debug_info'
-.L74:
-	.word	231
+.L73:
+	.word	232
 	.half	3
-	.word	.L75
+	.word	.L74
 	.byte	4,1
 	.byte	'../DrvSensorFusion.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
-	.word	.L34
+	.byte	'D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.byte	2
+	.word	.L33
 	.byte	3
 	.byte	's_irLeftFiltered',0,4,21,15
-	.word	.L85
+	.word	.L84
 	.byte	5,3
 	.word	s_irLeftFiltered
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('s_irLeftFiltered')
 	.sect	'.debug_abbrev'
-.L75:
+.L74:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
 	.sdecl	'.debug_info',debug,cluster('s_irRightFiltered')
 	.sect	'.debug_info'
-.L76:
-	.word	232
+.L75:
+	.word	233
 	.half	3
-	.word	.L77
+	.word	.L76
 	.byte	4,1
 	.byte	'../DrvSensorFusion.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
-	.word	.L34
+	.byte	'D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.byte	2
+	.word	.L33
 	.byte	3
 	.byte	's_irRightFiltered',0,4,22,15
-	.word	.L85
+	.word	.L84
 	.byte	5,3
 	.word	s_irRightFiltered
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('s_irRightFiltered')
 	.sect	'.debug_abbrev'
-.L77:
+.L76:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
 	.sdecl	'.debug_info',debug,cluster('s_usFiltered')
 	.sect	'.debug_info'
-.L78:
-	.word	227
+.L77:
+	.word	228
 	.half	3
-	.word	.L79
+	.word	.L78
 	.byte	4,1
 	.byte	'../DrvSensorFusion.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1,2
-	.word	.L34
+	.byte	'D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\TriCore Debug (TASKING)\\',0,12,1
+	.byte	2
+	.word	.L33
 	.byte	3
 	.byte	's_usFiltered',0,4,23,15
-	.word	.L85
+	.word	.L84
 	.byte	5,3
 	.word	s_usFiltered
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('s_usFiltered')
 	.sect	'.debug_abbrev'
-.L79:
+.L78:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
 	.sdecl	'.debug_loc',debug,cluster('DrvSensorFusion_GetIrLeft')
 	.sect	'.debug_loc'
-.L28:
-	.word	-1,.L29,0,.L100-.L29
+.L27:
+	.word	-1,.L28,0,.L96-.L28
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('DrvSensorFusion_GetIrRight')
 	.sect	'.debug_loc'
-.L30:
-	.word	-1,.L31,0,.L101-.L31
+.L29:
+	.word	-1,.L30,0,.L97-.L30
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('DrvSensorFusion_GetUltrasonic')
 	.sect	'.debug_loc'
-.L32:
-	.word	-1,.L33,0,.L102-.L33
+.L31:
+	.word	-1,.L32,0,.L98-.L32
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('DrvSensorFusion_Update')
 	.sect	'.debug_loc'
-.L26:
-	.word	-1,.L27,0,.L96-.L27
+.L25:
+	.word	-1,.L26,0,.L95-.L26
 	.half	2
 	.byte	138,0
-	.word	0,0
-.L99:
-	.word	-1,.L27,.L116-.L27,.L117-.L27
-	.half	1
-	.byte	82
-	.word	.L118-.L27,.L117-.L27
-	.half	1
-	.byte	84
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('MovingAvg_Init')
 	.sect	'.debug_loc'
-.L22:
-	.word	-1,.L23,0,.L80-.L23
+.L21:
+	.word	-1,.L22,0,.L79-.L22
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L82:
-	.word	-1,.L23,0,.L80-.L23
+.L81:
+	.word	-1,.L22,0,.L79-.L22
 	.half	1
 	.byte	100
 	.word	0,0
-.L84:
-	.word	-1,.L23,.L104-.L23,.L80-.L23
+.L83:
+	.word	-1,.L22,.L100-.L22,.L79-.L22
 	.half	5
 	.byte	144,32,157,32,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('MovingAvg_Update')
 	.sect	'.debug_loc'
-.L24:
-	.word	-1,.L25,0,.L86-.L25
+.L23:
+	.word	-1,.L24,0,.L85-.L24
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L89:
-	.word	-1,.L25,.L106-.L25,.L5-.L25
+.L88:
+	.word	-1,.L24,.L102-.L24,.L5-.L24
 	.half	1
 	.byte	85
-	.word	.L6-.L25,.L86-.L25
+	.word	.L6-.L24,.L85-.L24
 	.half	1
 	.byte	85
 	.word	0,0
-.L87:
-	.word	-1,.L25,0,.L86-.L25
+.L86:
+	.word	-1,.L24,0,.L85-.L24
 	.half	1
 	.byte	100
 	.word	0,0
-.L92:
-	.word	-1,.L25,.L111-.L25,.L112-.L25
+.L91:
+	.word	-1,.L24,.L107-.L24,.L108-.L24
 	.half	1
 	.byte	81
-	.word	.L10-.L25,.L108-.L25
+	.word	.L10-.L24,.L104-.L24
 	.half	1
 	.byte	81
-	.word	.L113-.L25,.L114-.L25
+	.word	.L109-.L24,.L110-.L24
 	.half	5
 	.byte	144,32,157,32,0
-	.word	.L15-.L25,.L115-.L25
+	.word	.L15-.L24,.L111-.L24
 	.half	5
 	.byte	144,32,157,32,0
 	.word	0,0
-.L95:
-	.word	-1,.L25,.L109-.L25,.L110-.L25
+.L94:
+	.word	-1,.L24,.L105-.L24,.L106-.L24
 	.half	1
 	.byte	82
 	.word	0,0
-.L94:
-	.word	-1,.L25,.L107-.L25,.L108-.L25
+.L93:
+	.word	-1,.L24,.L103-.L24,.L104-.L24
 	.half	5
 	.byte	144,32,157,32,0
 	.word	0,0
-.L88:
-	.word	-1,.L25,0,.L105-.L25
+.L87:
+	.word	-1,.L24,0,.L101-.L24
 	.half	1
 	.byte	84
 	.word	0,0
-.L91:
-	.word	-1,.L25,.L105-.L25,.L8-.L25
+.L90:
+	.word	-1,.L24,.L101-.L24,.L8-.L24
 	.half	1
 	.byte	84
 	.word	0,0
 	.sdecl	'.debug_frame',debug
 	.sect	'.debug_frame'
-.L202:
+.L196:
 	.word	48
 	.word	-1
 	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
@@ -1227,30 +1204,30 @@ s_usFiltered:	.type	object
 	.sdecl	'.debug_frame',debug,cluster('MovingAvg_Init')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L202,.L23,.L80-.L23
+	.word	.L196,.L22,.L79-.L22
 	.byte	8,18,8,19,8,21,8,22,8,23,0,0
 	.sdecl	'.debug_frame',debug,cluster('MovingAvg_Update')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L202,.L25,.L86-.L25
+	.word	.L196,.L24,.L85-.L24
 	.byte	8,18,8,19,8,21,8,22,8,23,0,0
 	.sdecl	'.debug_frame',debug,cluster('DrvSensorFusion_Update')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L202,.L27,.L96-.L27
+	.word	.L196,.L26,.L95-.L26
 	.sdecl	'.debug_frame',debug,cluster('DrvSensorFusion_GetIrLeft')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L202,.L29,.L100-.L29
+	.word	.L196,.L28,.L96-.L28
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('DrvSensorFusion_GetIrRight')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L202,.L31,.L101-.L31
+	.word	.L196,.L30,.L97-.L30
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('DrvSensorFusion_GetUltrasonic')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L202,.L33,.L102-.L33
+	.word	.L196,.L32,.L98-.L32
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	; Module end

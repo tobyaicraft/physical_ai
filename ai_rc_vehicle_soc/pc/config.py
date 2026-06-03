@@ -2,8 +2,8 @@
 # 새 WiFi 추가 시 RPI5_HOSTS 리스트에 추가하면 됩니다
 
 RPI5_HOSTS = [
-    "toby.local",       # mDNS (기본 — WiFi 바뀌어도 자동 해석)
     "192.168.0.23",     # 집 WiFi
+    "toby.local",       # mDNS
     "192.168.43.1",     # 핸드폰 핫스팟 (예시)
 ]
 RPI5_HOST = RPI5_HOSTS[0]  # 기본값

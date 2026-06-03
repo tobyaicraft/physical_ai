@@ -236,7 +236,7 @@ class ControlPanel:
         # Detection mode selector
         self.detect_combo = ttk.Combobox(top, width=8, state="readonly",
                                           font=("Consolas", 10))
-        self.detect_combo["values"] = ["none", "blue", "ssd", "cat_custom", "yolo_onnx", "yolo_tflite", "cat_track"]
+        self.detect_combo["values"] = ["none", "blue", "ssd", "cat_custom", "yolo_onnx", "yolo_tflite"]
         self.detect_combo.set("none")
         self.detect_combo.pack(side=tk.RIGHT, padx=(5, 0))
         self.detect_combo.bind("<<ComboboxSelected>>", self._on_detect_mode_change)
@@ -297,114 +297,6 @@ class ControlPanel:
         self.servo_var = tk.StringVar(value="Servo: 90.0\u00b0")
         ttk.Label(key_frame, textvariable=self.servo_var,
                   style="Stat.TLabel").pack(pady=(4, 0))
-
-        # Speed slider
-        spd_frame = ttk.Frame(key_frame, style="Dark.TFrame")
-        spd_frame.pack(fill=tk.X, padx=10, pady=(6, 0))
-        ttk.Label(spd_frame, text="Speed:", style="Stat.TLabel").pack(side=tk.LEFT)
-        self.speed_var = tk.IntVar(value=60)
-        self.speed_label = tk.Label(spd_frame, text="60%", bg=BG_COLOR,
-                                     fg=ACCENT_U, font=("Consolas", 11, "bold"))
-        self.speed_label.pack(side=tk.RIGHT)
-        self.speed_slider = tk.Scale(
-            spd_frame, from_=10, to=100, orient=tk.HORIZONTAL,
-            variable=self.speed_var, bg=BG_COLOR, fg=FG_COLOR,
-            troughcolor=SURFACE, highlightthickness=0,
-            showvalue=False, command=self._on_speed_change)
-        self.speed_slider.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(4, 4))
-
-        # Stop Size slider (CLOSE_THRESHOLD %)
-        stop_frame = ttk.Frame(key_frame, style="Dark.TFrame")
-        stop_frame.pack(fill=tk.X, padx=10, pady=(4, 0))
-        ttk.Label(stop_frame, text="Stop Size:", style="Stat.TLabel").pack(side=tk.LEFT)
-        self.stop_size_var = tk.IntVar(value=25)
-        self.stop_size_label = tk.Label(stop_frame, text="25%", bg=BG_COLOR,
-                                         fg=DANGER_COLOR, font=("Consolas", 11, "bold"))
-        self.stop_size_label.pack(side=tk.RIGHT)
-        self.stop_size_slider = tk.Scale(
-            stop_frame, from_=3, to=25, orient=tk.HORIZONTAL,
-            variable=self.stop_size_var, bg=BG_COLOR, fg=FG_COLOR,
-            troughcolor=SURFACE, highlightthickness=0,
-            showvalue=False, command=self._on_stop_size_change)
-        self.stop_size_slider.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(4, 4))
-
-        # US Stop Threshold slider (cm) — TC237 전송
-        us_frame = ttk.Frame(key_frame, style="Dark.TFrame")
-        us_frame.pack(fill=tk.X, padx=10, pady=(4, 0))
-        ttk.Label(us_frame, text="US Stop:", style="Stat.TLabel").pack(side=tk.LEFT)
-        self.us_thresh_var = tk.IntVar(value=5)
-        self.us_thresh_label = tk.Label(us_frame, text="5cm", bg=BG_COLOR,
-                                         fg=WARN_COLOR, font=("Consolas", 11, "bold"))
-        self.us_thresh_label.pack(side=tk.RIGHT)
-        self.us_thresh_slider = tk.Scale(
-            us_frame, from_=5, to=50, orient=tk.HORIZONTAL,
-            variable=self.us_thresh_var, bg=BG_COLOR, fg=FG_COLOR,
-            troughcolor=SURFACE, highlightthickness=0,
-            showvalue=False, command=self._on_us_thresh_change)
-        self.us_thresh_slider.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(4, 4))
-
-        # Turn Threshold slider
-        turn_frame = ttk.Frame(key_frame, style="Dark.TFrame")
-        turn_frame.pack(fill=tk.X, padx=10, pady=(4, 0))
-        ttk.Label(turn_frame, text="Turn:", style="Stat.TLabel").pack(side=tk.LEFT)
-        self.turn_thr_var = tk.IntVar(value=25)
-        self.turn_thr_label = tk.Label(turn_frame, text="25%", bg=BG_COLOR,
-                                        fg=ACCENT_Y, font=("Consolas", 11, "bold"))
-        self.turn_thr_label.pack(side=tk.RIGHT)
-        self.turn_thr_slider = tk.Scale(
-            turn_frame, from_=5, to=50, orient=tk.HORIZONTAL,
-            variable=self.turn_thr_var, bg=BG_COLOR, fg=FG_COLOR,
-            troughcolor=SURFACE, highlightthickness=0,
-            showvalue=False, command=lambda v: self.turn_thr_label.configure(
-                text=f"{self.turn_thr_var.get()}%"))
-        self.turn_thr_slider.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(4, 4))
-
-        # Turn Speed slider
-        tspd_frame = ttk.Frame(key_frame, style="Dark.TFrame")
-        tspd_frame.pack(fill=tk.X, padx=10, pady=(4, 0))
-        ttk.Label(tspd_frame, text="Turn Spd:", style="Stat.TLabel").pack(side=tk.LEFT)
-        self.turn_spd_var = tk.IntVar(value=30)
-        self.turn_spd_label = tk.Label(tspd_frame, text="30%", bg=BG_COLOR,
-                                        fg=ACCENT_Y, font=("Consolas", 11, "bold"))
-        self.turn_spd_label.pack(side=tk.RIGHT)
-        self.turn_spd_slider = tk.Scale(
-            tspd_frame, from_=10, to=100, orient=tk.HORIZONTAL,
-            variable=self.turn_spd_var, bg=BG_COLOR, fg=FG_COLOR,
-            troughcolor=SURFACE, highlightthickness=0,
-            showvalue=False, command=lambda v: self.turn_spd_label.configure(
-                text=f"{self.turn_spd_var.get()}%"))
-        self.turn_spd_slider.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(4, 4))
-
-        # Resume Size slider (FAR_THRESHOLD %)
-        resume_frame = ttk.Frame(key_frame, style="Dark.TFrame")
-        resume_frame.pack(fill=tk.X, padx=10, pady=(4, 0))
-        ttk.Label(resume_frame, text="Resume Size:", style="Stat.TLabel").pack(side=tk.LEFT)
-        self.resume_size_var = tk.IntVar(value=15)
-        self.resume_size_label = tk.Label(resume_frame, text="15%", bg=BG_COLOR,
-                                           fg=ACCENT_U, font=("Consolas", 11, "bold"))
-        self.resume_size_label.pack(side=tk.RIGHT)
-        self.resume_size_slider = tk.Scale(
-            resume_frame, from_=1, to=15, orient=tk.HORIZONTAL,
-            variable=self.resume_size_var, bg=BG_COLOR, fg=FG_COLOR,
-            troughcolor=SURFACE, highlightthickness=0,
-            showvalue=False, command=self._on_resume_size_change)
-        self.resume_size_slider.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(4, 4))
-
-        # Search Flip slider (탐색 방향 전환 주기, 초)
-        sflip_frame = ttk.Frame(key_frame, style="Dark.TFrame")
-        sflip_frame.pack(fill=tk.X, padx=10, pady=(4, 0))
-        ttk.Label(sflip_frame, text="Search Flip:", style="Stat.TLabel").pack(side=tk.LEFT)
-        self.search_flip_var = tk.IntVar(value=4)
-        self.search_flip_label = tk.Label(sflip_frame, text="4s", bg=BG_COLOR,
-                                           fg=ACCENT_L, font=("Consolas", 11, "bold"))
-        self.search_flip_label.pack(side=tk.RIGHT)
-        self.search_flip_slider = tk.Scale(
-            sflip_frame, from_=1, to=10, orient=tk.HORIZONTAL,
-            variable=self.search_flip_var, bg=BG_COLOR, fg=FG_COLOR,
-            troughcolor=SURFACE, highlightthickness=0,
-            showvalue=False, command=lambda v: self.search_flip_label.configure(
-                text=f"{self.search_flip_var.get()}s"))
-        self.search_flip_slider.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(4, 4))
 
         # --- Right Column ---
         right_col = ttk.Frame(main, style="Dark.TFrame")
@@ -706,48 +598,6 @@ class ControlPanel:
             self.cmd_sock.sendall(cmd)
         except OSError:
             pass
-
-    def _set_speed(self, speed):
-        """uart_server로 속도 즉시 전송 (표시 업데이트 없음)"""
-        if self.cmd_sock:
-            try:
-                self.cmd_sock.sendall(b'V' + bytes([max(10, min(100, speed))]))
-            except OSError:
-                pass
-
-    def _on_speed_change(self, val=None):
-        speed = self.speed_var.get()
-        self.speed_label.configure(text=f"{speed}%")
-        if self.cmd_sock:
-            try:
-                self.cmd_sock.sendall(b'V' + bytes([speed]))
-            except OSError:
-                pass
-
-    def _on_us_thresh_change(self, val=None):
-        v = self.us_thresh_var.get()
-        self.us_thresh_label.configure(text=f"{v}cm")
-        if self.cmd_sock:
-            try:
-                self.cmd_sock.sendall(b'N' + bytes([v]))
-            except OSError:
-                pass
-
-    def _on_stop_size_change(self, val=None):
-        v = self.stop_size_var.get()
-        self.stop_size_label.configure(text=f"{v}%")
-        # Resume size는 Stop size보다 항상 작게 유지
-        if self.resume_size_var.get() >= v:
-            self.resume_size_var.set(max(1, v - 2))
-            self.resume_size_label.configure(text=f"{max(1, v-2)}%")
-
-    def _on_resume_size_change(self, val=None):
-        v = self.resume_size_var.get()
-        self.resume_size_label.configure(text=f"{v}%")
-        # Resume size는 Stop size보다 항상 작게 유지
-        if v >= self.stop_size_var.get():
-            self.resume_size_var.set(max(1, self.stop_size_var.get() - 1))
-            self.resume_size_label.configure(text=f"{max(1, self.stop_size_var.get()-1)}%")
 
     def _on_detect_mode_change(self, event=None):
         mode = self.detect_combo.get()
@@ -1070,12 +920,6 @@ class ControlPanel:
         # 이전 모드 정리
         if old_mode == "CAT_TRACK":
             self.cat_track_running = False
-            # TC237 수동 모드 복귀
-            if self.cmd_sock:
-                try:
-                    self.cmd_sock.sendall(b'M')
-                except OSError:
-                    pass
         elif old_mode == "GPS_RETURN":
             self.gps_returning = False
             self.btn_return.configure(bg="#45475a", fg=WARN_COLOR)
@@ -1091,20 +935,8 @@ class ControlPanel:
             self.detect_combo.set("cat_custom")
             self.detect_combo.configure(state="disabled")
             self._on_detect_mode_change()
-            # TC237 모드 전송은 새 펌웨어 플래시 후 활성화
-            # if self.cmd_sock:
-            #     try:
-            #         self.cmd_sock.sendall(b'C')
-            #     except OSError:
-            #         pass
             self.cat_track_running = True
             self.cat_no_detect_count = 0
-            self._cat_turning = 0          # 0=직진, -1=좌회전, +1=우회전
-            self._cat_lost_time = None     # 고양이 소실 시각
-            self._cat_search_dir = 1       # 탐색 방향: 1=우, -1=좌
-            self._cat_search_flip_time = 0.0
-            self._cat_pulse_time = 0.0     # 현재 펄스 시작 시각
-            self._cat_pulse_rotating = False  # True=회전 중, False=정지 중
             threading.Thread(target=self._cat_track_loop, daemon=True).start()
             self.cmd_var.set("MODE: CAT_TRACK")
 
@@ -1144,43 +976,13 @@ class ControlPanel:
 
             if box is None:
                 self.cat_no_detect_count += 1
-                if self.cat_no_detect_count > 2:
-                    now = time.time()
-                    # 처음 소실된 시각 기록
-                    if self._cat_lost_time is None:
-                        self._cat_lost_time        = now
-                        self._cat_search_flip_time = now
-                        self._cat_search_dir       = 1
-                        self._cat_pulse_time       = now
-                        self._cat_pulse_rotating   = True  # 회전부터 시작
-                    # Search Flip 주기마다 방향 반전
-                    flip_sec = self.search_flip_var.get()
-                    if now - self._cat_search_flip_time >= flip_sec:
-                        self._cat_search_dir      *= -1
-                        self._cat_search_flip_time = now
-                    # 200ms 회전 → 200ms 정지 펄스
-                    if now - self._cat_pulse_time >= 0.2:
-                        self._cat_pulse_rotating = not self._cat_pulse_rotating
-                        self._cat_pulse_time = now
-                    if self._cat_pulse_rotating:
-                        move = 4 if self._cat_search_dir == 1 else 3
-                        label = "SEARCH→R" if self._cat_search_dir == 1 else "SEARCH→L"
-                        self._send_move(move)
-                    else:
-                        self._send_move(0)
-                        label = "SEARCH·PAUSE"
-                    self.root.after(0, lambda l=label: self.cmd_var.set(
-                        f"CAT: {l} ({self.cat_no_detect_count})"))
-                else:
-                    self._send_move(0)
-                    self.root.after(0, lambda: self.cmd_var.set(
-                        f"CAT: LOST ({self.cat_no_detect_count})"))
+                if self.cat_no_detect_count > 5:
+                    self._send_move(0)  # target lost → STOP
+                    self.root.after(0, lambda: self.cmd_var.set("CAT: LOST"))
                 time.sleep(0.15)
                 continue
 
-            # 고양이 재감지 → 탐색 상태 초기화
             self.cat_no_detect_count = 0
-            self._cat_lost_time = None
             x1, y1, x2, y2 = box
             box_cx = (x1 + x2) / 2.0
             box_w = x2 - x1
@@ -1188,52 +990,25 @@ class ControlPanel:
             box_area = box_w * box_h
             frame_area = frame_w * frame_h
 
+            # 수평 오프셋: -1.0 (왼쪽) ~ +1.0 (오른쪽)
+            offset_x = (box_cx - frame_w / 2.0) / (frame_w / 2.0)
             area_ratio = box_area / frame_area
-            box_cx     = (x1 + x2) / 2.0
-            offset_x   = (box_cx - frame_w / 2.0) / (frame_w / 2.0)  # -1.0 ~ +1.0
 
-            close_thr  = self.stop_size_var.get() / 100.0
-            resume_thr = self.resume_size_var.get() / 100.0
-            TURN_THRESHOLD = self.turn_thr_var.get() / 100.0
+            TURN_THRESHOLD = 0.25
+            CLOSE_THRESHOLD = 0.25
 
-            if area_ratio > close_thr:
-                self.cat_no_detect_count = -1  # 가까움 상태
-                self._send_move(0)
-                self.root.after(0, lambda: self.cmd_var.set(
-                    f"CAT: STOP ({area_ratio*100:.1f}%)"))
-            elif self.cat_no_detect_count == -1:
-                if area_ratio < resume_thr:
-                    self.cat_no_detect_count = 0
-                self._send_move(0)
-                self.root.after(0, lambda: self.cmd_var.set(
-                    f"CAT: WAIT ({area_ratio*100:.1f}%)"))
-            # 히스테리시스: 진입=TURN_THRESHOLD, 복귀=TURN_THRESHOLD * 0.5
-            TURN_EXIT = TURN_THRESHOLD * 0.5
-
-            if self._cat_turning == -1:  # 좌회전 중
-                if offset_x > -TURN_EXIT:
-                    self._cat_turning = 0  # 충분히 중심으로 → 직진 복귀
-            elif self._cat_turning == 1:  # 우회전 중
-                if offset_x < TURN_EXIT:
-                    self._cat_turning = 0  # 충분히 중심으로 → 직진 복귀
-            else:  # 직진 중
-                if offset_x < -TURN_THRESHOLD:
-                    self._cat_turning = -1
-                elif offset_x > TURN_THRESHOLD:
-                    self._cat_turning = 1
-
-            if self._cat_turning == -1:
+            if area_ratio > CLOSE_THRESHOLD:
+                self._send_move(0)  # 너무 가까움 → STOP
+                self.root.after(0, lambda: self.cmd_var.set("CAT: CLOSE"))
+            elif offset_x < -TURN_THRESHOLD:
                 self._send_move(3)  # LEFT
-                self.root.after(0, lambda: self.cmd_var.set(
-                    f"CAT: LEFT ({offset_x:.2f})"))
-            elif self._cat_turning == 1:
+                self.root.after(0, lambda: self.cmd_var.set("CAT: LEFT"))
+            elif offset_x > TURN_THRESHOLD:
                 self._send_move(4)  # RIGHT
-                self.root.after(0, lambda: self.cmd_var.set(
-                    f"CAT: RIGHT ({offset_x:.2f})"))
+                self.root.after(0, lambda: self.cmd_var.set("CAT: RIGHT"))
             else:
                 self._send_move(1)  # FORWARD
-                self.root.after(0, lambda: self.cmd_var.set(
-                    f"CAT: FWD ({area_ratio*100:.1f}%)"))
+                self.root.after(0, lambda: self.cmd_var.set("CAT: FORWARD"))
 
             time.sleep(0.15)
 

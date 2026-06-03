@@ -87,11 +87,7 @@ void DrvSensorFusion_Update(void)
 {
     s_irLeftFiltered  = MovingAvg_Update(&s_filterIrLeft,  DrvAdc_GetIrLeft());
     s_irRightFiltered = MovingAvg_Update(&s_filterIrRight, DrvAdc_GetIrRight());
-    {
-        float32 rawDist = DrvUltrasonic_GetDistanceCm();
-        if (rawDist >= 5.0f)
-            s_usFiltered = MovingAvg_Update(&s_filterUs, (uint16)rawDist);
-    }
+    s_usFiltered      = MovingAvg_Update(&s_filterUs, (uint16)DrvUltrasonic_GetDistanceCm());
 }
 
 uint16 DrvSensorFusion_GetIrLeft(void)     { return s_irLeftFiltered; }

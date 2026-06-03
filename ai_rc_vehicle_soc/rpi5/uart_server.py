@@ -57,15 +57,8 @@ CMD_NAMES = {
     'U': '서보 왼쪽',
     'I': '서보 오른쪽',
     'P': '자동 주차 (Auto Parking)',
-    'C': 'CAT_TRACK 모드',
-    'M': '수동 모드 복귀',
-    'N': '초음파 정지 거리 설정',
     'X': 'MCU 리셋 (Reset)',
 }
-
-VEHICLE_MODE_MANUAL    = 0
-VEHICLE_MODE_AUTO      = 2
-VEHICLE_MODE_CAT_TRACK = 4
 
 UART_CMDS = {'F', 'B', 'L', 'R', 'S', 'P'}
 SERVO_CMDS = {'U', 'I'}
@@ -77,8 +70,7 @@ PROTO_ETX = 0x55
 CMD_MOVE  = 0x01
 CMD_MODE  = 0x02
 CMD_RESET = 0x30
-DEFAULT_SPEED = 50   # 모터 속도 (0~100%)
-current_speed = DEFAULT_SPEED  # 런타임 속도 (패널 슬라이더로 변경 가능)
+DEFAULT_SPEED = 100  # 모터 속도 (0~100%)
 
 # PC 키 → MOVE 방향 매핑
 DIR_MAP = {
@@ -176,37 +168,20 @@ def move_resend_thread(ser, stop_event):
 
 
 def handle_command(cmd_byte, ser, servo):
-    global last_move_pkt, current_speed
+    global last_move_pkt
     cmd = cmd_byte.decode('ascii', errors='ignore')
     name = CMD_NAMES.get(cmd, f'Unknown({cmd})')
 
-    # 속도 설정 명령: 'V' + 1바이트 (속도값 0~100)
-    if cmd == 'V':
-        return 'SPEED_PENDING'
-
-    # 초음파 정지 거리 설정: 'N' + 1바이트 (거리 cm)
-    if cmd == 'N':
-        return 'THRESH_PENDING'
-
     if cmd in DIR_MAP:
-        pkt = build_move_packet(DIR_MAP[cmd], current_speed)
+        pkt = build_move_packet(DIR_MAP[cmd])
         with uart_write_lock:
             ser.write(pkt)
         with last_move_lock:
             last_move_pkt = pkt if DIR_MAP[cmd] != 0 else None
-        print(f"  [RX→UART]  {cmd} → {name} spd={current_speed} (pkt={pkt.hex()})")
+        print(f"  [RX→UART]  {cmd} → {name}  (pkt={pkt.hex()})")
     elif cmd == 'P':
-        pkt = build_mode_packet(VEHICLE_MODE_AUTO)
-        with uart_write_lock:
-            ser.write(pkt)
-        print(f"  [RX→UART]  {cmd} → {name}  (pkt={pkt.hex()})")
-    elif cmd == 'C':
-        pkt = build_mode_packet(VEHICLE_MODE_CAT_TRACK)
-        with uart_write_lock:
-            ser.write(pkt)
-        print(f"  [RX→UART]  {cmd} → {name}  (pkt={pkt.hex()})")
-    elif cmd == 'M':
-        pkt = build_mode_packet(VEHICLE_MODE_MANUAL)
+        # 자동 주차: AUTO 모드 전환
+        pkt = build_mode_packet(2)  # VEHICLE_MODE_AUTO
         with uart_write_lock:
             ser.write(pkt)
         print(f"  [RX→UART]  {cmd} → {name}  (pkt={pkt.hex()})")
@@ -416,32 +391,11 @@ def run_server(cmd_port, sensor_port, uart_port):
             print(f"\n[Cmd Connected] Client: {addr[0]}:{addr[1]}")
 
             try:
-                speed_pending  = False
-                thresh_pending = False
                 while True:
                     data = conn.recv(1)
                     if not data:
                         break
-                    if speed_pending:
-                        global current_speed
-                        current_speed = max(0, min(100, data[0]))
-                        print(f"  [SPEED] {current_speed}%")
-                        speed_pending = False
-                    elif thresh_pending:
-                        dist_cm = max(5, min(100, data[0]))
-                        cmd_byte = 0x28  # CMD_SET_US_THRESH
-                        chk = cmd_byte ^ dist_cm
-                        pkt = bytes([0xAA, 0x02, cmd_byte, dist_cm, chk, 0x55])
-                        with uart_write_lock:
-                            ser.write(pkt)
-                        print(f"  [US_THRESH] {dist_cm}cm")
-                        thresh_pending = False
-                    else:
-                        result = handle_command(data, ser, servo)
-                        if result == 'SPEED_PENDING':
-                            speed_pending = True
-                        elif result == 'THRESH_PENDING':
-                            thresh_pending = True
+                    handle_command(data, ser, servo)
             except ConnectionResetError:
                 pass
 

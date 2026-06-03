@@ -149,7 +149,7 @@
            <Area></Area>
            <Load>true</Load>
            <OverrideMemArea>false</OverrideMemArea>
-           <Path>..\..\..\TriCore Debug (TASKING)\ai_rc_vehicle_mcu.elf</Path>
+           <Path>..\..\..\TriCore Debug (TASKING)\ai_rc_vehicle.elf</Path>
            <PgmDestination>memory</PgmDestination>
            <TargetDir></TargetDir>
            <UseDefaultMSID>true</UseDefaultMSID>
@@ -256,7 +256,7 @@
            <Area></Area>
            <Load>true</Load>
            <OverrideMemArea>false</OverrideMemArea>
-           <Path>..\..\..\TriCore Debug (TASKING)\ai_rc_vehicle_mcu.elf</Path>
+           <Path>..\..\..\TriCore Debug (TASKING)\ai_rc_vehicle.elf</Path>
            <PgmDestination>memory</PgmDestination>
            <TargetDir></TargetDir>
            <UseDefaultMSID>true</UseDefaultMSID>

@@ -2,109 +2,109 @@ DrvSpi.o :	../DrvSpi.c
 ../DrvSpi.c :
 DrvSpi.o :	..\DrvSpi.h
 ..\DrvSpi.h :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Ifx_Types.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Ifx_Types.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Platform\Tricore\Compilers\Compilers.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Platform\Tricore\Compilers\Compilers.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Configurations\Ifx_Cfg.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Configurations\Ifx_Cfg.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Ifx_Types.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Ifx_Types.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Platform\Tricore\Compilers\Compilers.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Platform\Tricore\Compilers\Compilers.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Configurations\Ifx_Cfg.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Configurations\Ifx_Cfg.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h" :
 DrvSpi.o :	"C:\Infineon\AURIX-Studio-1.10.28\tools\Compilers\Tasking_1.1r8\ctc\include\stddef.h"
 "C:\Infineon\AURIX-Studio-1.10.28\tools\Compilers\Tasking_1.1r8\ctc\include\stddef.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Platform_Types.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Platform_Types.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Ifx_TypesTasking.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Ifx_TypesTasking.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Qspi\SpiMaster\IfxQspi_SpiMaster.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Qspi\SpiMaster\IfxQspi_SpiMaster.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Irq\IfxCpu_Irq.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Irq\IfxCpu_Irq.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\Ifx_Types.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\Ifx_Types.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\IfxCpu.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\IfxCpu.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxCpu_cfg.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxCpu_cfg.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\IfxCpu_Intrinsics.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\IfxCpu_Intrinsics.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\IfxCpu_IntrinsicsTasking.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\IfxCpu_IntrinsicsTasking.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxCpu_reg.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxCpu_reg.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxCpu_regdef.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxCpu_regdef.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\Ifx_TypesReg.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\Ifx_TypesReg.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxSrc_reg.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxSrc_reg.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxSrc_regdef.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxSrc_regdef.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxScu_reg.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxScu_reg.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxScu_regdef.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxScu_regdef.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxStm_reg.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxStm_reg.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxStm_regdef.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxStm_regdef.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxScu_cfg.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxScu_cfg.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxScu_bf.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxScu_bf.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxFlash_bf.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxFlash_bf.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Scu\Std\IfxScuWdt.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Scu\Std\IfxScuWdt.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Scu\Std\IfxScuWdt.asm.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Scu\Std\IfxScuWdt.asm.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Scu\Std\IfxScuCcu.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Scu\Std\IfxScuCcu.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\IfxCpu.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\IfxCpu.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxFlash_reg.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxFlash_reg.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxFlash_regdef.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxFlash_regdef.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_PinMap\IfxScu_PinMap.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_PinMap\IfxScu_PinMap.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Port\Std\IfxPort.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Port\Std\IfxPort.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxPort_cfg.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxPort_cfg.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxPort_reg.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxPort_reg.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxPort_regdef.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxPort_regdef.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_PinMap\Ifx_PinMap.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_PinMap\Ifx_PinMap.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Src\Std\IfxSrc.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Src\Std\IfxSrc.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxSrc_cfg.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxSrc_cfg.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Dma\Dma\IfxDma_Dma.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Dma\Dma\IfxDma_Dma.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxDma_cfg.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxDma_cfg.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Dma\Std\IfxDma.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Dma\Std\IfxDma.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxDma_bf.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxDma_bf.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxDma_reg.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxDma_reg.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxDma_regdef.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxDma_regdef.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Qspi\Std\IfxQspi.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Qspi\Std\IfxQspi.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxQspi_cfg.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxQspi_cfg.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxQspi_reg.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxQspi_reg.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxQspi_regdef.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxQspi_regdef.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_PinMap\IfxQspi_PinMap.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_PinMap\IfxQspi_PinMap.h" :
-DrvSpi.o :	"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\\Port\\Std\IfxPort.h"
-"D:\\01_WorkPlace\\202_Pysical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\\Port\\Std\IfxPort.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Platform_Types.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Platform_Types.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Ifx_TypesTasking.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\\Cpu\\Std\Ifx_TypesTasking.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Qspi\SpiMaster\IfxQspi_SpiMaster.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Qspi\SpiMaster\IfxQspi_SpiMaster.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Irq\IfxCpu_Irq.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Irq\IfxCpu_Irq.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\Ifx_Types.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\Ifx_Types.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\IfxCpu.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\IfxCpu.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxCpu_cfg.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxCpu_cfg.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\IfxCpu_Intrinsics.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\IfxCpu_Intrinsics.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\IfxCpu_IntrinsicsTasking.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\IfxCpu_IntrinsicsTasking.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxCpu_reg.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxCpu_reg.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxCpu_regdef.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxCpu_regdef.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\Ifx_TypesReg.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\Ifx_TypesReg.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxSrc_reg.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxSrc_reg.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxSrc_regdef.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxSrc_regdef.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxScu_reg.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxScu_reg.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxScu_regdef.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxScu_regdef.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxStm_reg.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxStm_reg.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxStm_regdef.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxStm_regdef.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxScu_cfg.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxScu_cfg.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxScu_bf.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxScu_bf.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxFlash_bf.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxFlash_bf.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Scu\Std\IfxScuWdt.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Scu\Std\IfxScuWdt.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Scu\Std\IfxScuWdt.asm.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Scu\Std\IfxScuWdt.asm.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Scu\Std\IfxScuCcu.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Scu\Std\IfxScuCcu.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\IfxCpu.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Cpu\Std\IfxCpu.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxFlash_reg.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxFlash_reg.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxFlash_regdef.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxFlash_regdef.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_PinMap\IfxScu_PinMap.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_PinMap\IfxScu_PinMap.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Port\Std\IfxPort.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Port\Std\IfxPort.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxPort_cfg.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxPort_cfg.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxPort_reg.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxPort_reg.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxPort_regdef.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxPort_regdef.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_PinMap\Ifx_PinMap.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_PinMap\Ifx_PinMap.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Src\Std\IfxSrc.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Src\Std\IfxSrc.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxSrc_cfg.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxSrc_cfg.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Dma\Dma\IfxDma_Dma.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Dma\Dma\IfxDma_Dma.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxDma_cfg.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxDma_cfg.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Dma\Std\IfxDma.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Dma\Std\IfxDma.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxDma_bf.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxDma_bf.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxDma_reg.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxDma_reg.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxDma_regdef.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxDma_regdef.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Qspi\Std\IfxQspi.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\Qspi\Std\IfxQspi.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxQspi_cfg.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_Impl\IfxQspi_cfg.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxQspi_reg.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxQspi_reg.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxQspi_regdef.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\Infra\\Sfr\\TC23A\\_Reg\IfxQspi_regdef.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_PinMap\IfxQspi_PinMap.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\_PinMap\IfxQspi_PinMap.h" :
+DrvSpi.o :	"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\\Port\\Std\IfxPort.h"
+"D:\\01_WorkPlace\\230_Physical_AI\\physical_ai\\ai_rc_vehicle_mcu\\Libraries\\iLLD\\TC23A\\Tricore\\Port\\Std\IfxPort.h" :

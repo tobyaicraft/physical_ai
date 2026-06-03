@@ -1,16 +1,14 @@
 """
 RPi5 카메라 MJPEG 스트리머 + 검출 모드 전환
-  - none      : 검출 없이 원본 스트리밍
-  - blue      : 파란색 물체 HSV 검출
-  - cat_custom: 커스텀 고양이 검출 (best.onnx)
-  - cat_track : 고양이 자율 추적 RC카 제어 (best.onnx)
+  - none : 검출 없이 원본 스트리밍
+  - blue : 파란색 물체 HSV 검출
+  - cat  : YOLOv8n INT8 고양이 검출
 
-모드 전환: HTTP GET /mode/<name>  (예: /mode/cat_track, /mode/none)
+모드 전환: HTTP GET /mode/<name>  (예: /mode/cat, /mode/blue, /mode/none)
 스트리밍:  http://<RPi_IP>:8000/stream.mjpg
 """
 import io
 import os
-import socket
 import time
 from threading import Condition, Thread, Lock
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -23,338 +21,134 @@ from picamera2 import Picamera2
 # --- 설정 ---
 FRAME_W = 640
 FRAME_H = 480
-MODEL_DIR = "/home/toby/rccar/models"
+MODEL_DIR = "/home/toby/project/models"
 
-# 커스텀 고양이 ONNX (best.onnx)
-CAT_ONNX_PATH = f"{MODEL_DIR}/best.onnx"
-CAT_ONNX_CONF = 0.4
-YOLO_IMGSZ    = 224
+# MobileNet SSD (Caffe)
+SSD_PROTOTXT = f"{MODEL_DIR}/MobileNetSSD_deploy.prototxt"
+SSD_MODEL    = f"{MODEL_DIR}/MobileNetSSD_deploy.caffemodel"
+SSD_CONF = 0.5
+SSD_CLASSES = ["background", "aeroplane", "bicycle", "bird", "boat",
+               "bottle", "bus", "car", "cat", "chair", "cow", "diningtable",
+               "dog", "horse", "motorbike", "person", "pottedplant",
+               "sheep", "sofa", "train", "tvmonitor"]
+
+# YOLOv8n ONNX INT8 (COCO pretrained)
+YOLO_ONNX_PATH = f"{MODEL_DIR}/yolov8n_int8.onnx"
+
+# 커스텀 고양이 ONNX INT8 (87장 학습, mAP50=0.992)
+CAT_ONNX_PATH = f"{MODEL_DIR}/best_int8.onnx"
+CAT_ONNX_CONF = 0.2
+CAT_ONNX_CLASS_ID = 0  # 커스텀 모델은 클래스 0 = cat
+YOLO_IMGSZ = 320
+YOLO_CONF = 0.2
+CAT_CLASS_ID = 15  # COCO cat
+
+# YOLOv8n TFLite INT8
+YOLO_TFLITE_PATH = f"{MODEL_DIR}/yolov8n_int8.tflite"
 
 # 파랑색 HSV 범위
-BLUE_LOW  = np.array([100, 80, 50])
+BLUE_LOW = np.array([100, 80, 50])
 BLUE_HIGH = np.array([130, 255, 255])
-MIN_AREA  = 500
+MIN_AREA = 500
 
 # --- Detection Mode ---
-# "none", "blue", "cat_custom", "cat_track"
+# "none", "blue", "ssd", "cat_custom", "yolo_onnx", "yolo_tflite"
 detect_mode = "none"
 detect_lock = Lock()
-
-# =====================================================================
-# 7장 고양이 추적 모듈
-# =====================================================================
-
-# PD 제어 파라미터
-_TRACK_KP         = 1.0    # 비례 게인
-_TRACK_KD         = 0.2    # 미분 게인
-_TRACK_DEAD_ZONE  = 0.15   # 이 범위 안이면 직진 (offset 절대값)
-_TRACK_STOP_CM    = 25     # 초음파 장애물 정지 거리 (cm)
-
-# 거리 추정 캘리브레이션 (실제 고양이로 측정 후 수정)
-_REF_HEIGHT_PX = 120   # 1m 거리에서 박스 높이(px) — 캘리브레이션 필요
-_REF_DIST_M    = 1.0
-_STOP_DIST_M   = 0.45  # 이 거리 이내 → STOPPED
-
-
-def _estimate_distance(box_h_px):
-    """단일 카메라 거리 추정 (m). 신뢰 불가면 None."""
-    if box_h_px < 20:
-        return None
-    return _REF_DIST_M * _REF_HEIGHT_PX / box_h_px
-
-
-class _TrackingFSM:
-    """고양이 추적 상태 머신 (7.4절)"""
-
-    IDLE     = "IDLE"
-    SEARCH   = "SEARCH"
-    TRACKING = "TRACKING"
-    LOST     = "LOST"
-    STOPPED  = "STOPPED"
-
-    _SEARCH_FLIP_SEC = 4.0   # 이 초마다 탐색 방향 반전
-    _SEARCH_TIMEOUT  = 30.0  # 총 탐색 시간 초과 시 IDLE
-
-    def __init__(self):
-        self.state         = self.IDLE
-        self._last_seen    = 0.0
-        self._search_start = 0.0
-        self._search_flip  = 0.0
-        self._search_dir   = "R"
-
-    def start(self):
-        self.state = self.SEARCH
-        now = time.time()
-        self._search_start = now
-        self._search_flip  = now
-        self._search_dir   = "R"
-
-    def stop(self):
-        self.state = self.IDLE
-
-    def update(self, cat_detected, distance_m, obstacle_near):
-        """상태 전이 후 기본 명령 반환. None = PD 제어가 결정."""
-        now = time.time()
-
-        if obstacle_near:
-            self.state = self.STOPPED
-            return "S"
-
-        if self.state == self.IDLE:
-            return "S"
-
-        if self.state == self.SEARCH:
-            if cat_detected:
-                self.state = self.TRACKING
-                self._last_seen = now
-                return None
-            if now - self._search_start > self._SEARCH_TIMEOUT:
-                self.state = self.IDLE
-                return "S"
-            # 4초마다 탐색 방향 반전 (R → L → R ...)
-            if now - self._search_flip > self._SEARCH_FLIP_SEC:
-                self._search_dir  = "L" if self._search_dir == "R" else "R"
-                self._search_flip = now
-            return self._search_dir
-
-        if self.state == self.TRACKING:
-            if not cat_detected:
-                self.state = self.LOST
-                return "F"
-            if distance_m and distance_m < _STOP_DIST_M:
-                self.state = self.STOPPED
-                return "S"
-            self._last_seen = now
-            return None  # PD 제어
-
-        if self.state == self.LOST:
-            if cat_detected:
-                self.state = self.TRACKING
-                self._last_seen = now
-                return None
-            if now - self._last_seen > 2.0:
-                self.state         = self.SEARCH
-                self._search_start = now
-                self._search_flip  = now
-                self._search_dir   = "R"
-                return "R"
-            return "F"   # 2초간 직진 대기
-
-        if self.state == self.STOPPED:
-            if not obstacle_near:
-                if cat_detected and (not distance_m or distance_m >= _STOP_DIST_M):
-                    self.state = self.TRACKING
-                    return None
-                if not cat_detected:
-                    self.state = self.LOST
-                    return "F"
-            return "S"
-
-        return "S"
-
-
-class CatTracker:
-    """카메라 검출 결과를 받아 uart_server(9000)로 RC카 명령을 보내는 추적기."""
-
-    def __init__(self, uart_port=9000, sensor_port=9001):
-        self._uart_port   = uart_port
-        self._sensor_port = sensor_port
-        self._fsm         = _TrackingFSM()
-        self._sock        = None
-        self._prev_offset = 0.0
-        self._obstacle_near = False
-        self._running     = False
-        self._lock        = Lock()
-
-    # ── 시작 / 정지 ──────────────────────────────────────────────
-
-    def start(self):
-        if self._running:
-            return
-        self._running = True
-        self._connect_uart()
-        Thread(target=self._sensor_loop, daemon=True).start()
-        self._fsm.start()
-        print("[TRACKER] 시작 → SEARCH")
-
-    def stop(self):
-        self._running = False
-        self._fsm.stop()
-        self._send("S")
-        self._close_uart()
-        print("[TRACKER] 정지")
-
-    # ── UART 연결 ─────────────────────────────────────────────────
-
-    def _connect_uart(self):
-        try:
-            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            s.connect(("localhost", self._uart_port))
-            self._sock = s
-            print(f"[TRACKER] uart_server:{self._uart_port} 연결")
-        except OSError as e:
-            print(f"[TRACKER] uart_server 연결 실패: {e}")
-            self._sock = None
-
-    def _close_uart(self):
-        if self._sock:
-            try:
-                self._sock.close()
-            except OSError:
-                pass
-            self._sock = None
-
-    def _send(self, cmd):
-        if not self._sock:
-            return
-        try:
-            self._sock.sendall(cmd.encode("ascii"))
-        except OSError:
-            self._sock = None
-
-    # ── 센서 수신 (9001 → obstacle_near) ─────────────────────────
-
-    def _sensor_loop(self):
-        while self._running:
-            try:
-                s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                s.connect(("localhost", self._sensor_port))
-                buf = ""
-                while self._running:
-                    chunk = s.recv(128).decode("ascii", errors="ignore")
-                    if not chunk:
-                        break
-                    buf += chunk
-                    while "\n" in buf:
-                        line, buf = buf.split("\n", 1)
-                        if "U:" in line:
-                            try:
-                                u_val = int([p for p in line.split(",")
-                                             if p.startswith("U:")][0][2:])
-                                with self._lock:
-                                    self._obstacle_near = u_val < _TRACK_STOP_CM
-                            except (ValueError, IndexError):
-                                pass
-                s.close()
-            except OSError:
-                pass
-            if self._running:
-                time.sleep(1)
-
-    # ── 프레임 처리 (capture_loop에서 호출) ──────────────────────
-
-    def process(self, frame, best_box, best_conf):
-        h, w = frame.shape[:2]
-        cat_detected = best_box is not None
-        distance_m   = None
-        offset       = 0.0
-
-        if cat_detected:
-            x1, y1, x2, y2 = best_box
-            cx       = (x1 + x2) / 2
-            offset   = (cx - w / 2) / (w / 2)  # -1.0 ~ +1.0
-            distance_m = _estimate_distance(y2 - y1)
-
-        with self._lock:
-            obstacle_near = self._obstacle_near
-
-        fsm_cmd = self._fsm.update(cat_detected, distance_m, obstacle_near)
-
-        if fsm_cmd is not None:
-            self._send(fsm_cmd)
-            self._prev_offset = 0.0
-        elif cat_detected:
-            # PD 제어 → L / F / R
-            pd = _TRACK_KP * offset + _TRACK_KD * (offset - self._prev_offset)
-            self._prev_offset = offset
-            if abs(offset) < _TRACK_DEAD_ZONE:
-                self._send("F")
-            elif pd < 0:
-                self._send("L")
-            else:
-                self._send("R")
-
-        self._draw_overlay(frame, best_box, best_conf, distance_m,
-                           obstacle_near, offset)
-        return frame
-
-    def _draw_overlay(self, frame, best_box, best_conf,
-                      distance_m, obstacle_near, offset):
-        h, w = frame.shape[:2]
-        state = self._fsm.state
-
-        if best_box:
-            x1, y1, x2, y2 = best_box
-            color = (0, 255, 0) if state == "TRACKING" else (0, 165, 255)
-            cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2)
-            cx = (x1 + x2) // 2
-            cy = (y1 + y2) // 2
-            cv2.circle(frame, (cx, cy), 6, color, -1)
-            # 조향 방향 화살표
-            arr_x = int(w // 2 + offset * w // 2 * 0.8)
-            cv2.arrowedLine(frame, (w // 2, h - 30),
-                            (arr_x, h - 30), (0, 255, 255), 3)
-            label = f"CAT {best_conf:.2f}"
-            if distance_m:
-                label += f"  {distance_m:.2f}m"
-            cv2.putText(frame, label, (x1, max(y1 - 10, 15)),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, color, 2)
-        else:
-            cv2.putText(frame, "Searching...", (10, 30),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 165, 255), 2)
-
-        state_color = {
-            "TRACKING": (0, 255, 0), "SEARCH":  (0, 165, 255),
-            "LOST":     (0, 255, 255), "STOPPED": (0, 0, 255),
-            "IDLE":     (128, 128, 128),
-        }.get(state, (255, 255, 255))
-        cv2.putText(frame, f"[TRACK:{state}]", (w - 230, 25),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.6, state_color, 2)
-
-        if obstacle_near:
-            cv2.putText(frame, "!! OBSTACLE !!", (w // 2 - 90, h // 2),
-                        cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 0, 255), 3)
-
-        cv2.line(frame, (w // 2, 0), (w // 2, h), (255, 255, 255), 1)
-
-    @property
-    def fsm_state(self):
-        return self._fsm.state
-
-
-# 전역 tracker 인스턴스
-cat_tracker = CatTracker()
-
-# =====================================================================
 
 # --- 최신 검출 결과 (PC 폴링용) ---
 last_detection = {"box": None, "conf": 0.0, "timestamp": 0.0}
 
 # --- 모델 인스턴스 ---
+ssd_net = None
 cat_onnx_session = None
-cat_onnx_input   = None
+cat_onnx_input = None
+yolo_onnx_session = None
+yolo_onnx_input = None
+yolo_tflite_interp = None
+yolo_tflite_input = None
+yolo_tflite_output = None
 
 
 def load_models():
-    global cat_onnx_session, cat_onnx_input
+    global ssd_net, cat_onnx_session, cat_onnx_input
+    global yolo_onnx_session, yolo_onnx_input
+    global yolo_tflite_interp, yolo_tflite_input, yolo_tflite_output
 
+    # 1. MobileNet SSD
+    if os.path.exists(SSD_PROTOTXT) and os.path.exists(SSD_MODEL):
+        try:
+            ssd_net = cv2.dnn.readNetFromCaffe(SSD_PROTOTXT, SSD_MODEL)
+            print("[MODEL] MobileNet SSD loaded")
+        except Exception as e:
+            print(f"[MODEL] MobileNet SSD failed: {e}")
+
+    # 2. 커스텀 고양이 ONNX INT8
     if os.path.exists(CAT_ONNX_PATH):
         try:
             import onnxruntime as ort
-            cat_onnx_session = ort.InferenceSession(
-                CAT_ONNX_PATH, providers=["CPUExecutionProvider"])
+            cat_onnx_session = ort.InferenceSession(CAT_ONNX_PATH,
+                                                     providers=["CPUExecutionProvider"])
             cat_onnx_input = cat_onnx_session.get_inputs()[0].name
-            print(f"[MODEL] Custom Cat ONNX loaded: {CAT_ONNX_PATH}")
+            print("[MODEL] Custom Cat ONNX INT8 loaded")
         except Exception as e:
             print(f"[MODEL] Custom Cat ONNX failed: {e}")
-    else:
-        print(f"[MODEL] 파일 없음: {CAT_ONNX_PATH}")
+
+    # 3. YOLOv8n ONNX INT8
+    if os.path.exists(YOLO_ONNX_PATH):
+        try:
+            import onnxruntime as ort
+            yolo_onnx_session = ort.InferenceSession(YOLO_ONNX_PATH,
+                                                      providers=["CPUExecutionProvider"])
+            yolo_onnx_input = yolo_onnx_session.get_inputs()[0].name
+            print("[MODEL] YOLOv8n ONNX INT8 loaded")
+        except Exception as e:
+            print(f"[MODEL] YOLOv8n ONNX failed: {e}")
+
+    # 3. YOLOv8n TFLite INT8
+    if os.path.exists(YOLO_TFLITE_PATH):
+        try:
+            from ai_edge_litert.interpreter import Interpreter
+            yolo_tflite_interp = Interpreter(model_path=YOLO_TFLITE_PATH)
+            yolo_tflite_interp.allocate_tensors()
+            yolo_tflite_input = yolo_tflite_interp.get_input_details()
+            yolo_tflite_output = yolo_tflite_interp.get_output_details()
+            print("[MODEL] YOLOv8n TFLite INT8 loaded")
+        except Exception as e:
+            print(f"[MODEL] YOLOv8n TFLite failed: {e}")
 
 
-def _run_cat_custom_inference(frame):
-    """커스텀 고양이 ONNX 추론만 수행. (best_box, best_conf) 반환."""
+def _yolo_postprocess(preds, frame_h, frame_w, model_tag):
+    """YOLOv8 공통 후처리: preds (84, N) → 고양이 검출 결과"""
+    if preds.shape[0] == 84:
+        preds = preds.T
+
+    sx = frame_w / YOLO_IMGSZ
+    sy = frame_h / YOLO_IMGSZ
+    best_conf = 0
+    best_box = None
+
+    for det in preds:
+        cx, cy, bw, bh = det[0], det[1], det[2], det[3]
+        scores = det[4:]
+        class_id = int(np.argmax(scores))
+        conf = float(scores[class_id])
+        if class_id != CAT_CLASS_ID or conf < YOLO_CONF:
+            continue
+        if conf > best_conf:
+            best_conf = conf
+            best_box = (int((cx - bw/2)*sx), int((cy - bh/2)*sy),
+                        int((cx + bw/2)*sx), int((cy + bh/2)*sy))
+
+    return best_box, best_conf
+
+
+def detect_cat_custom(frame):
+    """커스텀 고양이 ONNX INT8 검출 (87장 학습 모델)"""
     if cat_onnx_session is None:
-        return None, 0.0
+        cv2.putText(frame, "Cat model not loaded", (10, 30),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+        return frame
 
     h, w = frame.shape[:2]
     img = cv2.resize(frame, (YOLO_IMGSZ, YOLO_IMGSZ))
@@ -364,13 +158,13 @@ def _run_cat_custom_inference(frame):
 
     outputs = cat_onnx_session.run(None, {cat_onnx_input: img})
     preds = outputs[0][0]
-    if preds.shape[0] == 5:
+    if preds.shape[0] == 5:  # 커스텀 1클래스: (5, N)
         preds = preds.T
 
     sx = w / YOLO_IMGSZ
     sy = h / YOLO_IMGSZ
-    best_conf = 0.0
-    best_box  = None
+    best_conf = 0
+    best_box = None
 
     for det in preds:
         cx, cy, bw, bh = det[0], det[1], det[2], det[3]
@@ -379,27 +173,18 @@ def _run_cat_custom_inference(frame):
             continue
         if conf > best_conf:
             best_conf = conf
-            best_box  = (int((cx - bw/2)*sx), int((cy - bh/2)*sy),
-                         int((cx + bw/2)*sx), int((cy + bh/2)*sy))
+            best_box = (int((cx - bw/2)*sx), int((cy - bh/2)*sy),
+                        int((cx + bw/2)*sx), int((cy + bh/2)*sy))
 
-    # 전역 검출 결과 갱신 (PC 폴링용)
+    # 검출 결과를 전역에 저장 (PC 폴링용)
     with detect_lock:
-        last_detection["box"]       = list(best_box) if best_box else None
-        last_detection["conf"]      = best_conf
+        if best_box:
+            last_detection["box"] = list(best_box)
+            last_detection["conf"] = best_conf
+        else:
+            last_detection["box"] = None
+            last_detection["conf"] = 0.0
         last_detection["timestamp"] = time.time()
-
-    return best_box, best_conf
-
-
-def detect_cat_custom(frame):
-    """커스텀 고양이 ONNX 검출 (best.onnx)"""
-    if cat_onnx_session is None:
-        cv2.putText(frame, "Cat model not loaded", (10, 30),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
-        return frame
-
-    h, w = frame.shape[:2]
-    best_box, best_conf = _run_cat_custom_inference(frame)
 
     if best_box:
         x1, y1, x2, y2 = best_box
@@ -417,15 +202,110 @@ def detect_cat_custom(frame):
     return frame
 
 
-def detect_cat_track(frame):
-    """고양이 추적 모드 — 검출 후 CatTracker로 RC카 제어."""
-    if cat_onnx_session is None:
-        cv2.putText(frame, "Cat model not loaded", (10, 30),
+def detect_ssd(frame):
+    """MobileNet SSD 검출"""
+    if ssd_net is None:
+        cv2.putText(frame, "SSD not loaded", (10, 30),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
         return frame
 
-    best_box, best_conf = _run_cat_custom_inference(frame)
-    return cat_tracker.process(frame, best_box, best_conf)
+    h, w = frame.shape[:2]
+    blob = cv2.dnn.blobFromImage(cv2.resize(frame, (300, 300)),
+                                  0.007843, (300, 300), 127.5)
+    ssd_net.setInput(blob)
+    detections = ssd_net.forward()
+
+    found = False
+    for i in range(detections.shape[2]):
+        confidence = float(detections[0, 0, i, 2])
+        class_id = int(detections[0, 0, i, 1])
+        if confidence < SSD_CONF or class_id >= len(SSD_CLASSES):
+            continue
+        label = SSD_CLASSES[class_id]
+
+        box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
+        x1, y1, x2, y2 = box.astype("int")
+        color = (0, 255, 0) if label == "cat" else (0, 180, 255)
+        cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2)
+        cv2.putText(frame, f"{label} {confidence:.0%}", (x1, y1 - 10),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
+        if label == "cat":
+            cv2.circle(frame, ((x1+x2)//2, (y1+y2)//2), 6, color, -1)
+        found = True
+
+    if not found:
+        cv2.putText(frame, "No object", (10, 30),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+
+    cv2.line(frame, (w//2, 0), (w//2, h), (255, 255, 255), 1)
+    cv2.putText(frame, "[SSD]", (w - 80, 25),
+                cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 200, 255), 2)
+    return frame
+
+
+def detect_yolo_onnx(frame):
+    """YOLOv8n ONNX INT8 고양이 검출"""
+    if yolo_onnx_session is None:
+        cv2.putText(frame, "ONNX not loaded", (10, 30),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+        return frame
+
+    h, w = frame.shape[:2]
+    img = cv2.resize(frame, (YOLO_IMGSZ, YOLO_IMGSZ))
+    img = img[:, :, ::-1].astype(np.float32) / 255.0
+    img = np.transpose(img, (2, 0, 1))
+    img = np.expand_dims(img, 0)
+
+    outputs = yolo_onnx_session.run(None, {yolo_onnx_input: img})
+    box, conf = _yolo_postprocess(outputs[0][0], h, w, "ONNX")
+
+    if box:
+        x1, y1, x2, y2 = box
+        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+        cv2.circle(frame, ((x1+x2)//2, (y1+y2)//2), 6, (0, 255, 0), -1)
+        cv2.putText(frame, f"CAT {conf:.2f}", (x1, y1 - 10),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+    else:
+        cv2.putText(frame, "No cat", (10, 30),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+
+    cv2.line(frame, (w//2, 0), (w//2, h), (255, 255, 255), 1)
+    cv2.putText(frame, "[YOLO ONNX]", (w - 160, 25),
+                cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 200, 255), 2)
+    return frame
+
+
+def detect_yolo_tflite(frame):
+    """YOLOv8n TFLite INT8 고양이 검출"""
+    if yolo_tflite_interp is None:
+        cv2.putText(frame, "TFLite not loaded", (10, 30),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+        return frame
+
+    h, w = frame.shape[:2]
+    img = cv2.resize(frame, (YOLO_IMGSZ, YOLO_IMGSZ))
+    img = img[:, :, ::-1].astype(np.float32) / 255.0
+    img = np.expand_dims(img, 0)
+
+    yolo_tflite_interp.set_tensor(yolo_tflite_input[0]['index'], img)
+    yolo_tflite_interp.invoke()
+    output = yolo_tflite_interp.get_tensor(yolo_tflite_output[0]['index'])
+    box, conf = _yolo_postprocess(output[0], h, w, "TFLite")
+
+    if box:
+        x1, y1, x2, y2 = box
+        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+        cv2.circle(frame, ((x1+x2)//2, (y1+y2)//2), 6, (0, 255, 0), -1)
+        cv2.putText(frame, f"CAT {conf:.2f}", (x1, y1 - 10),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+    else:
+        cv2.putText(frame, "No cat", (10, 30),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+
+    cv2.line(frame, (w//2, 0), (w//2, h), (255, 255, 255), 1)
+    cv2.putText(frame, "[YOLO TFLite]", (w - 180, 25),
+                cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 200, 255), 2)
+    return frame
 
 
 def detect_blue(frame):
@@ -479,24 +359,20 @@ class FrameBuffer:
 
 
 def capture_loop(picam, buffer):
-    interval = 1.0 / 20  # 최대 20 FPS (CPU 여유 확보)
-    last_t   = 0.0
-
     while True:
-        now = time.time()
-        if now - last_t < interval:
-            time.sleep(0.005)
-            continue
-        last_t = now
         frame = picam.capture_array()
 
         with detect_lock:
             mode = detect_mode
 
-        if mode == "cat_track":
-            frame = detect_cat_track(frame)
-        elif mode == "cat_custom":
+        if mode == "cat_custom":
             frame = detect_cat_custom(frame)
+        elif mode == "ssd":
+            frame = detect_ssd(frame)
+        elif mode == "yolo_onnx":
+            frame = detect_yolo_onnx(frame)
+        elif mode == "yolo_tflite":
+            frame = detect_yolo_tflite(frame)
         elif mode == "blue":
             frame = detect_blue(frame)
         # "none" → 원본 그대로
@@ -512,14 +388,13 @@ PAGE = """\
 <head><title>RPi5 Camera</title></head>
 <body style="background:#111;color:#eee;font-family:sans-serif;text-align:center;">
 <h2>RPi5 Camera Stream</h2>
-<img src="stream.mjpg" width="640" height="480" /><br><br>
-<a href="/mode/none" style="color:#888;margin:10px;font-size:15px;">None</a>
-<a href="/mode/blue" style="color:#44f;margin:10px;font-size:15px;">Blue</a>
-<a href="/mode/cat_custom" style="color:#f0f;margin:10px;font-size:15px;">Cat Custom</a>
-<br><br>
-<a href="/mode/cat_track" style="color:#fff;background:#e55;padding:8px 20px;border-radius:6px;font-weight:bold;text-decoration:none;font-size:16px;">Cat Track (RC카 추적)</a>
-&nbsp;&nbsp;
-<a href="/mode/none" style="color:#fff;background:#555;padding:8px 20px;border-radius:6px;font-weight:bold;text-decoration:none;font-size:16px;">정지</a>
+<img src="stream.mjpg" width="640" height="480" /><br>
+<a href="/mode/none" style="color:#888;margin:10px;">None</a>
+<a href="/mode/blue" style="color:#44f;margin:10px;">Blue</a>
+<a href="/mode/ssd" style="color:#0f0;margin:10px;">MobileNet SSD</a>
+<a href="/mode/cat_custom" style="color:#f0f;margin:10px;">Cat Custom</a>
+<a href="/mode/yolo_onnx" style="color:#ff0;margin:10px;">YOLO ONNX</a>
+<a href="/mode/yolo_tflite" style="color:#f80;margin:10px;">YOLO TFLite</a>
 </body>
 </html>
 """
@@ -542,16 +417,9 @@ class StreamingHandler(BaseHTTPRequestHandler):
             self.wfile.write(content)
         elif self.path.startswith('/mode/'):
             new_mode = self.path.split('/mode/')[-1].strip('/')
-            valid = ("none", "blue", "cat_custom", "cat_track")
-            if new_mode in valid:
+            if new_mode in ("none", "blue", "ssd", "cat_custom", "yolo_onnx", "yolo_tflite"):
                 with detect_lock:
-                    prev = detect_mode
                     detect_mode = new_mode
-                # tracker 시작/정지
-                if new_mode == "cat_track" and prev != "cat_track":
-                    cat_tracker.start()
-                elif prev == "cat_track" and new_mode != "cat_track":
-                    cat_tracker.stop()
                 msg = f"Mode changed to: {new_mode}"
                 print(f"[MODE] {new_mode}")
             else:
@@ -630,7 +498,7 @@ try:
     print("  RPi5 Camera + Detection")
     print("=" * 40)
     print(f"  Stream : http://0.0.0.0:8000/stream.mjpg")
-    print(f"  Mode   : none | blue | cat_custom | cat_track")
+    print(f"  Mode   : none | blue | ssd | yolo_onnx | yolo_tflite")
     print(f"  Current: {detect_mode}")
     print("=" * 40)
     server.serve_forever()
