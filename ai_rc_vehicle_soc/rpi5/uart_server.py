@@ -70,7 +70,7 @@ PROTO_ETX = 0x55
 CMD_MOVE  = 0x01
 CMD_MODE  = 0x02
 CMD_RESET = 0x30
-DEFAULT_SPEED = 100  # 모터 속도 (0~100%)
+DEFAULT_SPEED = 59   # 모터 속도 (0~100%)
 
 # PC 키 → MOVE 방향 매핑
 DIR_MAP = {
@@ -380,40 +380,43 @@ def run_server(cmd_port, sensor_port, uart_port):
     t_resend.start()
     t_gps.start()
 
-    # 명령 TCP 서버 (9000) — 메인 스레드
+    # 명령 TCP 서버 (9000) — 다중 클라이언트 지원
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server.bind(('0.0.0.0', cmd_port))
-    server.listen(1)
+    server.listen(4)
+
+    def handle_client(conn, addr):
+        """클라이언트별 명령 수신 스레드"""
+        try:
+            while True:
+                data = conn.recv(1)
+                if not data:
+                    break
+                handle_command(data, ser, servo)
+        except (ConnectionResetError, OSError):
+            pass
+        finally:
+            conn.close()
+            print(f"[Cmd Disconnected] {addr[0]}:{addr[1]}")
 
     print("=" * 40)
     print("  RC Car UART Server (RPi5)")
     print("=" * 40)
-    print(f"  CMD   : 0.0.0.0:{cmd_port}    (PC → RPi → TC237)")
+    print(f"  CMD   : 0.0.0.0:{cmd_port}    (multi-client)")
     print(f"  SENSOR: 0.0.0.0:{sensor_port}    (TC237 → RPi → PC)")
     print(f"  UART  : {uart_port} @ {BAUD_RATE}")
     print(f"  SERVO : GPIO 18 HW PWM (pwmchip0/pwm2, init={INIT_ANGLE:.0f}°)")
     print(f"  GPS   : {GPS_PORT} @ {GPS_BAUD}")
-    print("  Waiting for PC client...")
+    print("  Waiting for clients...")
     print("=" * 40)
 
     try:
         while True:
             conn, addr = server.accept()
-            print(f"\n[Cmd Connected] Client: {addr[0]}:{addr[1]}")
-
-            try:
-                while True:
-                    data = conn.recv(1)
-                    if not data:
-                        break
-                    handle_command(data, ser, servo)
-            except ConnectionResetError:
-                pass
-
-            conn.close()
-            print(f"[Cmd Disconnected] {addr[0]}:{addr[1]}")
-            print("  Waiting for reconnection...\n")
+            print(f"\n[Cmd Connected] {addr[0]}:{addr[1]}")
+            threading.Thread(target=handle_client, args=(conn, addr),
+                             daemon=True).start()
     finally:
         stop_event.set()
         ser.close()

@@ -178,9 +178,7 @@ class ControlPanel:
         self.gps_returning = False
 
         # Driving Mode
-        self.drive_mode = "MANUAL"  # "MANUAL", "CAT_TRACK", "GPS_RETURN"
-        self.cat_track_running = False
-        self.cat_no_detect_count = 0
+        self.drive_mode = "MANUAL"  # "MANUAL", "CAT_TRACK"
 
         # Servo
         self.servo_angle = 90.0
@@ -509,10 +507,11 @@ class ControlPanel:
     def _on_key_press(self, event):
         key = event.keysym
 
-        # CAT_TRACK 모드에서 방향키/스페이스 차단
+        # CAT_TRACK 모드에서 방향키/스페이스 → MANUAL 전환
         if self.drive_mode == "CAT_TRACK":
             if key in DIR_MAP or key == "space":
-                return
+                self.drive_combo.set("MANUAL")
+                self._on_drive_mode_change()
 
         # Arrow keys — GPS 복귀 중이면 복귀 취소
         if key in DIR_MAP:
@@ -687,6 +686,24 @@ class ControlPanel:
 
         # Move resend thread (MCU 200ms timeout)
         threading.Thread(target=self._move_resend, daemon=True).start()
+
+        # RPi5 drive 모드 동기화
+        try:
+            import json as _json
+            resp = urllib.request.urlopen(
+                f"http://{host}:{CAM_PORT}/status", timeout=2)
+            status = _json.loads(resp.read().decode('utf-8'))
+            rpi_mode = status.get("drive_mode", "MANUAL")
+            self.drive_mode = rpi_mode
+            self.drive_combo.set(rpi_mode)
+            if rpi_mode == "CAT_TRACK":
+                self.detect_combo.set("cat_custom")
+                self.detect_combo.configure(state="disabled")
+                self.cmd_var.set("MODE: CAT_TRACK (RPi5)")
+            else:
+                self.detect_combo.configure(state="readonly")
+        except Exception:
+            pass
 
     def _disconnect(self):
         self.connected = False
@@ -932,13 +949,6 @@ class ControlPanel:
             self.root.focus_set()
             return
 
-        # 차량 정지
-        self._send_move(0)
-
-        # 이전 모드 정리
-        if old_mode == "CAT_TRACK":
-            self.cat_track_running = False
-
         # GPS 복귀 중이었으면 취소
         if self.gps_returning:
             self.gps_returning = False
@@ -946,78 +956,23 @@ class ControlPanel:
 
         self.drive_mode = new_mode
 
-        # 새 모드 진입
+        # RPi5에 drive 모드 전환 HTTP 요청
+        host = self.entry_host.get().strip()
+        try:
+            url = f"http://{host}:{CAM_PORT}/drive/{new_mode.lower()}"
+            urllib.request.urlopen(url, timeout=2)
+        except Exception as e:
+            self.cmd_var.set(f"Drive mode error: {e}")
+
         if new_mode == "MANUAL":
             self.detect_combo.configure(state="readonly")
             self.cmd_var.set("MODE: MANUAL")
-
         elif new_mode == "CAT_TRACK":
             self.detect_combo.set("cat_custom")
             self.detect_combo.configure(state="disabled")
-            self._on_detect_mode_change()
-            self.cat_track_running = True
-            self.cat_no_detect_count = 0
-            threading.Thread(target=self._cat_track_loop, daemon=True).start()
-            self.cmd_var.set("MODE: CAT_TRACK")
+            self.cmd_var.set("MODE: CAT_TRACK (RPi5)")
 
         self.root.focus_set()
-
-    def _cat_track_loop(self):
-        """CAT_TRACK: /detect 폴링 → 바운딩 박스 기반 자동 조향"""
-        import json
-
-        host = self.entry_host.get().strip()
-        url = f"http://{host}:{CAM_PORT}/detect"
-
-        while self.cat_track_running and self.connected:
-            try:
-                resp = urllib.request.urlopen(url, timeout=1)
-                data = json.loads(resp.read().decode('utf-8'))
-            except Exception:
-                time.sleep(0.2)
-                continue
-
-            box = data.get("box")
-            frame_w = data.get("frame_w", 640)
-            frame_h = data.get("frame_h", 480)
-
-            if box is None:
-                self.cat_no_detect_count += 1
-                if self.cat_no_detect_count > 5:
-                    self._send_move(0)  # target lost → STOP
-                    self.root.after(0, lambda: self.cmd_var.set("CAT: LOST"))
-                time.sleep(0.15)
-                continue
-
-            self.cat_no_detect_count = 0
-            x1, y1, x2, y2 = box
-            box_cx = (x1 + x2) / 2.0
-            box_w = x2 - x1
-            box_h = y2 - y1
-            box_area = box_w * box_h
-            frame_area = frame_w * frame_h
-
-            # 수평 오프셋: -1.0 (왼쪽) ~ +1.0 (오른쪽)
-            offset_x = (box_cx - frame_w / 2.0) / (frame_w / 2.0)
-            area_ratio = box_area / frame_area
-
-            TURN_THRESHOLD = 0.25
-            CLOSE_THRESHOLD = 0.25
-
-            if area_ratio > CLOSE_THRESHOLD:
-                self._send_move(0)  # 너무 가까움 → STOP
-                self.root.after(0, lambda: self.cmd_var.set("CAT: CLOSE"))
-            elif offset_x < -TURN_THRESHOLD:
-                self._send_move(3)  # LEFT
-                self.root.after(0, lambda: self.cmd_var.set("CAT: LEFT"))
-            elif offset_x > TURN_THRESHOLD:
-                self._send_move(4)  # RIGHT
-                self.root.after(0, lambda: self.cmd_var.set("CAT: RIGHT"))
-            else:
-                self._send_move(1)  # FORWARD
-                self.root.after(0, lambda: self.cmd_var.set("CAT: FORWARD"))
-
-            time.sleep(0.15)
 
     # ======================== GPS ========================
     def _gps_set_home(self):
