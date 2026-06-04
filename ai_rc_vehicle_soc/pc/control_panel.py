@@ -207,9 +207,9 @@ class ControlPanel:
         style.configure("Key.TLabel", background=KEY_INACTIVE, foreground=FG_COLOR,
                         font=("Consolas", 14, "bold"), padding=8)
 
-        # === Top Bar ===
+        # === Top Bar (Row 1: Title + Connection) ===
         top = ttk.Frame(self.root, style="Dark.TFrame")
-        top.pack(fill=tk.X, padx=10, pady=(8, 4))
+        top.pack(fill=tk.X, padx=10, pady=(8, 2))
 
         ttk.Label(top, text="RC Car Control Panel",
                   style="Title.TLabel").pack(side=tk.LEFT)
@@ -224,27 +224,31 @@ class ControlPanel:
         self.entry_host.pack(side=tk.RIGHT, padx=(5, 0))
         ttk.Label(top, text="RPi5 IP:", style="Dark.TLabel").pack(side=tk.RIGHT)
 
-        # Driving mode selector
-        self.drive_combo = ttk.Combobox(top, width=10, state="readonly",
-                                          font=("Consolas", 10))
-        self.drive_combo["values"] = ["MANUAL", "CAT_TRACK", "GPS_RETURN"]
-        self.drive_combo.set("MANUAL")
-        self.drive_combo.pack(side=tk.RIGHT, padx=(5, 0))
-        self.drive_combo.bind("<<ComboboxSelected>>", self._on_drive_mode_change)
-        ttk.Label(top, text="Mode:", style="Dark.TLabel").pack(side=tk.RIGHT)
-
-        # Detection mode selector
-        self.detect_combo = ttk.Combobox(top, width=8, state="readonly",
-                                          font=("Consolas", 10))
-        self.detect_combo["values"] = ["none", "blue", "cat_custom"]
-        self.detect_combo.set("none")
-        self.detect_combo.pack(side=tk.RIGHT, padx=(5, 0))
-        self.detect_combo.bind("<<ComboboxSelected>>", self._on_detect_mode_change)
-        ttk.Label(top, text="Detect:", style="Dark.TLabel").pack(side=tk.RIGHT)
-
         self.status_var = tk.StringVar(value="Disconnected")
         ttk.Label(top, textvariable=self.status_var, style="Dark.TLabel").pack(
             side=tk.RIGHT, padx=(15, 10))
+
+        # === Top Bar (Row 2: Mode + Detect) ===
+        top2 = ttk.Frame(self.root, style="Dark.TFrame")
+        top2.pack(fill=tk.X, padx=10, pady=(0, 4))
+
+        # Driving mode selector
+        ttk.Label(top2, text="Mode:", style="Dark.TLabel").pack(side=tk.LEFT)
+        self.drive_combo = ttk.Combobox(top2, width=10, state="readonly",
+                                          font=("Consolas", 10))
+        self.drive_combo["values"] = ["MANUAL", "CAT_TRACK"]
+        self.drive_combo.set("MANUAL")
+        self.drive_combo.pack(side=tk.LEFT, padx=(5, 15))
+        self.drive_combo.bind("<<ComboboxSelected>>", self._on_drive_mode_change)
+
+        # Detection mode selector
+        ttk.Label(top2, text="Detect:", style="Dark.TLabel").pack(side=tk.LEFT)
+        self.detect_combo = ttk.Combobox(top2, width=8, state="readonly",
+                                          font=("Consolas", 10))
+        self.detect_combo["values"] = ["none", "blue", "cat_custom"]
+        self.detect_combo.set("none")
+        self.detect_combo.pack(side=tk.LEFT, padx=(5, 0))
+        self.detect_combo.bind("<<ComboboxSelected>>", self._on_detect_mode_change)
 
         # === Main Content: Left (Camera + Car) | Right (Chart + Sensors) ===
         main = ttk.Frame(self.root, style="Dark.TFrame")
@@ -505,13 +509,17 @@ class ControlPanel:
     def _on_key_press(self, event):
         key = event.keysym
 
-        # 자동 모드에서 방향키/스페이스 차단
-        if self.drive_mode != "MANUAL":
+        # CAT_TRACK 모드에서 방향키/스페이스 차단
+        if self.drive_mode == "CAT_TRACK":
             if key in DIR_MAP or key == "space":
                 return
 
-        # Arrow keys
+        # Arrow keys — GPS 복귀 중이면 복귀 취소
         if key in DIR_MAP:
+            if self.gps_returning:
+                self.gps_returning = False
+                self.btn_return.configure(bg="#45475a", fg=WARN_COLOR)
+                self.cmd_var.set("GPS: Return cancelled")
             if key not in self.pressed_keys:
                 self.pressed_keys.add(key)
                 self._highlight_key(key, True)
@@ -738,11 +746,21 @@ class ControlPanel:
                     elif line.startswith("G:"):
                         try:
                             parts = line[2:].split(",")
-                            self.gps_lat = float(parts[0])
-                            self.gps_lon = float(parts[1])
-                            self.gps_speed = float(parts[2])
+                            new_lat = float(parts[0])
+                            new_lon = float(parts[1])
+                            raw_speed = float(parts[2])
                             self.gps_sats = int(parts[3])
-                            if self.gps_lat != 0.0 and self.gps_lon != 0.0:
+                            # drift 필터: 1km/h 이하 속도는 정지로 간주
+                            self.gps_speed = raw_speed if raw_speed > 1.0 else 0.0
+                            if new_lat != 0.0 and new_lon != 0.0:
+                                # drift 필터: 이전 좌표와 약 1m 미만 차이면 무시
+                                if self.gps_lat != 0.0 and self.gps_lon != 0.0:
+                                    dlat = abs(new_lat - self.gps_lat)
+                                    dlon = abs(new_lon - self.gps_lon)
+                                    if dlat < 0.000009 and dlon < 0.000009:
+                                        continue  # drift 무시
+                                self.gps_lat = new_lat
+                                self.gps_lon = new_lon
                                 self.gps_track.append((self.gps_lat, self.gps_lon))
                                 if len(self.gps_track) > 1000:
                                     self.gps_track = self.gps_track[-500:]
@@ -920,7 +938,9 @@ class ControlPanel:
         # 이전 모드 정리
         if old_mode == "CAT_TRACK":
             self.cat_track_running = False
-        elif old_mode == "GPS_RETURN":
+
+        # GPS 복귀 중이었으면 취소
+        if self.gps_returning:
             self.gps_returning = False
             self.btn_return.configure(bg="#45475a", fg=WARN_COLOR)
 
@@ -939,19 +959,6 @@ class ControlPanel:
             self.cat_no_detect_count = 0
             threading.Thread(target=self._cat_track_loop, daemon=True).start()
             self.cmd_var.set("MODE: CAT_TRACK")
-
-        elif new_mode == "GPS_RETURN":
-            self.detect_combo.configure(state="disabled")
-            if self.gps_home is None:
-                self.cmd_var.set("GPS: Home not set")
-                self.drive_mode = "MANUAL"
-                self.drive_combo.set("MANUAL")
-                self.detect_combo.configure(state="readonly")
-            else:
-                self.gps_returning = True
-                self.btn_return.configure(bg=WARN_COLOR, fg="#1e1e2e")
-                threading.Thread(target=self._gps_return_loop, daemon=True).start()
-                self.cmd_var.set("MODE: GPS_RETURN")
 
         self.root.focus_set()
 
@@ -1054,12 +1061,33 @@ class ControlPanel:
         return (math.degrees(math.atan2(x, y)) + 360) % 360
 
     def _gps_return_loop(self):
-        """귀환 루프: GPS + IMU Yaw로 Home까지 이동"""
+        """귀환 루프: GPS bearing → IMU Yaw 기준 목표각 변환, 5m마다 재계산"""
+        # 1) 초기 방위각 계산 + IMU offset 산출
         while self.gps_returning and self.connected:
             if self.gps_lat == 0.0 or self.gps_home is None:
                 time.sleep(0.5)
                 continue
+            break
 
+        if not self.gps_returning:
+            return
+
+        last_recalc_lat = self.gps_lat
+        last_recalc_lon = self.gps_lon
+        gps_bearing = self._gps_bearing(
+            self.gps_lat, self.gps_lon,
+            self.gps_home[0], self.gps_home[1])
+        # IMU Yaw는 상대각 → GPS bearing과의 offset 저장
+        # target_yaw: IMU 기준으로 이 각도를 유지하면 Home 방향
+        target_yaw = self.yaw + 0  # 일단 현재 방향 저장
+        # offset = GPS bearing - 현재 IMU yaw (이 값으로 IMU→지리 변환)
+        yaw_to_geo_offset = gps_bearing - (self.yaw % 360)
+        target_yaw = (gps_bearing - yaw_to_geo_offset) % 360
+
+        self.root.after(0, lambda b=gps_bearing: self.cmd_var.set(
+            f"GPS: bearing {b:.0f}° → turning..."))
+
+        while self.gps_returning and self.connected:
             dist = self._gps_distance(self.gps_lat, self.gps_lon,
                                        self.gps_home[0], self.gps_home[1])
 
@@ -1069,29 +1097,41 @@ class ControlPanel:
                 self.gps_returning = False
                 self.root.after(0, lambda: self.btn_return.configure(
                     bg="#45475a", fg=WARN_COLOR))
-                self.root.after(0, lambda: self.cmd_var.set(
-                    f"GPS: Home reached ({dist:.1f}m)"))
-                # 자동으로 MANUAL 모드 복귀
-                self.drive_mode = "MANUAL"
-                self.root.after(0, lambda: self.drive_combo.set("MANUAL"))
-                self.root.after(0, lambda: self.detect_combo.configure(state="readonly"))
+                self.root.after(0, lambda d=dist: self.cmd_var.set(
+                    f"GPS: Home reached ({d:.1f}m)"))
                 break
 
-            # 목표 방위각 vs 현재 Yaw
-            target_bearing = self._gps_bearing(
-                self.gps_lat, self.gps_lon,
-                self.gps_home[0], self.gps_home[1])
-            yaw = self.yaw % 360
-            diff = (target_bearing - yaw + 360) % 360
+            # 5m 이상 이동했으면 방위각 재계산
+            moved = self._gps_distance(self.gps_lat, self.gps_lon,
+                                        last_recalc_lat, last_recalc_lon)
+            if moved > 5.0:
+                last_recalc_lat = self.gps_lat
+                last_recalc_lon = self.gps_lon
+                gps_bearing = self._gps_bearing(
+                    self.gps_lat, self.gps_lon,
+                    self.gps_home[0], self.gps_home[1])
+                target_yaw = (gps_bearing - yaw_to_geo_offset) % 360
+                self.root.after(0, lambda b=gps_bearing, d=dist: self.cmd_var.set(
+                    f"GPS: recalc {b:.0f}° dist={d:.0f}m"))
 
-            # 방향 결정
+            # IMU Yaw vs 목표 Yaw 비교
+            current_yaw = self.yaw % 360
+            diff = (target_yaw - current_yaw + 360) % 360
+
+            # 방향 결정: 30도 이내면 직진
             if diff > 30 and diff < 330:
                 if diff < 180:
                     self._send_move(4)  # RIGHT
+                    self.root.after(0, lambda d=diff, dt=dist: self.cmd_var.set(
+                        f"GPS: RIGHT ({d:.0f}°) {dt:.0f}m"))
                 else:
                     self._send_move(3)  # LEFT
+                    self.root.after(0, lambda d=(360-diff), dt=dist: self.cmd_var.set(
+                        f"GPS: LEFT ({d:.0f}°) {dt:.0f}m"))
             else:
                 self._send_move(1)  # FORWARD
+                self.root.after(0, lambda dt=dist: self.cmd_var.set(
+                    f"GPS: FWD {dt:.0f}m"))
 
             time.sleep(0.3)
 

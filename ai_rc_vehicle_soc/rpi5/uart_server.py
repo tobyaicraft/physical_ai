@@ -300,8 +300,11 @@ def gps_reader_thread(stop_event):
 
     lat = 0.0
     lon = 0.0
+    fixed_lat = 0.0  # 정지 필터 적용된 좌표
+    fixed_lon = 0.0
     speed_kmh = 0.0
     sats = 0
+    GPS_MOVE_THRESHOLD = 1.0  # km/h 이하면 정지로 판단 (drift 방지)
 
     buf = ""
     while not stop_event.is_set():
@@ -326,6 +329,15 @@ def gps_reader_thread(stop_event):
                         except ValueError:
                             speed_kmh = 0.0
 
+                        # 정지 필터: 이동 중일 때만 좌표 업데이트
+                        if speed_kmh > GPS_MOVE_THRESHOLD:
+                            fixed_lat = lat
+                            fixed_lon = lon
+                        elif fixed_lat == 0.0:
+                            # 첫 fix는 무조건 저장
+                            fixed_lat = lat
+                            fixed_lon = lon
+
                 # $GPGGA — 위성 수
                 elif line.startswith("$GPGGA") or line.startswith("$GNGGA"):
                     parts = line.split(",")
@@ -335,8 +347,8 @@ def gps_reader_thread(stop_event):
                         except ValueError:
                             sats = 0
 
-                        # GPS 데이터 브로드캐스트 (GGA 수신 시 1Hz)
-                        gps_line = f"G:{lat:.6f},{lon:.6f},{speed_kmh:.1f},{sats}"
+                        # GPS 데이터 브로드캐스트 (정지 필터 적용된 좌표)
+                        gps_line = f"G:{fixed_lat:.6f},{fixed_lon:.6f},{speed_kmh:.1f},{sats}"
                         broadcast_sensor_line(gps_line)
 
         except Exception:
